@@ -203,9 +203,37 @@ console.log("_______________________________");
 // g) Exiba o nome e a 3ª nota do 1º aluno.
 
 // → Seu código aqui:
+// const aluno1 = {
+//     nome: keyboard.question('Digite o nome do aluno1: '),
+//     notas: [
+//       keyboard.questionInt('Digite a nota 1: '),
+//       keyboard.questionInt('Digite a nota 2: '),
+//       keyboard.questionInt('Digite a nota 3: ')
+//     ]
+//   };
 
+//   const aluno2 = {
+//     nome: keyboard.question('Digite o nome do aluno2: '),
+//     notas: [
+//       keyboard.questionInt('Digite a nota 1: '),
+//       keyboard.questionInt('Digite a nota 2: '),
+//       keyboard.questionInt('Digite a nota 3: ')
+//     ]
+//   };
 
-
+//   const aluno3 = {
+//     nome: keyboard.question('Digite o nome do aluno3: '),
+//     notas: [
+//       keyboard.questionInt('Digite a nota 1: '),
+//       keyboard.questionInt('Digite a nota 2: '),
+//       keyboard.questionInt('Digite a nota 3: ')
+//     ]
+//   };
+// const turma =[aluno1, aluno2, aluno3]
+// console.table(turma)
+// console.log(`Aluno: ${turma[1].nome}, Nota: ${turma[1].notas[0]}`);
+// console.log(`Aluno: ${turma[2].nome}, Nota: ${turma[2].notas[1]}`);
+// console.log(`Aluno: ${turma[2].nome}, Nota: ${turma[2].notas[1]}`);
 
 
 console.log("_______________________________");
@@ -226,7 +254,25 @@ console.log("_______________________________");
 // d) Exiba no console uma frase resumo usando template literal:
 //    "Produto: <nome> | Categoria: <categoria> | Estoque: <quantidade> un".
 
-// → Seu código aqui:
+// → Seu código aqui
+// const Produtos = {
+//     nome: keyboard.question('digite o nome do produto:'),
+//     categoria: keyboard.question('digite sua categoria:'),
+//     preco: keyboard.questionInt('preco:'),
+//     quantidade_em_estoque: keyboard.questionInt('quantidade estoque:'),
+// }
+// const venda = keyboard.keyInYN('esta disponivel para venda?:');
+
+// const produto =  {
+//     nome: Produtos.nome,
+//     categoria: Produtos.categoria,
+//     preco: Produtos.preco,
+//     estoque: Produtos.quantidade_em_estoque,
+//     Disponivel: venda
+// }
+
+// console.table([produto]);
+// console.log(`produto: ${produto.nome} | categoria: ${produto.categoria} | estoque: ${produto.estoque} un.`);
 
 
 console.log("_______________________________");
@@ -243,3 +289,24 @@ console.log("_______________________________");
 // c) Exiba a lista com console.table().
 // d) Exiba somente o nome e preço do 2 medicamento.
 // e) Exiba somente o nome e se está em estoque o 1 medicamento.
+console.log("_______________________________");
+
+// const user = {
+//     nome: keyboard.question('digite o nome do medicamento:'),
+//     preco: keyboard.questionInt('digite o preco do medicamento:'),
+//     emEstoque: keyboard.keyInYN('esta disponivel para venda?:')
+// }
+
+// const user2 = {
+//     nome: keyboard.question('digite o nome do 2 medicamento:'),
+//     preco: keyboard.questionInt('digite o preco do 2 medicamento:'),
+//     emEstoque: keyboard.keyInYN('esta disponivel para venda?:')
+// }
+// const estoqueFarmacia = [];
+// estoqueFarmacia.push(user);
+// estoqueFarmacia.push(user2);
+
+// console.table(estoqueFarmacia)
+
+// console.log(`medicamento 2: ${estoqueFarmacia[1].nome} | preco R$ ${estoqueFarmacia[1].preco}`);
+// console.log(`medicamento 2: ${estoqueFarmacia[0].nome} | preco R$ ${estoqueFarmacia[0].emEstoque}`);
