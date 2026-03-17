@@ -287,7 +287,48 @@ let turma = {
 // e) Exiba a nota mais alta e a mais baixa da turma
 
 // → Seu código aqui:
+turma.aluno1.notas.push(Keyboard.questionFloat("Digite a nota 1: "))
+turma.aluno1.notas.push(Keyboard.questionFloat("Digite a nota 2: "))
+turma.aluno1.notas.push(Keyboard.questionFloat("Digite a nota 3: "))
+console.log("notas do Joao",turma.aluno1.notas)
 
+turma.aluno2.notas.push(Keyboard.questionFloat("Digite a nota 1: "));
+turma.aluno2.notas.push(Keyboard.questionFloat("Digite a nota 2: "));
+turma.aluno2.notas.push(Keyboard.questionFloat("Digite a nota 3: "));
+console.log("notas da Maria",turma.aluno1.notas)
+
+turma.aluno3.notas.push(Keyboard.questionFloat("Digite a nota 1: "));
+turma.aluno3.notas.push(Keyboard.questionFloat("Digite a nota 2: "));
+turma.aluno3.notas.push(Keyboard.questionFloat("Digite a nota 3: "));
+console.log("notas do Pedro",turma.aluno1.notas)
+
+let somaJoao = turma.aluno1.notas[0] + turma.aluno1.notas[1] + turma.aluno1.notas[2]
+let mediaJoao = somaJoao / 3
+console.log(`media do joao é: ${mediaJoao.toFixed(2)}`)
+
+let somaMaria = turma.aluno2.notas[0] + turma.aluno2.notas[1] + turma.aluno2.notas[2]
+let mediaMaria = somaMaria / 3
+console.log(`media da maria é: ${mediaMaria.toFixed(2)}`)
+
+let somaPedro = turma.aluno3.notas[0] + turma.aluno3.notas[1] + turma.aluno3.notas[2]
+let mediaPedro = somaPedro / 3
+console.log(`media do pedro é: ${mediaPedro.toFixed(2)}`);
+
+let somaMedias = mediaJoao + mediaMaria + mediaPedro
+let mediaGeral = somaMedias / 3
+console.log(`A média geral da turma : ${mediaGeral.toFixed(2)}`);
+
+let maiorJoao = Math.max(turma.aluno1.notas[0], turma.aluno1.notas[1], turma.aluno1.notas[2])
+let menorJoao = Math.min(turma.aluno1.notas[0], turma.aluno1.notas[1], turma.aluno1.notas[2])
+console.log(`João Maior nota: ${maiorJoao} | Menor nota: ${menorJoao}`)
+
+let maiorMaria = Math.max(turma.aluno2.notas[0], turma.aluno2.notas[1], turma.aluno2.notas[2])
+let menorMaria = Math.min(turma.aluno2.notas[0], turma.aluno2.notas[1], turma.aluno2.notas[2])
+console.log(`Maria Maior nota: ${maiorMaria} | Menor nota: ${menorMaria}`)
+
+let maiorPedro = Math.max(turma.aluno3.notas[0], turma.aluno3.notas[1], turma.aluno3.notas[2])
+let menorPedro = Math.min(turma.aluno3.notas[0], turma.aluno3.notas[1], turma.aluno3.notas[2])
+console.log(`Pedro Maior nota: ${maiorPedro} | Menor nota: ${menorPedro}`)
 
 
 console.log("_______________________________");
