@@ -166,17 +166,20 @@ console.log("_______________________________");
 // f) Use Math.min() para encontrar o menor entre 42, 17, 89, 5, 63. Exiba o resultado.
 
 // → Seu código aqui:
-let nota = 7.3
-console.log(`Math.round(${nota}) = ${Math.round(nota)}`); 
-console.log(`Math.floor(${nota}) = ${Math.floor(nota)}`); 
-console.log(`Math.ceil(${nota}) = ${Math.ceil(nota)}`);  
 
-let temperatura = -12.5
-console.log("valor abs :", Math.abs(temperatura));
-console.log(`valor maior : ${Math.max(42, 17, 89, 5, 63)}`)
-console.log(`valor menor : ${Math.min(42, 17, 89, 5, 63)}`)
+// let nota = 7.3
+// console.log(`Math.round(${nota}) = ${Math.round(nota)}`); 
+// console.log(`Math.floor(${nota}) = ${Math.floor(nota)}`); 
+// console.log(`Math.ceil(${nota}) = ${Math.ceil(nota)}`);  
 
-console.log("_______________________________");
+// let temperatura = -12.5
+// console.log("valor abs :", Math.abs(temperatura));
+// console.log(`valor maior : ${Math.max(42, 17, 89, 5, 63)}`)
+// console.log(`valor menor : ${Math.min(42, 17, 89, 5, 63)}`)
+
+// Assim os dados não serão solicitados novamente
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -189,6 +192,17 @@ console.log("_______________________________");
 //    "Média: <media>" (com 2 casas decimais usando toFixed(2))
 
 // → Seu código aqui:
+
+// let n1 = Keyboard.questionFloat("Digite a nota 1: ");
+// let n2 = Keyboard.questionFloat("Digite a nota 2: ");
+// let n3 = Keyboard.questionFloat("Digite a nota 3: ");
+
+// let media = (n1 + n2 + n3) / 3;
+
+// console.log(`Nota 1: ${n1} | Nota 2: ${n2} | Nota 3: ${n3}`);
+// console.log(`Média: ${media.toFixed(2)}`);
+
+// Assim os dados não serão solicitados novamente
 
 
 console.log("_______________________________");
@@ -208,6 +222,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let valorTotalCompra = Keyboard.questionFloat("digite o valor total da compra : R$");
+// let valorEntregue = Keyboard.questionFloat("valor entregue pelo cliente : R$");
+// let troco = ("troco :", valorEntregue - valorTotalCompra);
+
+// console.log("valor da compra :",valorTotalCompra,"valor entregue :",valorEntregue,"troco :",troco)
+
+// Assim os dados não serão solicitados novamente
+
 
 console.log("_______________________________");
 
@@ -224,6 +246,18 @@ let idades = [15, 22, 30, 18, 25];
 
 // → Seu código aqui:
 
+// let total = precos[0] + precos[1] + precos[2] + precos[3];
+// console.log(`total : ${total.toFixed(2)}`)
+
+
+// let soma = notas[0] + notas[1] + notas[2] + notas[3];
+// let media = soma / 4;
+// console.log("Média:", media);
+
+
+// console.log(`idade maior : ${Math.max(15, 22, 30, 18, 25)}`);
+// console.log(`idade menor : ${Math.min(15, 22, 30, 18, 25)}`);
+ 
 
 console.log("_______________________________");
 
