@@ -245,26 +245,26 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-let usuario = {
-    idade: keyboard.questionInt("Digite sua idade: "),
-    ingresso: keyboard.keyInYN("Tem ingresso? "),
-    associado: keyboard.keyInYN("Associado ao clube? ")
-};
+// let usuario = {
+//     idade: keyboard.questionInt("Digite sua idade: "),
+//     ingresso: keyboard.keyInYN("Tem ingresso? "),
+//     associado: keyboard.keyInYN("Associado ao clube? ")
+// };
 
-let entrada = {
-    podeEntrarNormal: (usuario.idade >= 18 && usuario.ingresso) || usuario.associado,
-    podeEntrarSocio: usuario.ingresso && usuario.associado, precisaAcompanhante: usuario.idade < 18,
-    naoPodeEntrar: !usuario.ingresso && !usuario.associado
-};
+// let entrada = {
+//     podeEntrarNormal: (usuario.idade >= 18 && usuario.ingresso) || usuario.associado,
+//     podeEntrarSocio: usuario.ingresso && usuario.associado, precisaAcompanhante: usuario.idade < 18,
+//     naoPodeEntrar: !usuario.ingresso && !usuario.associado
+// };
 
-console.log(`Pode entrar normal: ${entrada.podeEntrarNormal}`);
-console.log(`Pode entrar como sócio: ${entrada.podeEntrarSocio}`);
-console.log(`Precisa de acompanhante? ${entrada.precisaAcompanhante}`);
-console.log(`Não pode entrar de jeito nenhum? ${entrada.naoPodeEntrar}`);
+// console.log(`Pode entrar normal: ${entrada.podeEntrarNormal}`);
+// console.log(`Pode entrar como sócio: ${entrada.podeEntrarSocio}`);
+// console.log(`Precisa de acompanhante? ${entrada.precisaAcompanhante}`);
+// console.log(`Não pode entrar de jeito nenhum? ${entrada.naoPodeEntrar}`);
 
-let mensagemFinal = entrada.podeEntrarNormal || entrada.podeEntrarSocio ? "Entrada liberada!" : "Entrada negada.";
+// let mensagemFinal = entrada.podeEntrarNormal || entrada.podeEntrarSocio ? "Entrada liberada!" : "Entrada negada.";
 
-console.log(mensagemFinal);
+// console.log(mensagemFinal);
 
 
 // ------------------------------------------------------------
@@ -282,6 +282,25 @@ console.log(mensagemFinal);
 // d) Exiba os resultados com template literal.
 
 // → Seu código aqui:
+
+// const nome = keyboard.question("Digite o nome do produto: ");
+// const quantidade = keyboard.questionInt("Digite a quantidade em estoque: ");
+// const ativo = keyboard.keyInYN("O produto esta ativo no sistema? ");
+
+
+// const produto = {
+//     nome: nome,
+//     estoque: quantidade,
+//     statusAtivo: ativo
+// };
+
+
+// const temEstoque = produto.estoque > 0;
+// const produtoDisponivel = temEstoque && produto.statusAtivo;
+// const produtoIndisponivel = !temEstoque || !produto.statusAtivo;
+
+
+// console.log(`Produto: ${produto.nome} | Quantidade: ${produto.estoque} | Esta ativo? ${produto.statusAtivo ? "Sim" : "Não"} | Tem estoque? ${temEstoque} | Produto disponível para venda? ${produtoDisponivel} | Produto indisponível? ${produtoIndisponivel}`);
 
 
 console.log("_______________________________");
@@ -302,6 +321,22 @@ console.log("_______________________________");
 // d) Exiba todos os resultados.
 
 // → Seu código aqui:
+
+// let admin =  keyboard.keyInYN("Voce e administrador? ");
+// let logado =  keyboard.keyInYN("Voce esta logado no sistema? ");
+// let ativa =  keyboard.keyInYN("Sua conta esta ativa? ");
+
+// let usuario = {
+//     admin,
+//     logado,
+//     ativa
+// }
+
+// let acessoSistema = usuario.logado && usuario.ativa;
+// let acessoAdmin = acessoSistema && usuario.admin;
+// let acessoNegado = !usuario.logado || !usuario.ativa;
+
+// console.log(`Status Logado: ${usuario.logado ? "Sim" : "Não"} | Conta Ativa: ${usuario.ativa ? "Sim" : "Não"} | Administrador: ${usuario.admin ? "Sim" : "Não"} | Pode acessar o sistema? ${acessoSistema} | Tem privilégios de Admin? ${acessoAdmin} | Acesso foi negado? ${acessoNegado}`)
 
 
 console.log("_______________________________");
@@ -325,6 +360,23 @@ console.log("_______________________________");
 //    Caso contrário → "Usuário ou senha incorretos."
 
 // → Seu código aqui:
+
+// let credenciaisSistema = {
+//     usuario: "admin",
+//     senha: "1234"
+// };
+
+// let usuarioDigitado = keyboard.question("Usuario: ");
+// let senhaDigitada = keyboard.question("Senha: ");
+
+// let usuarioCorreto = usuarioDigitado === credenciaisSistema.usuario;
+// let senhaCorreta = senhaDigitada === credenciaisSistema.senha;
+// let loginValido = usuarioCorreto && senhaCorreta;
+
+// console.log(loginValido ? "Login realizado com sucesso!" : "Usuario ou senha incorretos.");
+
+
+
 
 
 console.log("_______________________________");
