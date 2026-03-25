@@ -13,15 +13,16 @@
 // b) Exiba o nome do aluno usando notação ponto.
 
 // → Seu código aqui:
-const aluno = {
 
-    nome: "Gabriel",
-    idade: 16,
-    curso: "cybersecurity"
+// const aluno = {
 
-  }
+//     nome: "Gabriel",
+//     idade: 16,
+//     curso: "cybersecurity"
+
+//   }
   
-  console.log(aluno);
+//   console.log(aluno);
 
 console.log("_______________________________");
 
@@ -33,11 +34,13 @@ console.log("_______________________________");
 // b) Exiba a cidade
 
 // → Seu código aqui:
-aluno.endereco = {
-    cidade: "jaragua",
-    rua: "ilha da figueira "
-  };
-  console.log(aluno.endereco.cidade);
+
+// aluno.endereco = {
+//     cidade: "jaragua",
+//     rua: "ilha da figueira "
+//   };
+//   console.log(aluno.endereco.cidade);
+
 console.log("_______________________________");
 
 
@@ -48,8 +51,10 @@ console.log("_______________________________");
 // b) Exiba a primeira habilidade.
 
 // → Seu código aqui:
-aluno.habilidades = ["programar","fazer comida","jogar"]
-console.log(aluno.habilidades[0])
+
+// aluno.habilidades = ["programar","fazer comida","jogar"]
+// console.log(aluno.habilidades[0])
+
 console.log("_______________________________");
 
 
@@ -60,9 +65,10 @@ console.log("_______________________________");
 // b) Exiba em uma única frase, o nome do aluno e suas notas.
 
 // → Seu código aqui:
-aluno.notas = [6, 7, 8, 9, 10]
-console.log(aluno)
-console.log(`Nome da pessoa: ${aluno.nome}, notas:${aluno.notas}`);
+
+// aluno.notas = [6, 7, 8, 9, 10]
+// console.log(aluno)
+// console.log(`Nome da pessoa: ${aluno.nome}, notas:${aluno.notas}`);
 
 console.log("_______________________________");
 
@@ -75,14 +81,16 @@ console.log("_______________________________");
 // c) Altere o nome do responsável e mostre que o objeto foi atualizado.
 
 // → Seu código aqui:
-aluno.resposaveis = {
-    mae: "rosa",
-    pai: "jorjin",
-    irmao: "jorjin jr"
-}
-console.log(aluno.resposaveis)
-aluno.resposaveis.mae = "talita"
-console.log(aluno.resposaveis)
+
+// aluno.resposaveis = {
+//     mae: "rosa",
+//     pai: "jorjin",
+//     irmao: "jorjin jr"
+// }
+// console.log(aluno.resposaveis)
+// aluno.resposaveis.mae = "talita"
+// console.log(aluno.resposaveis)
+
 console.log("_______________________________");
 
 // ------------------------------------------------------------
@@ -94,24 +102,25 @@ console.log("_______________________________");
 // c) Exiba o nome do segundo aluno da lista.
 
 // → Seu código aqui:
-const listaDeAlunos = [aluno];
+
+// const listaDeAlunos = [aluno];
 
 
-const aluno1 = {
-    nome: "cleitin",
-    idade: 17,
-    notas: [5,6,7,8,9,10]
-}
+// const aluno1 = {
+//     nome: "cleitin",
+//     idade: 17,
+//     notas: [5,6,7,8,9,10]
+// }
 
-const aluno2 = {
-    nome: "fulano",
-    idade: 16,
-    notas: [5,6,7,8,9,10]
-}
+// const aluno2 = {
+//     nome: "fulano",
+//     idade: 16,
+//     notas: [5,6,7,8,9,10]
+// }
  
-listaDeAlunos.push(aluno1, aluno2)
-console.log(listaDeAlunos)
-console.log(listaDeAlunos[2].nome)
+// listaDeAlunos.push(aluno1, aluno2)
+// console.log(listaDeAlunos)
+// console.log(listaDeAlunos[2].nome)
 
 console.log("_______________________________");
 
@@ -125,25 +134,26 @@ console.log("_______________________________");
 
 
 // → Seu código aqui:
-const listadeAlunos = [
-    {
-        nome: "gabriel",
-        idade: 16,
-        Notas: [5,6,7,8,9,10]
-    },
-    {
-        nome: "pablo",
-        idade: 17,
-        Notas: [5,6,7,8,9,10]
-    },
-    {
-        nome:"flavia",
-        idade: 15,
-        Notas: [5,6,7,8,9,10]
-    }
-]
-console.log(listaDeAlunos[0].nome, listaDeAlunos[0].notas)
-console.log(listaDeAlunos[1].nome, listaDeAlunos[1].notas)
-console.log(listaDeAlunos[2].nome, listaDeAlunos[2].notas)
+
+// const listadeAlunos = [
+//     {
+//         nome: "gabriel",
+//         idade: 16,
+//         Notas: [5,6,7,8,9,10]
+//     },
+//     {
+//         nome: "pablo",
+//         idade: 17,
+//         Notas: [5,6,7,8,9,10]
+//     },
+//     {
+//         nome:"flavia",
+//         idade: 15,
+//         Notas: [5,6,7,8,9,10]
+//     }
+// ]
+// console.log(listaDeAlunos[0].nome, listaDeAlunos[0].notas)
+// console.log(listaDeAlunos[1].nome, listaDeAlunos[1].notas)
+// console.log(listaDeAlunos[2].nome, listaDeAlunos[2].notas)
 
 console.log("_______________________________");

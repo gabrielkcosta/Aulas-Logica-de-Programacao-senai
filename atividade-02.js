@@ -13,12 +13,13 @@
 // b) Exiba a primeira e a última cor usando índices.
 
 // → Seu código aqui:
-let Cores = ["azul","preto","vermelho","verde"];
-console.log(Cores [0]) //azul
-console.log(Cores [3]) //verde
-console.log(Cores)
-console.log(Cores.length);
-console.log("_______________________________");
+
+// let Cores = ["azul","preto","vermelho","verde"];
+// console.log(Cores [0]) //azul
+// console.log(Cores [3]) //verde
+// console.log(Cores)
+// console.log(Cores.length);
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -29,11 +30,12 @@ console.log("_______________________________");
 // c) Exiba o array resultante e depois a quantidade de itens armazendos (length).
 
 // → Seu código aqui:
-Cores.push("marrom");
-console.log(Cores)
-Cores.shift()
-console.log(Cores)
-console.log(Cores.length)
+
+// Cores.push("marrom");
+// console.log(Cores)
+// Cores.shift()
+// console.log(Cores)
+// console.log(Cores.length)
 
 console.log("_______________________________");
 
@@ -45,8 +47,9 @@ console.log("_______________________________");
 // b) Em uma única linha, exiba os valores armazenados nesta lista e a quantidade de números armazenados (quantidade de itens, não a soma)
 
 // → Seu código aqui:
-let number = [1,2,3,4,5,6,7,8];
-console.log(`${number}, quantidade de itens armazenados ${number.length}`);
+
+// let number = [1,2,3,4,5,6,7,8];
+// console.log(`${number}, quantidade de itens armazenados ${number.length}`);
 
 
 console.log("_______________________________");
@@ -59,13 +62,14 @@ console.log("_______________________________");
 // b) Em uma única linha, exiba os valores armazenados nesta lista e a quantidade de itens armazenados
 
 // → Seu código aqui:
-let Verdade = true
-let Nada = null
-let Fantasma
-let Palavra = "texto"
-const Numero = 42
-let Variavel =[Verdade, Nada, Fantasma, Palavra, Numero]
-console.log(Variavel, "Quantidade de elementos" , Variavel.length)
+
+// let Verdade = true
+// let Nada = null
+// let Fantasma
+// let Palavra = "texto"
+// const Numero = 42
+// let Variavel =[Verdade, Nada, Fantasma, Palavra, Numero]
+// console.log(Variavel, "Quantidade de elementos" , Variavel.length)
 
 console.log("_______________________________");
 
@@ -81,13 +85,14 @@ console.log("_______________________________");
 // f) Exiba a lista final.
 
 // → Seu código aqui:
-let Tipos = ["batata","computador",43,"bolinha de golfe","six seven",]
-console.log(Tipos)
-Tipos.shift()
-Tipos.pop()
-console.log(Tipos)
-Tipos.push("xicara")
-console.log(Tipos)
+
+// let Tipos = ["batata","computador",43,"bolinha de golfe","six seven",]
+// console.log(Tipos)
+// Tipos.shift()
+// Tipos.pop()
+// console.log(Tipos)
+// Tipos.push("xicara")
+// console.log(Tipos)
 
 
 console.log("_______________________________");
