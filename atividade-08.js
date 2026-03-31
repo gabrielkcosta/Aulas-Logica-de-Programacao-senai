@@ -385,38 +385,43 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
+let numA = keyboard.questionFloat("Digite o primeiro numero: ");
+let numB = keyboard.questionFloat("Digite o segundo numero: ");
 
-// let numA = keyboard.questionFloat("Digite o primeiro numero: ");
-// let numB = keyboard.questionFloat("Digite o segundo numero: ");
+console.log("--- Menu de Operações ---");
+console.log("1 – Soma | 2 – Subtração | 3 – Multiplicação | 4 – Divisão | 5 – Resto");
 
-// console.log("--- Menu de Operações ---");
-// console.log("1 – Soma | 2 – Subtração | 3 – Multiplicação | 4 – Divisão | 5 – Resto");
+let operacao = keyboard.questionInt("Escolha uma operacao: ");
+let calculo;
 
-// let operacao = keyboard.questionInt("Escolha uma operacao: ");
-
-// switch (operacao) {
-//     case 1:
-//         console.log(`${numA} + ${numB} = ${numA + numB}`);
-//         break;
-//     case 2:
-//         console.log(`${numA} - ${numB} = ${numA - numB}`);
-//         break;
-//     case 3:
-//         console.log(`${numA} * ${numB} = ${numA * numB}`);
-//         break;
-//     case 4:
-//         if (numB === 0) {
-//             console.log("Erro: divisão por zero não é permitida.");
-//         } else {
-//             console.log(`${numA} / ${numB} = ${numA / numB}`);
-//         }
-//         break;
-//     case 5:
-//         console.log(`${numA} % ${numB} = ${numA % numB}`);
-//         break;
-//     default:
-//         console.log("Operação inválida.");
-// }
+switch (operacao) {
+    case 1:
+        calculo = numA + numB;
+        console.log(`${numA} + ${numB} = ${calculo}`);
+        break;
+    case 2:
+        calculo = numA - numB;
+        console.log(`${numA} - ${numB} = ${calculo}`);
+        break;
+    case 3:
+        calculo = numA * numB;
+        console.log(`${numA} * ${numB} = ${calculo}`);
+        break;
+    case 4:
+        if (numB === 0) {
+            console.log("Erro: divisão por zero não é permitida.");
+        } else {
+            calculo = numA / numB;
+            console.log(`${numA} / ${numB} = ${calculo}`);
+        }
+        break;
+    case 5:
+        calculo = numA % numB;
+        console.log(`${numA} % ${numB} = ${calculo}`);
+        break;
+    default:
+        console.log("Operação inválida.");
+}
 
 
 console.log("_______________________________");
