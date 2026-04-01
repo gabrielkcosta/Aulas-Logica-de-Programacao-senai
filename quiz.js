@@ -43,173 +43,173 @@
 
 // → Seu código aqui:
 
-let keyboard = require('readline-sync')
+// let keyboard = require('readline-sync')
 
-let jogador = {
-    nome: "",
-    pontos: 0
-};
+// let jogador = {
+//     nome: "",
+//     pontos: 0
+// };
 
-jogador.nome = keyboard.question("Digite o seu nome: ");
+// jogador.nome = keyboard.question("Digite o seu nome: ");
 
-console.log(`Olá, ${jogador.nome}! Seja bem-vindo ao Quiz de Games.`);
-console.log("Responda com o número da opção (1 a 4).");
+// console.log(`Olá, ${jogador.nome}! Seja bem-vindo ao Quiz de Games.`);
+// console.log("Responda com o número da opção (1 a 4).");
 
-console.log(`1. Qual o nome do protagonista de The Legend of Zelda?
-1) Zelda
-2) Link
-3) Ganon
-4) Mario`)
+// console.log(`1. Qual o nome do protagonista de The Legend of Zelda?
+// 1) Zelda
+// 2) Link
+// 3) Ganon
+// 4) Mario`)
 
-let respostaUm = keyboard.questionInt("Sua resposta: ");
+// let respostaUm = keyboard.questionInt("Sua resposta: ");
 
-switch (respostaUm) {
-    case 2:
-        console.log("Correto!");
-        jogador.pontos = jogador.pontos + 1;
-        break;
-    case 1:
-    case 3:
-    case 4:
-        console.log(`Errado! A resposta certa era a opção 2, ${jogador.nome}.`);
-        break;
-    default:
-        console.log("Opção inválida, nenhum ponto atribuído.");
-        break;
-}
+// switch (respostaUm) {
+//     case 2:
+//         console.log("Correto!");
+//         jogador.pontos = jogador.pontos + 1;
+//         break;
+//     case 1:
+//     case 3:
+//     case 4:
+//         console.log(`Errado! A resposta certa era a opção 2, ${jogador.nome}.`);
+//         break;
+//     default:
+//         console.log("Opção inválida, nenhum ponto atribuído.");
+//         break;
+// }
 
-console.log(`2. Em 'Minecraft', qual material é necessário para criar um portal para o Nether?
-1) Diamante
-2) Ouro
-3) Obsidiana
-4) Ferro`)
+// console.log(`2. Em 'Minecraft', qual material é necessário para criar um portal para o Nether?
+// 1) Diamante
+// 2) Ouro
+// 3) Obsidiana
+// 4) Ferro`)
 
-let respostaDois = entradaDados.questionInt("Sua resposta: ");
+// let respostaDois = entradaDados.questionInt("Sua resposta: ");
 
-switch (respostaDois) {
-    case 3:
-        console.log("Correto!");
-        jogador.pontos = jogador.pontos + 1;
-        break;
-    case 1:
-    case 2:
-    case 4:
-        console.log(`Errado! A resposta certa era a opção 3, ${jogador.nome}.`);
-        break;
-    default:
-        console.log("Opção inválida, nenhum ponto atribuído.");
-        break;
-}
+// switch (respostaDois) {
+//     case 3:
+//         console.log("Correto!");
+//         jogador.pontos = jogador.pontos + 1;
+//         break;
+//     case 1:
+//     case 2:
+//     case 4:
+//         console.log(`Errado! A resposta certa era a opção 3, ${jogador.nome}.`);
+//         break;
+//     default:
+//         console.log("Opção inválida, nenhum ponto atribuído.");
+//         break;
+// }
 
-console.log(`3. Qual é a cor do fantasma 'Blinky' no jogo Pac-Man?
-1) Azul
-2) Rosa
-3) Laranja
-4) Vermelho`)
+// console.log(`3. Qual é a cor do fantasma 'Blinky' no jogo Pac-Man?
+// 1) Azul
+// 2) Rosa
+// 3) Laranja
+// 4) Vermelho`)
 
-let respostaTres = entradaDados.questionInt("Sua resposta: ");
+// let respostaTres = entradaDados.questionInt("Sua resposta: ");
 
-switch (respostaTres) {
-    case 4:
-        console.log("Correto!");
-        jogador.pontos = jogador.pontos + 1;
-        break;
-    case 1:
-    case 2:
-    case 3:
-        console.log(`Errado! A resposta certa era a opção 4, ${jogador.nome}.`);
-        break;
-    default:
-        console.log("Opção inválida, nenhum ponto atribuído.");
-        break;
-}
+// switch (respostaTres) {
+//     case 4:
+//         console.log("Correto!");
+//         jogador.pontos = jogador.pontos + 1;
+//         break;
+//     case 1:
+//     case 2:
+//     case 3:
+//         console.log(`Errado! A resposta certa era a opção 4, ${jogador.nome}.`);
+//         break;
+//     default:
+//         console.log("Opção inválida, nenhum ponto atribuído.");
+//         break;
+// }
 
-console.log(`4. Em qual jogo os jogadores caem em uma ilha e lutam para ser o último sobrevivente?
-1) Fortnite
-2) FIFA
-3) Need for Speed
-4) The Sims`)
+// console.log(`4. Em qual jogo os jogadores caem em uma ilha e lutam para ser o último sobrevivente?
+// 1) Fortnite
+// 2) FIFA
+// 3) Need for Speed
+// 4) The Sims`)
 
-let respostaQuatro = entradaDados.questionInt("Sua resposta: ");
+// let respostaQuatro = entradaDados.questionInt("Sua resposta: ");
 
-switch (respostaQuatro) {
-    case 1:
-        console.log("Correto!");
-        jogador.pontos = jogador.pontos + 1;
-        break;
-    case 2:
-    case 3:
-    case 4:
-        console.log(`Errado! A resposta certa era a opção 1, ${jogador.nome}.`);
-        break;
-    default:
-        console.log("Opção inválida, nenhum ponto atribuído.");
-        break;
-}
+// switch (respostaQuatro) {
+//     case 1:
+//         console.log("Correto!");
+//         jogador.pontos = jogador.pontos + 1;
+//         break;
+//     case 2:
+//     case 3:
+//     case 4:
+//         console.log(`Errado! A resposta certa era a opção 1, ${jogador.nome}.`);
+//         break;
+//     default:
+//         console.log("Opção inválida, nenhum ponto atribuído.");
+//         break;
+// }
 
-console.log(`5. Qual empresa criou o console 'PlayStation'?
-1) Nintendo
-2) Sega
-3) Microsoft
-4) Sony`)
+// console.log(`5. Qual empresa criou o console 'PlayStation'?
+// 1) Nintendo
+// 2) Sega
+// 3) Microsoft
+// 4) Sony`)
 
-let respostaCinco = entradaDados.questionInt("Sua resposta: ");
+// let respostaCinco = entradaDados.questionInt("Sua resposta: ");
 
-switch (respostaCinco) {
-    case 4:
-        console.log("Correto!");
-        jogador.pontos = jogador.pontos + 1;
-        break;
-    case 1:
-    case 2:
-    case 3:
-        console.log(`Errado! A resposta certa era a opção 4, ${jogador.nome}.`);
-        break;
-    default:
-        console.log("Opção inválida, nenhum ponto atribuído.");
-        break;
-}
+// switch (respostaCinco) {
+//     case 4:
+//         console.log("Correto!");
+//         jogador.pontos = jogador.pontos + 1;
+//         break;
+//     case 1:
+//     case 2:
+//     case 3:
+//         console.log(`Errado! A resposta certa era a opção 4, ${jogador.nome}.`);
+//         break;
+//     default:
+//         console.log("Opção inválida, nenhum ponto atribuído.");
+//         break;
+// }
 
-console.log(`========================================`);
-console.log(`Fim de jogo, ${jogador.nome}!`);
-console.log(`Você fez ${jogador.pontos} de 5 pontos.`);
+// console.log(`========================================`);
+// console.log(`Fim de jogo, ${jogador.nome}!`);
+// console.log(`Você fez ${jogador.pontos} de 5 pontos.`);
 
-let mensagemFinal = "";
+// let mensagemFinal = "";
 
-switch (jogador.points) {
-    case 5:
-        mensagemFinal = "Perfeito! Você é um expert lendário!";
-        break;
-    case 4:
-        mensagemFinal = "Muito bem! Quase um Pro Player!";
-        break;
-    case 3:
-        mensagemFinal = "Bom trabalho, mas pode melhorar o seu XP.";
-        break;
-    case 1:
-    case 2:
-        mensagemFinal = "Nheee! Precisa de mais prática nesse jogo.";
-        break;
-    default:
-        mensagemFinal = "VIX, Game Over! Tente novamente!";
-        break;
-}
+// switch (jogador.points) {
+//     case 5:
+//         mensagemFinal = "Perfeito! Você é um expert lendário!";
+//         break;
+//     case 4:
+//         mensagemFinal = "Muito bem! Quase um Pro Player!";
+//         break;
+//     case 3:
+//         mensagemFinal = "Bom trabalho, mas pode melhorar o seu XP.";
+//         break;
+//     case 1:
+//     case 2:
+//         mensagemFinal = "Nheee! Precisa de mais prática nesse jogo.";
+//         break;
+//     default:
+//         mensagemFinal = "VIX, Game Over! Tente novamente!";
+//         break;
+// }
 
-console.log(mensagemFinal);
-console.log(`========================================\n`);
+// console.log(mensagemFinal);
+// console.log(`========================================\n`);
 
-const resultado = {
-    jogador: jogador.nome,
-    pontos: jogador.pontos,
-    total: 5,
-    aprovado: jogador.pontos >= 3
-};
+// const resultado = {
+//     jogador: jogador.nome,
+//     pontos: jogador.pontos,
+//     total: 5,
+//     aprovado: jogador.pontos >= 3
+// };
 
-console.table(resultado)
+// console.table(resultado)
 
-console.log("--- REVISÃO DAS RESPOSTAS ---");
-console.log(`Pergunta: Q1. | Sua: ${respostaUm} | Correta: 2`);
-console.log(`Pergunta: Q2. | Sua: ${respostaDois} | Correta: 3`);
-console.log(`Pergunta: Q3. | Sua: ${respostaTres} | Correta: 4`);
-console.log(`Pergunta: Q4. | Sua: ${respostaQuatro} | Correta: 1`);
-console.log(`Pergunta: Q5. | Sua: ${respostaCinco} | Correta: 4`);
+// console.log("--- REVISÃO DAS RESPOSTAS ---");
+// console.log(`Pergunta: Q1. | Sua: ${respostaUm} | Correta: 2`);
+// console.log(`Pergunta: Q2. | Sua: ${respostaDois} | Correta: 3`);
+// console.log(`Pergunta: Q3. | Sua: ${respostaTres} | Correta: 4`);
+// console.log(`Pergunta: Q4. | Sua: ${respostaQuatro} | Correta: 1`);
+// console.log(`Pergunta: Q5. | Sua: ${respostaCinco} | Correta: 4`);
