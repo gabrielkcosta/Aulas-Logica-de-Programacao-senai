@@ -49,6 +49,12 @@
 // let e1 = "JS"
 // console.log(`e == e1 -> ${e == e1}`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -88,7 +94,12 @@ console.log("_______________________________");
 // console.log(`i != i1 -> ${i != i1}`)
 // console.log(`i !== i1 -> ${i !== i1}`)
 
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -124,7 +135,12 @@ console.log("_______________________________");
 // console.log(`salario A : R$ ${salarioA} <= salario b : R$ ${salarioB} | menor ou igual: ${MenorIgual ? "sim" : "nao"} `)
 // console.log(`salario A : R$ ${salarioA} === salario b : R$ ${salarioB} | sao iguais: ${SaoIguais ? "sim" : "nao"} `)
 
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 console.log("_______________________________");
@@ -150,7 +166,12 @@ console.log("_______________________________");
 
 // console.log(`estoque : ${estoque} | tem estoque : ${temEstoque} | estoque esta zerado? : ${estoqueZerado} | temperatura : ${temperatura} | ta com febre? : ${febre}`)
 
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -183,6 +204,12 @@ let keyboard = require("readline-sync")
 // console.log(`sao iguais? : ${saoIguais}`)
 // console.log(`num1 maior ou igual? : ${maiorOUigual}`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -210,6 +237,13 @@ console.log("_______________________________");
 // console.log(`preco informado R$ ${preco}`)
 // console.log(`dentro do orcamento R$ ${precoMaximo}? | ${estaDentroDoOrcamento ? "sim" : "nao"} `)
 // console.log(`item cara R$ ${precoMaximo}? | ${esteItemEhCaro ? "sim" : "nao"}`)
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -252,6 +286,12 @@ console.log("_______________________________");
 // const nomeMaisVelho = p1.idade > p2.idade ? p1.nome : p2.nome;
 // console.log(`A pessoa mais velha é: ${nomeMaisVelho}`);
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -290,7 +330,12 @@ console.log("_______________________________");
 // console.log(`Aluno com a segunda maior nota: ${alunos[0].notas2 > alunos[1].notas2 ? alunos[0].nome : alunos[1].nome}`);
 // console.log(`Aluno com a terceira maior nota: ${alunos[0].notas3 > alunos[1].notas3 ? alunos[0].nome : alunos[1].nome}`);
 
-                
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 console.log("_______________________________");

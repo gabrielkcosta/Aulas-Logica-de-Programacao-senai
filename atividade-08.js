@@ -60,6 +60,13 @@ let keyboard = require('readline-sync')
 //         console.log('planeta n encontrado')
 // }
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -103,6 +110,13 @@ console.log("_______________________________");
 //         console.log("Direção desconhecida.");
 // }
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -136,6 +150,13 @@ console.log("_______________________________");
 // }
 
 // console.log(`A categoria do veículo é: ${categoria}`);
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 console.log("_______________________________");
@@ -174,6 +195,12 @@ console.log("_______________________________");
 //     console.log("Opcao invalida");
 // }
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 console.log("_______________________________");
@@ -213,6 +240,13 @@ console.log("_______________________________");
 //     console.log("Estação não reconhecida.");
 // }
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -246,10 +280,12 @@ console.log("_______________________________");
 //         console.log('numero invalido')
 // }
 
-
-
-
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 console.log("_______________________________");
@@ -302,6 +338,13 @@ console.log("_______________________________");
 // }
 
 // console.table(produto);
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 console.log("_______________________________");
@@ -365,6 +408,13 @@ console.log("_______________________________");
 
 // console.log(`${aluno.nome} – Nota: ${aluno.nota} | Conceito: ${aluno.conceito} | ${aluno.mensagem}`);
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -423,6 +473,12 @@ console.log("_______________________________");
 //         console.log("Operação inválida.");
 // }
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -487,4 +543,10 @@ console.log("_______________________________");
 //         console.log("Opção inválida.");
 // }
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 console.log("_______________________________");

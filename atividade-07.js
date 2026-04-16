@@ -33,7 +33,12 @@ let keyboard = require('readline-sync')
 // console.log('sem pontos para upar')
 // }
 
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -57,6 +62,13 @@ console.log("_______________________________");
 // } else {
 //     console.log('boa noite')
 // }
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -83,6 +95,12 @@ console.log("_______________________________");
 //     console.table('jovem')
 // }
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -115,6 +133,13 @@ console.log("_______________________________");
 // }
 
 // console.log(`Nota: ${notaAluno} - Situação: ${status}`);
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -149,6 +174,13 @@ console.log("_______________________________");
 // }
 
 // console.log(`Com ${temperatura} graus, o clima está: ${classificacao}.`);
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 console.log("_______________________________");
@@ -187,6 +219,12 @@ console.log("_______________________________");
 //     }
 // }
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -222,6 +260,13 @@ console.log("_______________________________");
 // }
 
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -245,6 +290,12 @@ console.log("_______________________________");
 //     console.log("Sem desconto. Preço cheio.");
 // }
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -291,6 +342,12 @@ console.log("_______________________________");
 // console.table(aluno);
 // console.log(`${aluno.nome}: ${situacao} (media: ${aluno.media})`);
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -353,7 +410,12 @@ console.log("_______________________________");
 
 // console.log(`${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado}`);
 
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 console.log("_______________________________");

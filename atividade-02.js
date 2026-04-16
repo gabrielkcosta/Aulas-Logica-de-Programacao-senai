@@ -21,6 +21,12 @@
 // console.log(Cores.length);
 // console.log("_______________________________");
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 // ------------------------------------------------------------
 // EXERCÍCIO 2 – Métodos básicos
@@ -37,6 +43,13 @@
 // console.log(Cores)
 // console.log(Cores.length)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -51,6 +64,12 @@ console.log("_______________________________");
 // let number = [1,2,3,4,5,6,7,8];
 // console.log(`${number}, quantidade de itens armazenados ${number.length}`);
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -70,6 +89,13 @@ console.log("_______________________________");
 // const Numero = 42
 // let Variavel =[Verdade, Nada, Fantasma, Palavra, Numero]
 // console.log(Variavel, "Quantidade de elementos" , Variavel.length)
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -94,5 +120,11 @@ console.log("_______________________________");
 // Tipos.push("xicara")
 // console.log(Tipos)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");

@@ -44,7 +44,12 @@
 // let d1 = false
 // console.log("false && false → <resultado>", d && d1)
 
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 
@@ -82,7 +87,12 @@ console.log("_______________________________");
 // let d1 = false
 // console.log("false || false → <resultado>", d || d1)
 
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -103,6 +113,13 @@ console.log("_______________________________");
 // let lugarVago = false
 // let lugarOcupado = !lugarVago
 // console.log(`sistemaAtivo : ${sistemaAtivo} | modoManutencao : ${modoManutencao} | lugarVago : ${lugarVago} | lugarOcupado : ${lugarOcupado}`)
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -161,6 +178,12 @@ console.log("_______________________________");
 // let precisaDeAjuda = precisaRecuperacao || reprovado
 // console.log(`nota final : ${notaFinal} | precisa de recuperacao : ${precisaRecuperacao} | reprovado : ${reprovado} | precisa de ajuda : ${precisaDeAjuda}`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -180,7 +203,12 @@ console.log("_______________________________");
 // let diagnostico = temperatura >= 37.6 ? "Febre detectada" : "Temperatura normal"; //operador ternario
 // console.log(`A temperatura registrada é ${temperatura} | Resultado: ${diagnostico}.`);
 
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -201,6 +229,12 @@ console.log("_______________________________");
 // let statusMulta =  velocidade > limiteVelocidade ? "multa aplicada" : "velocidade regular"
 // console.log(`valocidade : ${velocidade} | limite de velocidade : ${limiteVelocidade} | status dad multa : ${statusMulta}`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -222,6 +256,12 @@ console.log("_______________________________");
 // let mensagem = ehEstudante && curso ? "desconto aplicado" : "desconto nao aplicado"
 // console.log(`voce e bolista : ${ehEstudante ? "sim" : "nao"} | paga mais que R$ 1000,00 mensais pelo curso : ${curso ? "sim" : "nao"} | ganha desconto? : ${mensagem}`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -302,6 +342,12 @@ console.log("_______________________________");
 
 // console.log(`Produto: ${produto.nome} | Quantidade: ${produto.estoque} | Esta ativo? ${produto.statusAtivo ? "Sim" : "Não"} | Tem estoque? ${temEstoque} | Produto disponível para venda? ${produtoDisponivel} | Produto indisponível? ${produtoIndisponivel}`);
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -338,6 +384,12 @@ console.log("_______________________________");
 
 // console.log(`Status Logado: ${usuario.logado ? "Sim" : "Não"} | Conta Ativa: ${usuario.ativa ? "Sim" : "Não"} | Administrador: ${usuario.admin ? "Sim" : "Não"} | Pode acessar o sistema? ${acessoSistema} | Tem privilégios de Admin? ${acessoAdmin} | Acesso foi negado? ${acessoNegado}`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -375,7 +427,12 @@ console.log("_______________________________");
 
 // console.log(loginValido ? "Login realizado com sucesso!" : "Usuario ou senha incorretos.");
 
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 

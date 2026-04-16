@@ -24,6 +24,13 @@
   
 //   console.log(aluno);
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -41,6 +48,13 @@ console.log("_______________________________");
 //   };
 //   console.log(aluno.endereco.cidade);
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -54,6 +68,13 @@ console.log("_______________________________");
 
 // aluno.habilidades = ["programar","fazer comida","jogar"]
 // console.log(aluno.habilidades[0])
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -69,6 +90,13 @@ console.log("_______________________________");
 // aluno.notas = [6, 7, 8, 9, 10]
 // console.log(aluno)
 // console.log(`Nome da pessoa: ${aluno.nome}, notas:${aluno.notas}`);
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -90,6 +118,13 @@ console.log("_______________________________");
 // console.log(aluno.resposaveis)
 // aluno.resposaveis.mae = "talita"
 // console.log(aluno.resposaveis)
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -121,6 +156,13 @@ console.log("_______________________________");
 // listaDeAlunos.push(aluno1, aluno2)
 // console.log(listaDeAlunos)
 // console.log(listaDeAlunos[2].nome)
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -155,5 +197,12 @@ console.log("_______________________________");
 // console.log(listaDeAlunos[0].nome, listaDeAlunos[0].notas)
 // console.log(listaDeAlunos[1].nome, listaDeAlunos[1].notas)
 // console.log(listaDeAlunos[2].nome, listaDeAlunos[2].notas)
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");

@@ -27,6 +27,13 @@
 // //E
 // console.log(`Meu Nome é ${meuNome}\nMinha idade é ${minhaIdade}`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -48,6 +55,12 @@ console.log("_______________________________");
 // let fraseMoradia = ` Eu moro em ${cidade}, no ${pais}`
 // console.log(fraseMoradia)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -65,6 +78,13 @@ console.log("_______________________________");
 // let temCNH = false
 // console.log(typeof maiorDeIdade, typeof temCNH)
 // console.log(maiorDeIdade,temCNH)
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -88,6 +108,13 @@ console.log("_______________________________");
 // //d
 // //é um bug histórico da linguagem que nunca foi corrigido por questões de compatibilidade.
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -110,6 +137,13 @@ console.log("_______________________________");
 // console.log(typeof null); // object
 // console.log(typeof 3.14); // number
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -130,5 +164,12 @@ console.log("_______________________________");
 // const Cidade = "jaragua do sul"
 // let estudandoJS = true
 // console.log(`olá! Meu nome é ${MeuNome}, tenho ${Idade} anos, moro em ${Cidade},meço ${Altura} e estou estudando Javascript: ${estudandoJS}.`)
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");

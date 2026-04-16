@@ -28,6 +28,12 @@ let keyboard = require('readline-sync')
 // console.warn('inicie o programa com node e o nome do arquivo')
 // console.error('erro van 208')
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -47,6 +53,12 @@ console.log("_______________________________");
 // const cidade = keyboard.question('cidade onde voce mora')
 // console.log(`olá, ${nomeUsuario}! Você tem ${idadeDeUsuario} anos.`);
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -68,6 +80,13 @@ console.log("_______________________________");
 
 // console.table([ficha])
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -83,6 +102,12 @@ console.log("_______________________________");
 // const JogarBrawl = keyboard.keyInYN('Vamo jogar brawl?')
 // console.log(`${JogarBrawl ? 'entao bora' : 'nao seu bobao'}. `)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -102,6 +127,13 @@ console.log("_______________________________");
 // comidasFavoritas = [comida1, comida2, comida3];
 // const comidinhas = {Comida1:comida1, Comida2:comida2, Comida3:comida3}
 // console.table([comidinhas])
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -128,6 +160,13 @@ console.log("_______________________________");
 
 // console.log(`Me chamo ${nome}. Profissao ${profissao} e moro na cidade de: ${cidade}.`)
 // console.table(cadastroPessoal)
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -188,6 +227,13 @@ console.log("_______________________________");
 // console.log("endereço do 3 usuario", listaDeUsuarios[2].endereco);
 // console.log(`nome: ${listaDeUsuarios[0].nome}, Rua: ${listaDeUsuarios[0].endereco.rua}`);
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -235,6 +281,12 @@ console.log("_______________________________");
 // console.log(`Aluno: ${turma[2].nome}, Nota: ${turma[2].notas[1]}`);
 // console.log(`Aluno: ${turma[2].nome}, Nota: ${turma[2].notas[1]}`);
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -274,6 +326,12 @@ console.log("_______________________________");
 // console.table([produto]);
 // console.log(`produto: ${produto.nome} | categoria: ${produto.categoria} | estoque: ${produto.estoque} un.`);
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -289,7 +347,7 @@ console.log("_______________________________");
 // c) Exiba a lista com console.table().
 // d) Exiba somente o nome e preço do 2 medicamento.
 // e) Exiba somente o nome e se está em estoque o 1 medicamento.
-console.log("_______________________________");
+
 
 // const user = {
 //     nome: keyboard.question('digite o nome do medicamento:'),
@@ -310,3 +368,12 @@ console.log("_______________________________");
 
 // console.log(`medicamento 2: ${estoqueFarmacia[1].nome} | preco R$ ${estoqueFarmacia[1].preco}`);
 // console.log(`medicamento 2: ${estoqueFarmacia[0].nome} | preco R$ ${estoqueFarmacia[0].emEstoque}`);
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
+console.log("_______________________________");

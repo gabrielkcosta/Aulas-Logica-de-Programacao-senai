@@ -19,6 +19,13 @@
 // let hobby = "jogar volei";
 // console.log(`meu nome é ${Nome}, tenho ${idade} anos, gosto muito de jogar ${hobby} no tempo livre`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 // ------------------------------------------------------------
@@ -34,6 +41,12 @@ console.log("_______________________________");
 // let temperatura = 39
 // console.log(`Hoje na cidade ${cidade}, está fazendo ${temperatura}°C, muito quente perfeito para não sair de casa e ficar só no ar condicionado`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -55,6 +68,13 @@ console.log("_______________________________");
 // console.log(`eu tenho medo do ${gasparzinho}. e o tipo ${gasparzinho}`)
 // console.log(`${nada}. ${typeof nada}`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 // ------------------------------------------------------------
@@ -71,6 +91,13 @@ console.log("_______________________________");
 // let missao = "trocar pneu"
 // console.log(`olá eu me chamo ${personagem}, tenho ${Idade} anos, e moro ${Cidade}, minha missao nesse mundo belo é ${missao} para salvar os carros de nao andarem e ajudar as pessoas`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 // ------------------------------------------------------------
@@ -85,6 +112,12 @@ console.log("_______________________________");
 // let objetivo = "ser bom no desenvolvimento de sistema"
 // console.log(`meu nome é ${Name} e esse ano pretendo ${objetivo}. tenha paciencia e nunca dessista dos seus sonhos`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -110,6 +143,11 @@ console.log("_______________________________");
 // Digite o número da opção desejada
 // ==========================================`)
 
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");

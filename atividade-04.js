@@ -39,7 +39,12 @@ let Keyboard = require('readline-sync')
 
 // Assim os dados não serão solicitados novamente
 
-
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 console.log("_______________________________");
@@ -63,6 +68,13 @@ console.log("_______________________________");
 // console.log(`retangulo | largura: ${largura} | altura: ${altura} | area: ${area} | perimetro: ${perimetro}`);
 
 // Assim os dados não serão solicitados novamente
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -88,6 +100,13 @@ console.log("_______________________________");
 // console.log(`preco original: R$ ${precoOriginal} | desconto: R$ ${valorDesconto} | preco final: R$ ${precoFinal}`)
 
 // Assim os dados não serão solicitados novamente
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -118,6 +137,12 @@ console.log("_______________________________");
 
 // Assim os dados não serão solicitados novamente
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -151,6 +176,13 @@ console.log("_______________________________");
 
 // Assim os dados não serão solicitados novamente
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 console.log("_______________________________");
 
 
@@ -179,7 +211,14 @@ console.log("_______________________________");
 
 // Assim os dados não serão solicitados novamente
 
-// console.log("_______________________________");
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -204,6 +243,12 @@ console.log("_______________________________");
 
 // Assim os dados não serão solicitados novamente
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -230,6 +275,12 @@ console.log("_______________________________");
 
 // Assim os dados não serão solicitados novamente
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -258,6 +309,12 @@ let idades = [15, 22, 30, 18, 25];
 // console.log(`idade maior : ${Math.max(15, 22, 30, 18, 25)}`);
 // console.log(`idade menor : ${Math.min(15, 22, 30, 18, 25)}`);
  
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -331,5 +388,11 @@ let turma = {
 // let menorPedro = Math.min(turma.aluno3.notas[0], turma.aluno3.notas[1], turma.aluno3.notas[2])
 // console.log(`Pedro Maior nota: ${maiorPedro} | Menor nota: ${menorPedro}`)
 
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 console.log("_______________________________");
