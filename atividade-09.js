@@ -2,6 +2,7 @@
 //   ATIVIDADE 09 – Estruturas de Controle (Repetição - For)
 // ============================================================
 
+let keyboard = require("readline-sync")
 
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Contagem simples
@@ -344,6 +345,49 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let turma = [];
+// let somaMedias = 0;
+
+// for (let i = 1; i <= 3; i++) {
+//     console.log(`--- Cadastro do ${i}º aluno ---`);
+//     let nome = readline.question("Nome: ");
+    
+//     let n1 = parseFloat(readline.question("Nota 1: "));
+//     let n2 = parseFloat(readline.question("Nota 2: "));
+//     let n3 = parseFloat(readline.question("Nota 3: "));
+    
+//     let mediaAluno = (n1 + n2 + n3) / 3;
+    
+//     turma.push({
+//         nome: nome,
+//         nota: mediaAluno.toFixed(1)
+//     });
+
+//     somaMedias += mediaAluno;
+// }
+
+// let mediaTurma = somaMedias / turma.length;
+
+// console.log("\n--- Resultados ---");
+
+// turma.forEach(aluno => {
+//     let nota = parseFloat(aluno.nota);
+//     let situacao = nota >= 7 ? "Aprovado" : (nota >= 5 ? "Recuperação" : "Reprovado");
+    
+//     console.log(`${aluno.nome}: ${aluno.nota} – ${situacao}`);
+// });
+
+// console.log(`\nMédia da turma: ${mediaTurma.toFixed(1)}`);
+
+// console.table(turma);
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
+
 
 
 console.log("_______________________________");
@@ -363,6 +407,45 @@ console.log("_______________________________");
 // f) Exiba o array com console.table().
 
 // → Seu código aqui:
+
+// let qtd = readline.questionInt("Quantos produtos deseja cadastrar? ");
+// let estoque = [];
+
+// for (let i = 0; i < qtd; i++) {
+//     console.log(`\n--- Produto ${i + 1} ---`);
+//     let nome = readline.question("Nome do produto: ");
+//     let preco = readline.questionFloat("Preco: ");
+    
+//     estoque.push({ nome: nome, preco: preco });
+// }
+
+// console.log("\n--- Estoque Cadastrado ---");
+
+// let maisCaro = estoque[0];
+// let maisBarato = estoque[0];
+
+// estoque.forEach(produto => {
+//     console.log(`${produto.nome}: R$ ${produto.preco.toFixed(2)}`);
+
+//     if (produto.preco > maisCaro.preco) {
+//         maisCaro = produto;
+//     }
+//     if (produto.preco < maisBarato.preco) {
+//         maisBarato = produto;
+//     }
+// });
+
+// console.log(`\nProduto mais caro: ${maisCaro.nome} (R$ ${maisCaro.preco.toFixed(2)})`);
+// console.log(`Produto mais barato: ${maisBarato.nome} (R$ ${maisBarato.preco.toFixed(2)})`);
+
+// console.table(estoque);
+
+//      ▲
+//     / \
+//    /___\
+//     | |
+//
+// CÓDIGO ACIMA
 
 
 console.log("_______________________________");
