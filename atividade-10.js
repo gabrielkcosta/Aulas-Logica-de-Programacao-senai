@@ -12,12 +12,12 @@
 
 // → Seu código aqui:
 
-let n = 1;
+// let n = 1;
 
-while (n <= 7) {
-    console.log(n)
-    n++
-}
+// while (n <= 7) {
+//     console.log(n)
+//     n++
+// }
 
 console.log("_______________________________");
 
@@ -31,14 +31,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let regressiva = 10;
+// let regressiva = 10;
 
-while(regressiva >= 0 ) {
-    console.log(regressiva)
-    regressiva--
-}
+// while(regressiva >= 0 ) {
+//     console.log(regressiva)
+//     regressiva--
+// }
 
-console.log("lançamento ON!!!!");
+// console.log("lançamento ON!!!!");
 
 
 console.log("_______________________________");
@@ -53,16 +53,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let w = require('readline-sync')
+// let w = require('readline-sync')
 
-let numero = w.question('Digite um numero entre 1 e 5: ')
+// let numero = w.question('Digite um numero entre 1 e 5: ')
 
-while (numero < 1 || numero > 5) {
-  console.log('Valor fora do intervalo. Tente novamente.')
-  numero = w.question('Digite um numero entre 1 e 5: ')
-}
+// while (numero < 1 || numero > 5) {
+//   console.log('Valor fora do intervalo. Tente novamente.')
+//   numero = w.question('Digite um numero entre 1 e 5: ')
+// }
 
-console.log('Voce escolheu: ' + numero)
+// console.log('Voce escolheu: ' + numero)
 
 
 console.log("_______________________________");
@@ -78,26 +78,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let soma4 = 0
-let contador4 = 0
-let num
-let lista = []
+// let soma4 = 0
+// let contador4 = 0
+// let num
+// let lista = []
 
-while (true) {
-  num = keyboard.questionInt('Digite um numero (ou 0 para sair): ')
+// while (true) {
+//   num = w.questionInt('Digite um numero (ou 0 para sair): ')
   
-  if (num === 0) {
-    break
-  }
+//   if (num === 0) {
+//     break
+//   }
   
-  soma4 += num
-  contador4++
-  lista.push(num)
-}
+//   soma4 += num
+//   contador4++
+//   lista.push(num)
+// }
 
-console.log(`Soma: ${soma4}`)
-console.log(`Quantidade: ${contador4}`)
-console.log(`Numeros digitados: ${lista}`)
+// console.log(`Soma: ${soma4}`)
+// console.log(`Quantidade: ${contador4}`)
+// console.log(`Numeros digitados: ${lista}`)
 
 
 
@@ -114,27 +114,27 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let soma5 = 0
-let contador5 = 0
+// let soma5 = 0
+// let contador5 = 0
 
-while (true) {
-  let nota = keyboard.questionFloat('Digite uma nota de 0 a 10 (ou -1 para sair): ')
+// while (true) {
+//   let nota = w.questionFloat('Digite uma nota de 0 a 10 (ou -1 para sair): ')
 
-  if (nota === -1) {
-    break
-  } else if (nota < 0 || nota > 10) {
-    console.log('Nota invalida.')
-  } else {
-    soma5 += nota
-    contador5++
-  }
-}
+//   if (nota === -1) {
+//     break
+//   } else if (nota < 0 || nota > 10) {
+//     console.log('Nota invalida.')
+//   } else {
+//     soma5 += nota
+//     contador5++
+//   }
+// }
 
-if (contador5 > 0) {
-  console.log(`A media das notas e: ${soma5 / contador5}`)
-} else {
-  console.log('Nenhuma nota valida foi inserida.')
-}
+// if (contador5 > 0) {
+//   console.log(`A media das notas e: ${soma5 / contador5}`)
+// } else {
+//   console.log('Nenhuma nota valida foi inserida.')
+// }
 
 
 console.log("_______________________________");
@@ -152,30 +152,30 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let opcao
+// let opcao
 
-do {
-  console.log('--- MENU ---')
-  console.log('1 - Exibir hora atual')
-  console.log('2 - Exibir data atual')
-  console.log('0 - Sair')
+// do {
+//   console.log('--- MENU ---')
+//   console.log('1 - Exibir hora atual')
+//   console.log('2 - Exibir data atual')
+//   console.log('0 - Sair')
   
-  opcao = keyboard.questionInt('Escolha uma opcao: ')
+//   opcao = w.questionInt('Escolha uma opcao: ')
 
-  switch (opcao) {
-    case 1:
-      console.log('Hora atual: ' + new Date().toLocaleTimeString())
-      break
-    case 2:
-      console.log('Data atual: ' + new Date().toLocaleDateString())
-      break
-    case 0:
-      console.log('Saindo...')
-      break
-    default:
-      console.log('Opcao invalida.')
-  }
-} while (opcao > 0)
+//   switch (opcao) {
+//     case 1:
+//       console.log('Hora atual: ' + new Date().toLocaleTimeString())
+//       break
+//     case 2:
+//       console.log('Data atual: ' + new Date().toLocaleDateString())
+//       break
+//     case 0:
+//       console.log('Saindo...')
+//       break
+//     default:
+//       console.log('Opcao invalida.')
+//   }
+// } while (opcao > 0)
 
 
 
@@ -198,23 +198,23 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let secreto = Math.floor(Math.random() * 50) + 1
-let nome = keyboard.question('Nome do jogador: ')
-let tentativas = 0
+// let secreto = Math.floor(Math.random() * 50) + 1
+// let nome = w.question('Nome do jogador: ')
+// let tentativas = 0
 
-while (true) {
-  let chute = keyboard.questionInt('Palpite: ')
-  tentativas++
+// while (true) {
+//   let chute = w.questionInt('Palpite: ')
+//   tentativas++
 
-  if (chute === secreto) {
-    console.log(nome + ' acertou apos ' + tentativas + ' tentativa(s)! O numero era ' + secreto)
-    break
-  } else if (chute > secreto) {
-    console.log('Muito alto! Tente menor.')
-  } else {
-    console.log('Muito baixo! Tente maior.')
-  }
-}
+//   if (chute === secreto) {
+//     console.log(nome + ' acertou apos ' + tentativas + ' tentativa(s)! O numero era ' + secreto)
+//     break
+//   } else if (chute > secreto) {
+//     console.log('Muito alto! Tente menor.')
+//   } else {
+//     console.log('Muito baixo! Tente maior.')
+//   }
+// }
 
 
 console.log("_______________________________");
@@ -229,13 +229,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let numerO = keyboard.questionInt('Digite um numero: ')
-let i = 1
+// let numerO = w.questionInt('Digite um numero: ')
+// let i = 1
 
-while (i <= 10) {
-  console.log(`${numerO} x ${i} = ${numerO * i}`)
-  i++
-}
+// while (i <= 10) {
+//   console.log(`${numerO} x ${i} = ${numerO * i}`)
+//   i++
+// }
 
 
 console.log("_______________________________");
@@ -254,24 +254,24 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let saldo = 1000
-let rodada = 0
+// let saldo = 1000
+// let rodada = 0
 
-while (saldo > 0 && rodada < 10) {
-  rodada++
-  let saque = Math.floor(Math.random() * (200 - 50 + 1)) + 50
+// while (saldo > 0 && rodada < 10) {
+//   rodada++
+//   let saque = Math.floor(Math.random() * (200 - 50 + 1)) + 50
   
-  if (saque > saldo) {
-    console.log('Saldo insuficiente. Fim!')
-    break
-  } else {
-    saldo -= saque
-    console.log(`Rodada ${rodada}: sacou R$ ${saque} | Novo saldo: R$ ${saldo}`)
-  }
-}
+//   if (saque > saldo) {
+//     console.log('Saldo insuficiente. Fim!')
+//     break
+//   } else {
+//     saldo -= saque
+//     console.log(`Rodada ${rodada}: sacou R$ ${saque} | Novo saldo: R$ ${saldo}`)
+//   }
+// }
 
-console.log(`Saldo restante: R$ ${saldo}`)
-console.log(`Total de rodadas: ${rodada}`)
+// console.log(`Saldo restante: R$ ${saldo}`)
+// console.log(`Total de rodadas: ${rodada}`)
 
 console.log("_______________________________");
 
@@ -290,19 +290,19 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let contatos = []
-let continuar
+// let contatos = []
+// let continuar
 
-do {
-  let nomeC = keyboard.question('Nome do contato: ')
-  let telefoneC = keyboard.question('Telefone do contato: ')
+// do {
+//   let nomeC = w.question('Nome do contato: ')
+//   let telefoneC = w.question('Telefone do contato: ')
   
-  contatos.push({ nome: nomeC, telefone: telefoneC })
+//   contatos.push({ nome: nomeC, telefone: telefoneC })
   
-  continuar = keyboard.keyInYN('Adicionar outro contato? ')
-} while (continuar === true)
+//   continuar = w.keyInYN('Adicionar outro contato? ')
+// } while (continuar === true)
 
-console.table(contatos)
-console.log(`Total de contatos cadastrados: ${contatos.length}`)
+// console.table(contatos)
+// console.log(`Total de contatos cadastrados: ${contatos.length}`)
 
 console.log("_______________________________");
