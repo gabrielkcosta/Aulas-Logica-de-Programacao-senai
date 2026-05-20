@@ -165,11 +165,11 @@ console.log("_______________________________");
 // let estudandoJS = true
 // console.log(`olá! Meu nome é ${MeuNome}, tenho ${Idade} anos, moro em ${Cidade},meço ${Altura} e estou estudando Javascript: ${estudandoJS}.`)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+console.log(`
+        __
+    ___( o)>
+    \\ <_. )
+     \`---'
+`);
 
 console.log("_______________________________");

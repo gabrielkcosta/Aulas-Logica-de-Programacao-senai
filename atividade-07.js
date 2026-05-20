@@ -410,12 +410,10 @@ console.log("_______________________________");
 
 // console.log(`${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
-
-
+console.log(`
+        __
+    ___( o)>
+    \\ <_. )
+     \`---'
+`);
 console.log("_______________________________");

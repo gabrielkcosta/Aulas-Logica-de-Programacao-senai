@@ -198,11 +198,11 @@ console.log("_______________________________");
 // console.log(listaDeAlunos[1].nome, listaDeAlunos[1].notas)
 // console.log(listaDeAlunos[2].nome, listaDeAlunos[2].notas)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+console.log(`
+        __
+    ___( o)>
+    \\ <_. )
+     \`---'
+`);
 
 console.log("_______________________________");

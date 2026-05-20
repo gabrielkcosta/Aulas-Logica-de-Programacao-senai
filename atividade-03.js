@@ -369,11 +369,10 @@ console.log("_______________________________");
 // console.log(`medicamento 2: ${estoqueFarmacia[1].nome} | preco R$ ${estoqueFarmacia[1].preco}`);
 // console.log(`medicamento 2: ${estoqueFarmacia[0].nome} | preco R$ ${estoqueFarmacia[0].emEstoque}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
-
+console.log(`
+        __
+    ___( o)>
+    \\ <_. )
+     \`---'
+`);
 console.log("_______________________________");

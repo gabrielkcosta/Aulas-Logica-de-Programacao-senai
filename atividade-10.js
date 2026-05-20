@@ -305,4 +305,11 @@ console.log("_______________________________");
 // console.table(contatos)
 // console.log(`Total de contatos cadastrados: ${contatos.length}`)
 
+console.log(`
+        __
+    ___( o)>
+    \\ <_. )
+     \`---'
+`);
+
 console.log("_______________________________");

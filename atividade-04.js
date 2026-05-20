@@ -388,11 +388,11 @@ let turma = {
 // let menorPedro = Math.min(turma.aluno3.notas[0], turma.aluno3.notas[1], turma.aluno3.notas[2])
 // console.log(`Pedro Maior nota: ${maiorPedro} | Menor nota: ${menorPedro}`)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+console.log(`
+        __
+    ___( o)>
+    \\ <_. )
+     \`---'
+`);
 
 console.log("_______________________________");

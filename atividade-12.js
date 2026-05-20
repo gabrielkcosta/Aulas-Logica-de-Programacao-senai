@@ -182,23 +182,23 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-console.log(`alunos :  Ana | Bruno | Carla | Diego | Eva | Jorgin | Pedro | Gabriel | etc..`);
+// console.log(`alunos :  Ana | Bruno | Carla | Diego | Eva | Jorgin | Pedro | Gabriel | etc..`);
 
-const procurado = keyboard.question("qual aluno voce esta procurando: ")
-let achouNoIndice = -1;
+// const procurado = keyboard.question("qual aluno voce esta procurando: ")
+// let achouNoIndice = -1;
 
-for (let i = 0; i < alunosReprovados.length; i++) {
-    if (alunosReprovados[i] === procurado) {
-      achouNoIndice = i;
-      break;
-    }
-  }
+// for (let i = 0; i < alunosReprovados.length; i++) {
+//     if (alunosReprovados[i] === procurado) {
+//       achouNoIndice = i;
+//       break;
+//     }
+//   }
   
-  if (achouNoIndice === -1) {
-    console.log(`"${procurado}" não está na lista de Reprovados.`);
-  } else {
-    console.log(`"${procurado}" está no índice ${achouNoIndice}.`);
-  }
+//   if (achouNoIndice === -1) {
+//     console.log(`"${procurado}" não está na lista de Reprovados.`);
+//   } else {
+//     console.log(`"${procurado}" está no índice ${achouNoIndice}.`);
+//   }
   
 
 console.log("_______________________________");
@@ -222,6 +222,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let totalPaginas = 0;
+let livroMaisPaginas = livros[0];
+
+for(let i = 0; i < livros.length; i++){
+      totalPaginas += livros[i].paginas
+    }
+
+let mediaPaginas = totalPaginas / livros.length;
+
+console.log("Total de páginas:", totalPaginas);
+console.log("Média de páginas:", mediaPaginas);
 
 console.log("_______________________________");
 
@@ -239,6 +250,20 @@ console.log("_______________________________");
 //    "Adultos (<qtd>): <adultos>"
 
 // → Seu código aqui:
+
+const menores = [];
+const adultos = [];
+
+for (let i = 0; i < idades.length; i++) {
+  if (idades[i] < 18) {
+    menores.push(idades[i]);
+  } else {
+    adultos.push(idades[i]);
+  }
+}
+
+console.log(`Menores (${menores.length}): ${menores}`);
+console.log(`Adultos (${adultos.length}): ${adultos}`);
 
 
 console.log("_______________________________");
@@ -260,5 +285,85 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let notas = [];
+let opcao;
 
+do {
+  console.log(`\n--- MENU ---`);
+  console.log(`1 - Adicionar nota`);
+  console.log(`2 - Listar notas`);
+  console.log(`3 - Estatísticas`);
+  console.log(`4 - Remover última`);
+  console.log(`5 - Limpar todas`);
+  console.log(`0 - Sair`);
+  
+  opcao = keyboard.questionInt(`Escolha uma opcao: `);
+
+  switch (opcao) {
+    case 1:
+      let novaNota = keyboard.questionFloat(`Digite a nota: `);
+      notas.push(novaNota);
+      console.log(`Nota ${novaNota} adicionada com sucesso!`);
+      break;
+
+    case 2:
+      if (notas.length === 0) {
+        console.log(`Nenhuma nota registrada.`);
+      } else {
+        console.log(`Notas: ${notas.join(", ")}`);
+      }
+      break;
+
+    case 3:
+      if (notas.length === 0) {
+        console.log(`Nenhuma nota registrada para calcular estatisticas.`);
+      } else {
+        let soma = 0;
+        let maior = notas[0];
+        let menor = notas[0];
+
+        for (let i = 0; i < notas.length; i++) {
+          soma += notas[i];
+          if (notas[i] > maior) {
+            maior = notas[i];
+          }
+          if (notas[i] < menor) {
+            menor = notas[i];
+          }
+        }
+
+        let media = soma / notas.length;
+        console.log(`Média: ${media} | Maior: ${maior} | Menor: ${menor}`);
+      }
+      break;
+
+    case 4:
+      if (notas.length > 0) {
+        notas.pop();
+        console.log(`Última nota removida.`);
+      } else {
+        console.log(`Não há notas para remover.`);
+      }
+      break;
+
+    case 5:
+      notas = [];
+      console.log(`Todas as notas foram apagadas.`);
+      break;
+
+    case 0:
+      console.log(`Saindo...`);
+      break;
+  }
+
+} while (opcao !== 0); 
+
+console.log(`Encerrando. Total de notas registradas: ${notas.length}`);
+
+console.log(`
+        __
+    ___( o)>
+    \\ <_. )
+     \`---'
+`);
 console.log("_______________________________");

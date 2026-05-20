@@ -427,12 +427,12 @@ console.log("_______________________________");
 
 // console.log(loginValido ? "Login realizado com sucesso!" : "Usuario ou senha incorretos.");
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+console.log(`
+        __
+    ___( o)>
+    \\ <_. )
+     \`---'
+`);
 
 
 

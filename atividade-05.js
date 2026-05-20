@@ -330,12 +330,12 @@ console.log("_______________________________");
 // console.log(`Aluno com a segunda maior nota: ${alunos[0].notas2 > alunos[1].notas2 ? alunos[0].nome : alunos[1].nome}`);
 // console.log(`Aluno com a terceira maior nota: ${alunos[0].notas3 > alunos[1].notas3 ? alunos[0].nome : alunos[1].nome}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+console.log(`
+        __
+    ___( o)>
+    \\ <_. )
+     \`---'
+`);
 
 
 console.log("_______________________________");
