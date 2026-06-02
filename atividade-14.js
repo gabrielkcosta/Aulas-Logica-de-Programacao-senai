@@ -26,14 +26,14 @@ log()
 
 // → Seu código aqui:
 
-// function saudacao() {
-//     console.log("Olá!");
-//     console.log("Bem-vindo(a) ao curso de JavaScript.");
-//     console.log("Bons estudos!!");
-// }
+function saudacao() {
+    console.log("Olá!");
+    console.log("Bem-vindo(a) ao curso de JavaScript.");
+    console.log("Bons estudos!!");
+}
 
-// saudacao();
-// saudacao();
+saudacao();
+saudacao();
 
 console.log("_______________________________");
 
@@ -87,36 +87,36 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let nsei = [];
 
 
-// let keyboard = require("readline-sync");
+function meusDados() {
+       let nsei2 = 
+            {
+                nome: keyboard.question("nome: "),
+                idade: keyboard.questionInt("idade: "),
+                cidade: keyboard.question("cidade: ")
+            }
+        linha()
+        nsei.push(nsei2)
+    }
 
-// let nsei = [];
+function exibirDados() {
+    for(let i = 0; i < nsei.length;i++){
+       log("---------------------------------")
+       log("            BEM VINDO(a)          ")
+       log(`Nome ${nsei[i].nome}`)
+       log(`Idade  ${nsei[i].idade}`)
+       log(`Cidade ${nsei[i].cidade}`)
+       log("----------------------------------")
+    }
+}
 
+for(let i = 0; i < 2; i++) {
+    meusDados();
+}
 
-// function meusDados() {
-//     for(let i = 0; i < 2; i++){
-//         nsei.push(
-//             {
-//                 nome: keyboard.question("nome: "),
-//                 idade: keyboard.questionInt("idade: "),
-//                 cidade: keyboard.question("cidade: ")
-//             }
-//         )
-//         linha();
-//     }
-// }
-
-// function exibirDados() {
-//     for(let i = 0; i < 2;i++){
-//         linha();
-//         console.log(nsei[i]);
-//         linha();
-//     }
-// }
-
-// meusDados();
-// exibirDados();
+exibirDados();
 
 
 console.log("_______________________________");
@@ -204,18 +204,18 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// function converterTemperatura() {
-//     let pergunta = keyboard.question("digite uma temperatura em celsius: ")
-//     let Fahrenheit = pergunta * 1.8 + 32
+function converterTemperatura() {
+    let pergunta = keyboard.question("digite uma temperatura em celsius: ")
+    let Fahrenheit = pergunta * 1.8 + 32
     
-//     log(`${pergunta}°C equivalem a ${Fahrenheit.toFixed(2)}°F`)
-// }
+    log(`${pergunta}°C equivalem a ${Fahrenheit.toFixed(2)}°F`)
+}
 
-// converterTemperatura()
-// linha()
-// converterTemperatura()
-// linha()
-// converterTemperatura()
+converterTemperatura()
+linha()
+converterTemperatura()
+linha()
+converterTemperatura()
 
 console.log("_______________________________");
 
@@ -260,65 +260,65 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// function limparTela() {
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-//     log("")
-// }
+function limparTela() {
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+    log("")
+}
 
-// function exibirBanner() {
-//     log("---------------------------------");
-//     log("           BOAS VINDAS           ");
-//     log("---------------------------------");
-// }
+function exibirBanner() {
+    log("---------------------------------");
+    log("           BOAS VINDAS           ");
+    log("---------------------------------");
+}
 
-// let Nome = keyboard.question("digite seu nome: ")
+let Nome = keyboard.question("digite seu nome: ")
 
-// function pedirNome() {
-//     let nome = Nome
+function pedirNome() {
+    let nome = Nome
 
-//     log(`          Olá! ${nome}`)
-// }
+    log(`          Olá! ${nome}`)
+}
 
-// function rodape() {log(`\n           desenvolvido por "Gabriel Costa"`)}
+function rodape() {log(`\n           desenvolvido por "Gabriel Costa"`)}
 
-// function FuncaoPrincipal() {
-//     limparTela()
-//     exibirBanner()
-//     pedirNome()
-//     rodape()
-//     linha()
-// }
+function FuncaoPrincipal() {
+    limparTela()
+    exibirBanner()
+    pedirNome()
+    rodape()
+    linha()
+}
 
-// FuncaoPrincipal()
+FuncaoPrincipal()
 
 console.log("_______________________________");
 
@@ -341,32 +341,32 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 function somar() {
-    let num1 = keyboard.questionInt("primeiro numero: ")
-    let num2 = keyboard.questionInt("segundo numero: ")
+    let num1 = keyboard.questionFloat("primeiro numero: ")
+    let num2 = keyboard.questionFloat("segundo numero: ")
 
     resultado = num1 + num2
     log(`[${num1}] + [${num2}] = ${resultado.toFixed(2)} `)
 }
 
 function subtração() {
-    let num1 = keyboard.questionInt("primeiro numero: ")
-    let num2 = keyboard.questionInt("segundo numero: ")
+    let num1 = keyboard.questionFloat("primeiro numero: ")
+    let num2 = keyboard.questionFloat("segundo numero: ")
 
-    resultado = num1 + num2
+    resultado = num1 - num2
     log(`[${num1}] - [${num2}] = ${resultado.toFixed(2)} `)
 }
 
 function multiplicação() {
-    let num1 = keyboard.questionInt("primeiro numero: ")
-    let num2 = keyboard.questionInt("segundo numero: ")
+    let num1 = keyboard.questionFloat("primeiro numero: ")
+    let num2 = keyboard.questionFloat("segundo numero: ")
 
     resultado = num1 * num2
     log(`[${num1}] X [${num2}] = ${resultado.toFixed(2)} `)
 }
 
-function opcaoDividir() {
-    let num1 = keyboard.questionInt("Primeiro numero: ")
-    let num2 = keyboard.questionInt("Segundo numero: ")
+function Dividir() {
+    let num1 = keyboard.questionFloat("Primeiro numero: ")
+    let num2 = keyboard.questionFloat("Segundo numero: ")
 
     if (num2 === 0) {
         log("Erro: Não é possível dividir por zero!")
@@ -392,16 +392,16 @@ do {
 
     switch (opcao) {
         case 1:
-            opcaoSomar()
+            somar()
             break
         case 2:
-            opcaoSubtrair()
+            subtração()
             break
         case 3:
-            opcaoMultiplicar()
+            multiplicação()
             break
         case 4:
-            opcaoDividir()
+            Dividir()
             break
         case 0:
             log("Saindo do sistema...")
