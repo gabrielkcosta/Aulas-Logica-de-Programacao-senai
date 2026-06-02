@@ -7,6 +7,13 @@
 //
 // ============================================================
 
+let keyboard = require("readline-sync")
+
+function log(mensagem) {
+    console.log(mensagem);
+}
+
+log()
 
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Primeira função
@@ -157,6 +164,31 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+function tabuadaDoCinco() {
+
+
+console.log(`--- Tabuada do ${5} ---`);
+
+for (let i = 1; i <= 10; i++) {
+    let resultado = 5 * i;
+    console.log(`${5} x ${i} = ${resultado}`);
+    }   
+}
+
+
+function tabuadaDoSete() {
+
+console.log(`--- Tabuada do ${7} ---`);
+
+for (let i = 1; i <= 10; i++) {
+    let resultado = 7 * i;
+    console.log(`${7} x ${i} = ${resultado}`);
+    }   
+}
+
+tabuadaDoCinco()
+linha()
+tabuadaDoSete()
 
 console.log("_______________________________");
 
@@ -172,6 +204,18 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function converterTemperatura() {
+//     let pergunta = keyboard.question("digite uma temperatura em celsius: ")
+//     let Fahrenheit = pergunta * 1.8 + 32
+    
+//     log(`${pergunta}°C equivalem a ${Fahrenheit.toFixed(2)}°F`)
+// }
+
+// converterTemperatura()
+// linha()
+// converterTemperatura()
+// linha()
+// converterTemperatura()
 
 console.log("_______________________________");
 
@@ -187,6 +231,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+function listarFilmes() {
+    for (let i = 0; i < filmes.length; i++) {
+     log(`Índice ${i+1} = ${filmes[i]}`);
+   }
+}
+
+listarFilmes()
+linha()
+listarFilmes()
 
 console.log("_______________________________");
 
@@ -207,6 +260,65 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function limparTela() {
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+//     log("")
+// }
+
+// function exibirBanner() {
+//     log("---------------------------------");
+//     log("           BOAS VINDAS           ");
+//     log("---------------------------------");
+// }
+
+// let Nome = keyboard.question("digite seu nome: ")
+
+// function pedirNome() {
+//     let nome = Nome
+
+//     log(`          Olá! ${nome}`)
+// }
+
+// function rodape() {log(`\n           desenvolvido por "Gabriel Costa"`)}
+
+// function FuncaoPrincipal() {
+//     limparTela()
+//     exibirBanner()
+//     pedirNome()
+//     rodape()
+//     linha()
+// }
+
+// FuncaoPrincipal()
 
 console.log("_______________________________");
 
@@ -227,6 +339,78 @@ console.log("_______________________________");
 //    correspondente em cada case. Encerre quando o usuário digitar 0.
 
 // → Seu código aqui:
+
+function somar() {
+    let num1 = keyboard.questionInt("primeiro numero: ")
+    let num2 = keyboard.questionInt("segundo numero: ")
+
+    resultado = num1 + num2
+    log(`[${num1}] + [${num2}] = ${resultado.toFixed(2)} `)
+}
+
+function subtração() {
+    let num1 = keyboard.questionInt("primeiro numero: ")
+    let num2 = keyboard.questionInt("segundo numero: ")
+
+    resultado = num1 + num2
+    log(`[${num1}] - [${num2}] = ${resultado.toFixed(2)} `)
+}
+
+function multiplicação() {
+    let num1 = keyboard.questionInt("primeiro numero: ")
+    let num2 = keyboard.questionInt("segundo numero: ")
+
+    resultado = num1 * num2
+    log(`[${num1}] X [${num2}] = ${resultado.toFixed(2)} `)
+}
+
+function opcaoDividir() {
+    let num1 = keyboard.questionInt("Primeiro numero: ")
+    let num2 = keyboard.questionInt("Segundo numero: ")
+
+    if (num2 === 0) {
+        log("Erro: Não é possível dividir por zero!")
+    } else {
+        let resultado = num1 / num2
+        log(`[${num1}] % [${num2}] = ${resultado.toFixed(2)}`)
+    }
+}
+
+function exibirMenu() {
+    log("\n----------- MENU CALCULADORA -----------")
+    log("1. Somar")
+    log("2. Subtrair")
+    log("3. Multiplicar")
+    log("4. Dividir")
+    log("0. Sair")
+    log("----------------------------------------")
+}
+
+do {
+    exibirMenu()
+    opcao = keyboard.questionInt("Escolha uma opcao: ")
+
+    switch (opcao) {
+        case 1:
+            opcaoSomar()
+            break
+        case 2:
+            opcaoSubtrair()
+            break
+        case 3:
+            opcaoMultiplicar()
+            break
+        case 4:
+            opcaoDividir()
+            break
+        case 0:
+            log("Saindo do sistema...")
+            break
+        default:
+            log("Opcao invalida! Tente novamente.")
+    }
+
+} while (opcao !== 0)
 
 
 console.log("_______________________________");

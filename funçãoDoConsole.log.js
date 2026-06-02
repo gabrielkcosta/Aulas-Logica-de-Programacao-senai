@@ -1,5 +1,8 @@
-function log(mensagem) {
-    console.log(mensagem);
-}
+// function log(mensagem) {
+//     console.log(mensagem);
+// }
 
-log()
+// log()
+
+
+// const log = console.log
