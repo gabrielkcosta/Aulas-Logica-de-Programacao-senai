@@ -8,7 +8,11 @@
 //
 // ============================================================
 
-function log(mensagem) {console.log(mensagem)};
+function log(mensagem) { console.log(mensagem) };
+let keyboard = require("readline-sync")
+function linha() {
+    log("-----------------------------")
+}
 
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Função com 1 parâmetro
@@ -18,11 +22,11 @@ function log(mensagem) {console.log(mensagem)};
 
 // → Seu código aqui:
 
-function quadrado(n) {return n ** 2}
+// function quadrado(n) { return n ** 2 }
 
-log(quadrado(3))
-log(quadrado(7))
-log(quadrado(10))
+// log(quadrado(3))
+// log(quadrado(7))
+// log(quadrado(10))
 
 console.log("_______________________________");
 
@@ -37,9 +41,19 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-function somar(a,b) {
-    
-}
+// function somar(a, b) { return a + b; }
+// function subtrair(a, b) { return a - b; }
+// function multiplicar(a, b) { return a * b; }
+// function dividir(a, b) {
+//     if (b === 0) return "Erro: divisão por zero";
+//     return a / b;
+// }
+
+// log(somar(10, 5));
+// log(subtrair(10, 5));
+// log(multiplicar(10, 5));
+// log(dividir(10, 5));
+// log(dividir(10, 0));
 
 console.log("_______________________________");
 
@@ -55,6 +69,34 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function ehPar(n) {
+//     if (n % 2 === 0) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// function ehMaiorDeIdade(m) {
+//     if (m >= 18) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// function vogal(a) {
+//     if (a = ["a", "e", "i", "o", "u" && "A", "E", "I", "O", "U",]) {
+//         return true
+//     }
+//     return false
+// }
+
+// log(ehPar(2));
+// log(ehPar(3));
+// linha()
+// log(ehMaiorDeIdade(18));
+// log(ehMaiorDeIdade(17));
+// linha()
+// log(vogal("A"))
 
 console.log("_______________________________");
 
@@ -74,6 +116,32 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function classificarImc(imc) {
+//     if(imc < 18.5) return "Abaixo do peso";
+//     if(imc < 25) return "Peso normal";
+//     if(imc < 30) return "Sobrepeso";
+//     if(imc > 50) return "morreu ja ta só a banha";
+
+//     return "Obesidade";
+// }
+
+// const altura = keyboard.questionFloat("Sua altura (ex: 1.75): ");
+// const peso = keyboard.questionFloat("Seu peso (ex: 70): ");
+
+// function calcularImc(peso, altura) {
+//     return peso / (altura * altura);
+// }
+
+// function exibirResultado() {
+//     const valorImc = calcularImc(peso, altura);
+
+//     const classificacao = classificarImc(valorImc);
+
+//     log(`Seu peso é [${peso}], Sua altura é [${altura}], Seu Imc é [${valorImc.toFixed(2)}] - Classificação: ${classificacao}`);
+// }
+
+// exibirResultado();
+
 
 console.log("_______________________________");
 
@@ -91,6 +159,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function precoComDesconto(valor, desconto = 10) {
+//     const valorDoDesconto = (valor * desconto) / 100;
+//     return valor - valorDoDesconto;
+// }
+
+
+// log(`Teste 1: R$ ${precoComDesconto(100).toFixed(2)}`);
+
+// log(`Teste 2: R$ ${precoComDesconto(100, 25).toFixed(2)}`);
+
+// log(`Teste 3: R$ ${precoComDesconto(250, 5).toFixed(2)}`);
 
 console.log("_______________________________");
 
@@ -103,9 +182,49 @@ console.log("_______________________________");
 // c) Crie 'maiorDoVetor(vet)' que retorna o maior valor de um vetor.
 // d) Crie 'menorDoVetor(vet)' que retorna o menor valor de um vetor.
 // e) Teste com:
-      numeros = [12, 7, 25, 3, 18, 9, 31, 14];
+numeros = [12, 7, 25, 3, 18, 9, 31, 14];
 
 // → Seu código aqui:
+
+// function somarVetor(vet) {
+//     let soma = 0;
+//     for (let numero of vet) {
+//         soma += numero;
+//     }
+//     return soma;
+// }
+
+// function mediaVetor(vet) {
+//     return somarVetor(vet) / vet.length;
+// }
+
+// function maiorDoVetor(vet) {
+//     let maior = vet[0];
+
+//     for (let numero of vet) {
+//         if (numero > maior) {
+//             maior = numero;
+//         }
+//         return maior;
+//     }
+// }
+
+//     function menorDoVetor(vet) {
+//         let menor = vet[0];
+
+//         for (let numero of vet) {
+//             if (numero < menor) {
+//                 menor = numero;
+//             }
+//             return menor;
+//         }
+// }
+
+// log(`Vetor analisado: [${numeros}]`);
+// log(`Soma dos valores: ${somarVetor(numeros)}`);
+// log(`Média dos valores: ${mediaVetor(numeros).toFixed(2)}`);
+// log(`Maior valor: ${maiorDoVetor(numeros)}`);
+// log(`Menor valor: ${menorDoVetor(numeros)}`);
 
 
 console.log("_______________________________");
@@ -121,6 +240,31 @@ console.log("_______________________________");
 // c) Crie 3 alunos chamando a função e exiba-os com console.table([a1, a2, a3]).
 
 // → Seu código aqui:
+
+// function verificarSituacao(nota) {
+//     if (nota >= 7) {
+//         return "Aprovado";
+//     } else {
+//         return "Reprovado";
+//     }
+    
+// }
+
+// function criarAluno(nome, idade, nota) {
+//     return {
+//         nome: nome,
+//         idade: idade,
+//         nota: nota,
+//         situacao: verificarSituacao(nota)
+//     }
+// }
+
+// const a1 = criarAluno("Lucas", 16, 8.5);
+// const a2 = criarAluno("Mariana", 17, 5.0);
+// const a3 = criarAluno("Rafael", 15, 7.0);
+
+// console.table([a1, a2, a3]);
+
 
 
 console.log("_______________________________");
@@ -138,5 +282,35 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function gerarPares(inicio, fim) {
+//     const vetorPares = [];
+    
+//     for (let i = inicio; i <= fim; i++) {
+//       if (i % 2 === 0) {
+//         vetorPares.push(i);
+//       }
+//     }
+    
+//     return vetorPares;
+//   }
+  
+//   const paresAte20 = gerarPares(1, 20);
+//   console.log("Pares de 1 a 20:", paresAte20);
+  
+//   function filtrarMaioresQue(vet, limite) {
+//     const vetorFiltrado = [];
+    
+//     for (let i = 0; i < vet.length; i++) {
+//       if (vet[i] > limite) {
+//         vetorFiltrado.push(vet[i]);
+//       }
+//     }
+    
+//     return vetorFiltrado;
+//   }
+  
+//   const paresAte50 = gerarPares(1, 50);
+//   const maioresQue30 = filtrarMaioresQue(paresAte50, 30);
+//   console.log("Pares de 1 a 50 (maiores que 30):", maioresQue30);
 
 console.log("_______________________________");
