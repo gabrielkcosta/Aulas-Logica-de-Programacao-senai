@@ -297,7 +297,6 @@ function maiorSalario(lista) {
     return maior;
 }
 
-// c) Menu do Banco de Funcionários
 let opcao4;
 do {
     console.log("\n--- SISTEMA DE GESTÃO DE FUNCIONÁRIOS ---");
