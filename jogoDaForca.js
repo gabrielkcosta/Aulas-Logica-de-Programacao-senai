@@ -11,21 +11,21 @@ boasVindas();
 
 const palavrasForca = [
     // Animais
-    "cachorro", "gato", "elefante", "girafa", "leão",
+    "cachorro", "gato", "elefante", "girafa", "leao",
     "tigre", "macaco", "urso", "coelho", "pinguim",
     "jacare", "tartaruga", "borboleta", "cavalo", "ovelha",
-    "camelo", "rinoceronte", "hipopotamo", "tubarão", "polvo",
+    "camelo", "rinoceronte", "hipopotamo", "tubarao", "polvo",
 
     // Frutas
     "maca", "banana", "laranja", "uva", "morango",
-    "abacaxi", "melancia", "mamão", "pera", "melão",
+    "abacaxi", "melancia", "mamao", "pera", "melao",
     "kiwi", "manga", "cereja", "goiaba", "amora",
     "framboesa", "maracuja", "pêssego", "ameixa", "figo",
 
     // Objetos
     "computador", "telefone", "caderno", "caneta", "cadeira",
     "mesa", "janela", "porta", "relogio", "espelho",
-    "geladeira", "fogão", "televisao", "cama", "travesseiro",
+    "geladeira", "fogao", "televisao", "cama", "travesseiro",
     "mochila", "sapato", "óculos", "tesoura", "garrafa",
 
     // Profissões
@@ -35,7 +35,7 @@ const palavrasForca = [
     "pintor", "motorista", "cozinheiro", "fazendeiro", "piloto",
 
     // Países
-    "brasil", "argentina", "canada", "japao", "austrália",
+    "brasil", "argentina", "canada", "japao", "australia",
     "alemanha", "franca", "italia", "espanha", "mexico",
     "portugal", "inglaterra", "china", "India", "russia",
     "egito", "marrocos", "peru", "chile", "colombia"
