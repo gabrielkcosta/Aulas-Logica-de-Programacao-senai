@@ -30,11 +30,11 @@
 //logado = boolean
 //Excluir Cadastro;
 
-let Keyboard = require("readline-sync");
+const Keyboard = require("readline-sync");
 
 let contas = []; 
 
-function criarCadastroBase(){
+function criarCadastroBase() {
     return {
         nomeCompleto: null,
         senha: null,
@@ -55,10 +55,10 @@ function criarCadastroBase(){
 }
 
 // Controla o fluxo de cadastro de novos clientes
-function conta(){
-    const pergunta = Keyboard.keyInYN('Deseja criar uma conta? (Pressione Nao se ja tiver login): ');
+function conta() {
+    const pergunta = Keyboard.keyInYN('Deseja criar uma conta? (Pressione N se ja tiver login): ');
 
-    if(pergunta === true){
+    if (pergunta === true) {
         const novoUsuario = criarCadastroBase();
         const nomeDigitado = Keyboard.question("Digite seu nome completo: ");
         let nomeJaExiste = false; 
@@ -79,7 +79,10 @@ function conta(){
 
         // Preenchimento dos dados do novo usuário
         novoUsuario.nomeCompleto = nomeDigitado;
-        novoUsuario.senha = Keyboard.question("Crie uma senha: "); 
+        
+        // MÁSCARA ADICIONADA AQUI: esconde a senha ao digitar
+        novoUsuario.senha = Keyboard.question("Crie uma senha: ", { hideEchoBack: true, mask: '*' }); 
+        
         novoUsuario.telefone = Keyboard.question("Digite seu telefone: ");
         novoUsuario.cpf = Keyboard.question("Digite seu CPF: "); 
         
@@ -100,10 +103,13 @@ function conta(){
 }
 
 // Realiza a autenticação do usuário
-function login(){
+function login() {
     console.log("\n--- TELA DE LOGIN ---");
     const nomeLogin = Keyboard.question("Digite seu nome de usuario: ");
-    const senhaLogin = Keyboard.question("Digite sua senha: "); 
+    
+    // MÁSCARA ADICIONADA AQUI TAMBÉM: para o login seguro
+    const senhaLogin = Keyboard.question("Digite sua senha: ", { hideEchoBack: true, mask: '*' }); 
+    
     let usuarioLogado = null; 
 
     // Busca no sistema uma conta que coincida com o nome e a senha digitados
@@ -116,7 +122,7 @@ function login(){
 
     if (usuarioLogado !== null) {
         console.log(`\nLogin realizado com sucesso! Bem-vindo, ${usuarioLogado.nomeCompleto}.`);
-        menuPrincipal(usuarioLogado); // Direciona para o menu do banco passand o usuário logado
+        menuPrincipal(usuarioLogado); // Direciona para o menu do banco passando o usuário logado
     } else {
         console.log("\n[ERRO] Nome de usuario ou senha incorretos!");
         const tentarNovamente = Keyboard.keyInYN('Deseja tentar logar novamente? ');
