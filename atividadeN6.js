@@ -1,13 +1,11 @@
 const Keyboard = require("readline-sync");
 
-// Array principal onde todas as contas criadas serão armazenadas
 let contas = [];
 
-/*
-    Cria a estrutura padrão de uma conta nova.
-    Sempre que um usuário for cadastrado, ele começa
-    com saldo zerado, sem extrato e sem empréstimos.
-*/
+
+  //Cria e retorna a estrutura de objeto padrão para novos clientes.
+ // Útil para garantir que toda conta comece com as mesmas propriedades básicas.
+ 
 function criarCadastroBase() {
     return {
         nomeCompleto: null,
@@ -18,84 +16,58 @@ function criarCadastroBase() {
         saldo: 0,
         extrato: [],
         emprestimos: [],
-        enderecoCompleto: {
-            cep: null,
-            estado: null,
-            cidade: null,
-            bairro: null,
-            numero: null
-        }
+        enderecoCompleto: { cep: null, estado: null, city: null, bairro: null, numero: null }
     };
 }
 
-/*
-    Adiciona uma movimentação no extrato do usuário.
-    Essa função é usada em depósito, saque, transferência,
-    empréstimo e pagamento de parcela.
-*/
+
+  //Insere um novo objeto de movimentação dentro do array 'extrato' do usuário.
+ // Captura automaticamente a data e hora locais do momento da transação.
+ 
 function registrarTransacao(usuario, tipo, valor, detalhes = "") {
-    usuario.extrato.push({
-        tipo: tipo,
-        valor: valor,
-        detalhes: detalhes,
-        data: new Date().toLocaleString("pt-BR")
+    usuario.extrato.push({ 
+        tipo, 
+        valor, 
+        detalhes, 
+        data: new Date().toLocaleString("pt-BR") 
     });
 }
 
-/*
-    Lê um valor digitado pelo usuário.
-    O replace(",", ".") permite que o usuário digite
-    valor com vírgula ou ponto.
-    O loop só termina quando o valor for maior que zero.
-*/
+
+  //Lê a entrada do usuário, converte vírgula em ponto para aceitar decimais
+ // e força um loop 'while' até que o valor digitado seja estritamente maior que zero.
+ 
 function lerValor(mensagem) {
     let valor;
-
-    do {
-        valor = Number(Keyboard.question(mensagem).replace(",", "."));
-
-        if (valor <= 0) {
-            console.log("[ERRO] Digite um valor válido maior que zero.");
-        }
-    } while (valor <= 0);
-
+    // O 'while' executa a pergunta e a atribuição ao mesmo tempo, validando o resultado
+    while ((valor = Number(Keyboard.question(mensagem).replace(",", "."))) <= 0) {
+        console.log("[ERRO] Digite um valor válido maior que zero.");
+    }
     return valor;
 }
 
-/*
-    Procura uma conta pelo CPF.
-    Retorna a conta encontrada ou null caso não exista.
-    Atualmente essa função existe, mas não está sendo usada
-    para completar a transferência entre contas.
-*/
+
+  //Varre o array global de contas procurando por um CPF idêntico.
+  //Se achar, retorna o objeto da conta correspondente; se terminar o loop sem achar, retorna null.
+ 
 function buscarContaPorCPF(cpf) {
     for (let i = 0; i < contas.length; i++) {
-        if (contas[i].cpf === cpf) {
-            return contas[i];
-        }
+        if (contas[i].cpf === cpf) return contas[i]; // Retorno imediato ao encontrar
     }
     return null;
 }
 
-/*
-    Função inicial do programa.
-    Se não existir nenhuma conta, força a criação da primeira.
-    Caso já existam contas, o usuário escolhe entre criar conta
-    ou ir para a tela de login.
-*/
+
+  //Controla o ponto de partida do sistema.
+  //Se o sistema estiver vazio, obriga o cadastro. Caso contrário, pergunta o que fazer.
+
 function conta() {
     if (contas.length === 0) {
-        console.log("Nenhuma conta cadastrada ainda.");
-        console.log("Vamos criar sua primeira conta.\n");
-        criarConta();
-        return;
+        console.log("Nenhuma conta cadastrada ainda.\nVamos criar sua primeira conta.\n");
+        return criarConta();
     }
-
-    const pergunta = Keyboard.keyInYN(
-        "Deseja criar uma conta? (Pressione N se ja tiver login): "
-    );
-
-    if (pergunta) {
+    // KeyInYN capta apenas uma tecla (Y para sim, N para não)
+    if (Keyboard.keyInYN("Deseja criar uma conta? (Pressione N se ja tiver login): ")) {
         criarConta();
     } else {
         console.log("Encaminhando para a tela de login...");
@@ -103,454 +75,263 @@ function conta() {
     }
 }
 
-/*
-    Cria uma nova conta bancária.
-    Antes de salvar, verifica se já existe alguém com
-    o mesmo nome ou o mesmo CPF.
-*/
+
+// Fluxo de criação de conta com validação de duplicidade por Nome e CPF.
+ 
 function criarConta() {
     const novoUsuario = criarCadastroBase();
     const nomeDigitado = Keyboard.question("Digite seu nome completo: ");
     const cpfDigitado = Keyboard.question("Digite seu CPF: ");
 
-    let nomeJaExiste = false;
-    let cpfJaExiste = false;
-
-    // Percorre todas as contas para evitar duplicidade
+    let nomeJaExiste = false, cpfJaExiste = false;
+    
+    // Loop clássico para verificar se as credenciais já existem no "banco de dados"
     for (let i = 0; i < contas.length; i++) {
-        if (contas[i].nomeCompleto.toLowerCase() === nomeDigitado.toLowerCase()) {
-            nomeJaExiste = true;
-        }
-
-        if (contas[i].cpf === cpfDigitado) {
-            cpfJaExiste = true;
-        }
+        if (contas[i].nomeCompleto.toLowerCase() === nomeDigitado.toLowerCase()) nomeJaExiste = true;
+        if (contas[i].cpf === cpfDigitado) cpfJaExiste = true;
     }
 
-    if (nomeJaExiste) {
-        console.log("\n[ERRO] Esse nome já está cadastrado!");
-        return;
-    }
+    // Se houver duplicado, cancela a operação imediatamente (early return)
+    if (nomeJaExiste) return console.log("\n[ERRO] Esse nome já está cadastrado!");
+    if (cpfJaExiste) return console.log("\n[ERRO] Esse CPF já está cadastrado!");
 
-    if (cpfJaExiste) {
-        console.log("\n[ERRO] Esse CPF já está cadastrado!");
-        return;
-    }
-
-    // Preenchimento dos dados principais
+    // Atribuição dos dados principais
     novoUsuario.nomeCompleto = nomeDigitado;
     novoUsuario.cpf = cpfDigitado;
-    novoUsuario.senha = Keyboard.question("Crie uma senha: ", {
-        hideEchoBack: true,
-        mask: "*"
-    });
+    // hideEchoBack esconde o que é digitado e o mask coloca asteriscos na senha
+    novoUsuario.senha = Keyboard.question("Crie uma senha: ", { hideEchoBack: true, mask: "*" });
     novoUsuario.telefone = Keyboard.question("Digite seu telefone: ");
 
-    // Preenchimento do endereço
     console.log("\n--- Agora vamos preencher o endereco ---");
-    novoUsuario.enderecoCompleto.cep = Keyboard.question("Digite o CEP: ");
-    novoUsuario.enderecoCompleto.estado = Keyboard.question("Digite o estado: ");
-    novoUsuario.enderecoCompleto.cidade = Keyboard.question("Digite a cidade: ");
-    novoUsuario.enderecoCompleto.bairro = Keyboard.question("Digite o bairro: ");
-    novoUsuario.enderecoCompleto.numero = Keyboard.question("Digite o numero da casa: ");
+    const end = novoUsuario.enderecoCompleto; // Atalho de referência para encurtar o código abaixo
+    end.cep = Keyboard.question("Digite o CEP: ");
+    end.estado = Keyboard.question("Digite o estado: ");
+    end.cidade = Keyboard.question("Digite a cidade: ");
+    end.bairro = Keyboard.question("Digite o bairro: ");
+    end.numero = Keyboard.question("Digite o numero da casa: ");
 
-    // Salva a nova conta no array principal
+    // Adiciona o novo cliente ao array geral do sistema
     contas.push(novoUsuario);
-
     console.log("\n[SUCESSO] Conta criada com sucesso!\n");
-
-    const entrarAgora = Keyboard.keyInYN("Deseja fazer login agora? ");
-    if (entrarAgora) {
-        login();
-    }
+    
+    if (Keyboard.keyInYN("Deseja fazer login agora? ")) login();
 }
 
-/*
-    Faz login no sistema comparando nome e senha.
-    Se encontrar uma conta correspondente, envia o usuário
-    para o menu principal.
-*/
+
+ // Autentica o usuário comparando Nome (desconsiderando maiúsculas/minúsculas) e Senha.
+ 
 function login() {
     if (contas.length === 0) {
         console.log("\n[ERRO] Não existe nenhuma conta cadastrada ainda.");
-        criarConta();
-        return;
+        return criarConta();
     }
 
     console.log("\n--- TELA DE LOGIN ---");
     const nomeLogin = Keyboard.question("Digite seu nome de usuario: ");
-    const senhaLogin = Keyboard.question("Digite sua senha: ", {
-        hideEchoBack: true,
-        mask: "*"
-    });
+    const senhaLogin = Keyboard.question("Digite sua senha: ", { hideEchoBack: true, mask: "*" });
 
     let usuarioLogado = null;
-
-    // Procura no array a conta com nome e senha corretos
+    // Loop em busca da combinação exata de nome e senha
     for (let i = 0; i < contas.length; i++) {
-        if (
-            contas[i].nomeCompleto.toLowerCase() === nomeLogin.toLowerCase() &&
-            contas[i].senha === senhaLogin
-        ) {
+        if (contas[i].nomeCompleto.toLowerCase() === nomeLogin.toLowerCase() && contas[i].senha === senhaLogin) {
             usuarioLogado = contas[i];
-            break;
+            break; // Para o loop assim que encontrar o usuário
         }
     }
 
-    if (usuarioLogado !== null) {
+    // Se encontrou, redireciona para o painel principal, senão, oferece nova tentativa
+    if (usuarioLogado) {
         console.log(`\nLogin realizado com sucesso! Bem-vindo, ${usuarioLogado.nomeCompleto}.`);
-        menuPrincipal(usuarioLogado);
-        return;
+        return menuPrincipal(usuarioLogado);
     }
 
     console.log("\n[ERRO] Nome de usuario ou senha incorretos!");
-    const tentarNovamente = Keyboard.keyInYN("Deseja tentar logar novamente? ");
-
-    if (tentarNovamente) {
-        login();
-    } else {
-        console.log("Programa encerrado.");
-    }
+    if (Keyboard.keyInYN("Deseja tentar logar novamente? ")) login();
+    else console.log("Programa encerrado.");
 }
 
-/*
-    Deposita dinheiro na conta logada.
-    O valor é somado ao saldo e também registrado no extrato.
-*/
+
+ //Adiciona fundos ao saldo da conta ativa e gera registro no extrato.
+ 
 function depositar(usuario) {
     console.log("\n--- ÁREA DE DEPÓSITO ---");
     const valor = lerValor("Digite o valor que deseja depositar: R$ ");
-
     usuario.saldo += valor;
     registrarTransacao(usuario, "Depósito", valor);
-
     console.log(`\n[SUCESSO] Depósito de R$ ${valor.toFixed(2)} realizado!`);
 }
 
-/*
-    Realiza saque.
-    Primeiro verifica se existe saldo suficiente.
-    Se houver, desconta do saldo e registra no extrato.
-*/
+
+//Retira fundos do saldo caso o usuário possua quantia suficiente.
+ 
 function sacar(usuario) {
     console.log("\n--- ÁREA DE SAQUE ---");
     const valor = lerValor("Digite o valor que deseja sacar: R$ ");
 
     if (valor > usuario.saldo) {
-        const falta = valor - usuario.saldo;
-        console.log("\n[ERRO] Saldo insuficiente para essa operação!");
-        console.log(`Seu saldo atual é de R$ ${usuario.saldo.toFixed(2)}.`);
-        console.log(`Faltam R$ ${falta.toFixed(2)} para sacar esse valor.`);
+        // Usa quebras de linha '\n' dentro do mesmo console.log para economizar linhas de código
+        console.log(`\n[ERRO] Saldo insuficiente para essa operação!\nSeu saldo atual é de R$ ${usuario.saldo.toFixed(2)}.\nFaltam R$ ${(valor - usuario.saldo).toFixed(2)} para sacar esse valor.`);
         return;
     }
 
     usuario.saldo -= valor;
     registrarTransacao(usuario, "Saque", valor);
-
     console.log(`\n[SUCESSO] Saque de R$ ${valor.toFixed(2)} realizado!`);
 }
 
-/*
-    Simula uma transferência.
-    O usuário escolhe o tipo (Pix, TED ou DOC), informa
-    o valor e o CPF do destinatário.
-    
-    Importante:
-    nessa versão o dinheiro apenas sai da conta do usuário logado,
-    mas não entra em outra conta do sistema.
-*/
+
+// Desconta o saldo do remetente sem aplicar a entrada em outro objeto (Regra original).
+ 
 function transferir(usuario) {
-    console.log("\n--- TRANSFERÊNCIA ---");
-    console.log("1. Pix");
-    console.log("2. TED");
-    console.log("3. DOC");
-
+    console.log("\n--- TRANSFERÊNCIA ---\n1. Pix\n2. TED\n3. DOC");
     const opcao = Keyboard.question("Escolha o tipo de transferencia: ");
-    let tipoTransferencia = "";
+    
+    // Dicionário/Objeto para mapear a string correspondente sem precisar de uma estrutura Switch-Case longa
+    const tipos = { "1": "Pix", "2": "TED", "3": "DOC" };
+    const tipoTransferencia = tipos[opcao];
 
-    switch (opcao) {
-        case "1":
-            tipoTransferencia = "Pix";
-            break;
-        case "2":
-            tipoTransferencia = "TED";
-            break;
-        case "3":
-            tipoTransferencia = "DOC";
-            break;
-        default:
-            console.log("[ERRO] Opção inválida!");
-            return;
-    }
+    if (!tipoTransferencia) return console.log("[ERRO] Opção inválida!");
 
     const valor = lerValor(`Digite o valor da transferencia via ${tipoTransferencia}: R$ `);
     const cpfDestino = Keyboard.question("Digite o CPF do destinatario: ");
 
-    if (!cpfDestino) {
-        console.log("[ERRO] CPF inválido!");
-        return;
-    }
+    if (!cpfDestino) return console.log("[ERRO] CPF inválido!");
+    if (valor > usuario.saldo) return console.log(`[ERRO] Saldo insuficiente para realizar a transferência!\nSeu saldo atual é de R$ ${usuario.saldo.toFixed(2)}.`);
 
-    if (valor > usuario.saldo) {
-        console.log("[ERRO] Saldo insuficiente para realizar a transferência!");
-        console.log(`Seu saldo atual é de R$ ${usuario.saldo.toFixed(2)}.`);
-        return;
-    }
-
-    // Desconta da conta do usuário logado
+    // Executa a saída do dinheiro da conta logada
     usuario.saldo -= valor;
-
-    // Registra a saída no extrato
-    registrarTransacao(
-        usuario,
-        `Transferência enviada (${tipoTransferencia})`,
-        valor,
-        `CPF informado: ${cpfDestino}`
-    );
-
-    console.log(`\n[SUCESSO] Transferência via ${tipoTransferencia} realizada com sucesso!`);
-    console.log(`[INFO] Valor descontado da sua conta: R$ ${valor.toFixed(2)}`);
-    console.log(`[INFO] CPF informado: ${cpfDestino}`);
+    registrarTransacao(usuario, `Transferência enviada (${tipoTransferencia})`, valor, `CPF informado: ${cpfDestino}`);
+    console.log(`\n[SUCESSO] Transferência via ${tipoTransferencia} realizada com sucesso!\n[INFO] Valor descontado da sua conta: R$ ${valor.toFixed(2)}\n[INFO] CPF informado: ${cpfDestino}`);
 }
 
-/*
-    Solicita um empréstimo.
-    O valor é creditado imediatamente no saldo do usuário.
-    Depois o sistema salva os dados da dívida:
-    valor total, parcelas, saldo devedor etc.
-*/
+
+ // Concede crédito ao saldo e programa uma dívida de 10 parcelas com juros embutidos de 5%.
+ 
 function solicitarEmprestimo(usuario) {
     console.log("\n--- ÁREA DE EMPRÉSTIMO ---");
     const valor = lerValor("Digite o valor do empréstimo desejado: R$ ");
 
-    const juros = 0.05; // 5% de juros
-    const totalPagar = valor * (1 + juros);
+    const totalPagar = valor * 1.05; // 1.05 representa acréscimo direto de 5% de juros
     const parcelas = 10;
     const valorParcela = totalPagar / parcelas;
+    
+    usuario.saldo += valor; // O dinheiro do empréstimo cai na conta do cliente
 
-    // O dinheiro do empréstimo entra no saldo
-    usuario.saldo += valor;
+    // Guarda os dados da dívida dentro da lista de empréstimos do cliente
+    usuario.emprestimos.push({ valorSolicitado: valor, totalPagar, saldoDevedor: totalPagar, parcelasTotais: parcelas, parcelasRestantes: parcelas, valorParcela, quitado: false, data: new Date().toLocaleString("pt-BR") });
 
-    // Salva os dados do empréstimo
-    usuario.emprestimos.push({
-        valorSolicitado: valor,
-        totalPagar: totalPagar,
-        saldoDevedor: totalPagar,
-        parcelasTotais: parcelas,
-        parcelasRestantes: parcelas,
-        valorParcela: valorParcela,
-        quitado: false,
-        data: new Date().toLocaleString("pt-BR")
-    });
-
-    // Registra a entrada do empréstimo no extrato
-    registrarTransacao(
-        usuario,
-        "Empréstimo aprovado",
-        valor,
-        `Total a pagar: R$ ${totalPagar.toFixed(2)} em ${parcelas} parcelas de R$ ${valorParcela.toFixed(2)}`
-    );
-
-    console.log(`\n[SUCESSO] Empréstimo de R$ ${valor.toFixed(2)} aprovado!`);
-    console.log(`Você recebeu R$ ${valor.toFixed(2)} na conta.`);
-    console.log(`Total a pagar: R$ ${totalPagar.toFixed(2)}.`);
-    console.log(`Parcelas: ${parcelas}x de R$ ${valorParcela.toFixed(2)}.`);
+    registrarTransacao(usuario, "Empréstimo aprovado", valor, `Total a pagar: R$ ${totalPagar.toFixed(2)} em ${parcelas} parcelas de R$ ${valorParcela.toFixed(2)}`);
+    console.log(`\n[SUCESSO] Empréstimo de R$ ${valor.toFixed(2)} aprovado!\nVocê recebeu R$ ${valor.toFixed(2)} na conta.\nTotal a pagar: R$ ${totalPagar.toFixed(2)}.\nParcelas: ${parcelas}x de R$ ${valorParcela.toFixed(2)}.`);
 }
 
-/*
-    Desconta automaticamente uma parcela de um empréstimo em aberto.
-    Isso acontece quando o usuário abre o extrato.
-    
-    O sistema percorre os empréstimos do usuário e pega
-    o primeiro que ainda não foi quitado.
-*/
+
+ // Função automática chamada sempre que o usuário tenta visualizar o extrato.
+//Localiza a PRIMEIRA dívida ativa e efetua a cobrança de uma única parcela se houver saldo.
+ 
 function descontarParcelaEmprestimo(usuario) {
+    let emprestimo = null;
+    
+    // Procura o primeiro empréstimo em aberto usando um loop clássico
     for (let i = 0; i < usuario.emprestimos.length; i++) {
-        let emprestimo = usuario.emprestimos[i];
-
-        if (emprestimo.quitado === false && emprestimo.parcelasRestantes > 0) {
-            if (usuario.saldo >= emprestimo.valorParcela) {
-                usuario.saldo -= emprestimo.valorParcela;
-                emprestimo.saldoDevedor -= emprestimo.valorParcela;
-                emprestimo.parcelasRestantes--;
-
-                // Correção de arredondamento
-                if (emprestimo.saldoDevedor < 0.01) {
-                    emprestimo.saldoDevedor = 0;
-                }
-
-                // Se terminou de pagar, marca como quitado
-                if (emprestimo.saldoDevedor === 0 || emprestimo.parcelasRestantes === 0) {
-                    emprestimo.saldoDevedor = 0;
-                    emprestimo.parcelasRestantes = 0;
-                    emprestimo.quitado = true;
-
-                    registrarTransacao(
-                        usuario,
-                        "Parcela do empréstimo",
-                        emprestimo.valorParcela,
-                        "Empréstimo quitado"
-                    );
-
-                    console.log("\n[INFO] A última parcela do empréstimo foi descontada.");
-                    console.log("[INFO] Seu empréstimo foi quitado com sucesso.");
-                } else {
-                    registrarTransacao(
-                        usuario,
-                        "Parcela do empréstimo",
-                        emprestimo.valorParcela,
-                        `Parcelas restantes: ${emprestimo.parcelasRestantes}`
-                    );
-
-                    console.log("\n[INFO] Uma parcela do empréstimo foi descontada automaticamente.");
-                    console.log(`Valor da parcela: R$ ${emprestimo.valorParcela.toFixed(2)}`);
-                }
-            } else {
-                console.log("\n[AVISO] Você tem empréstimo em aberto, mas não há saldo suficiente para descontar a parcela.");
-            }
-
-            // Sai da função após tratar o primeiro empréstimo em aberto
-            return;
+        if (!usuario.emprestimos[i].quitado && usuario.emprestimos[i].parcelasRestantes > 0) {
+            emprestimo = usuario.emprestimos[i];
+            break; // Interrompe no primeiro que encontrar pendente
         }
     }
+
+    // Se não há empréstimos pendentes de pagamento, sai da função
+    if (!emprestimo) return;
+
+    // Se o cliente tem saldo para pagar a parcela corrente
+    if (usuario.saldo >= emprestimo.valorParcela) {
+        usuario.saldo -= emprestimo.valorParcela;
+        emprestimo.saldoDevedor -= emprestimo.valorParcela;
+        emprestimo.parcelasRestantes--;
+
+        // Corrige discrepâncias de dízimas ou arredondamentos de ponto flutuante no Javascript
+        if (emprestimo.saldoDevedor < 0.01) emprestimo.saldoDevedor = 0;
+
+        // Verifica se a dívida foi totalmente liquidada nesta cobrança
+        if (emprestimo.saldoDevedor === 0 || emprestimo.parcelasRestantes === 0) {
+            emprestimo.saldoDevedor = 0; emprestimo.parcelasRestantes = 0; emprestimo.quitado = true;
+            registrarTransacao(usuario, "Parcela do empréstimo", emprestimo.valorParcela, "Empréstimo quitado");
+            console.log("\n[INFO] A última parcela do empréstimo foi descontada.\n[INFO] Seu empréstimo foi quitado com sucesso.");
+        } else {
+            // Caso ainda existam parcelas futuras
+            registrarTransacao(usuario, "Parcela do empréstimo", emprestimo.valorParcela, `Parcelas restantes: ${emprestimo.parcelasRestantes}`);
+            console.log(`\n[INFO] Uma parcela do empréstimo foi descontada automaticamente.\nValor da parcela: R$ ${emprestimo.valorParcela.toFixed(2)}`);
+        }
+    } else {
+        console.log("\n[AVISO] Você tem empréstimo em aberto, mas não há saldo suficiente para descontar a parcela.");
+    }
 }
 
-/*
-    Exibe todos os empréstimos do usuário.
-    Mostra quais estão quitados e quais ainda possuem
-    parcelas pendentes.
-*/
-function exibirEmprestimos(usuario) {
-    if (usuario.emprestimos.length === 0) {
-        console.log("Nenhum empréstimo registrado.");
-        return;
-    }
 
+// Lista todos os empréstimos atrelados à conta, detalhando valores e status de quitação.
+ 
+function exibirEmprestimos(usuario) {
+    if (usuario.emprestimos.length === 0) return console.log("Nenhum empréstimo registrado.");
     let existeEmprestimoAberto = false;
 
+    // Percorre todos os empréstimos históricos do cliente para impressão em tela
     for (let i = 0; i < usuario.emprestimos.length; i++) {
-        let emprestimo = usuario.emprestimos[i];
-
-        console.log("-----------------------------------");
-        console.log(`Empréstimo ${i + 1}`);
-        console.log(`Valor solicitado: R$ ${emprestimo.valorSolicitado.toFixed(2)}`);
-        console.log(`Total a pagar: R$ ${emprestimo.totalPagar.toFixed(2)}`);
-
-        if (emprestimo.quitado) {
-            console.log("Status: QUITADO");
-            console.log("Saldo devedor: R$ 0.00");
-            console.log("Parcelas restantes: 0");
+        let emp = usuario.emprestimos[i];
+        console.log(`-----------------------------------\nEmpréstimo ${i + 1}\nValor solicitado: R$ ${emp.valorSolicitado.toFixed(2)}\nTotal a pagar: R$ ${emp.totalPagar.toFixed(2)}`);
+        
+        if (emp.quitado) {
+            console.log("Status: QUITADO\nSaldo devedor: R$ 0.00\nParcelas restantes: 0");
         } else {
-            existeEmprestimoAberto = true;
-            console.log("Status: EM ABERTO");
-            console.log(`Saldo devedor: R$ ${emprestimo.saldoDevedor.toFixed(2)}`);
-            console.log(`Parcelas restantes: ${emprestimo.parcelasRestantes}`);
-            console.log(`Valor da parcela: R$ ${emprestimo.valorParcela.toFixed(2)}`);
+            existeEmprestimoAberto = true; // Sinaliza que o painel de aviso final não deve rodar
+            console.log(`Status: EM ABERTO\nSaldo devedor: R$ ${emp.saldoDevedor.toFixed(2)}\nParcelas restantes: ${emp.parcelasRestantes}\nValor da parcela: R$ ${emp.valorParcela.toFixed(2)}`);
         }
     }
 
-    if (!existeEmprestimoAberto) {
-        console.log("-----------------------------------");
-        console.log("Todos os empréstimos já foram quitados.");
-    }
+    if (!existeEmprestimoAberto) console.log("-----------------------------------\nTodos os empréstimos já foram quitados.");
 }
 
-/*
-    Exibe o extrato bancário completo do usuário.
-    Antes de mostrar o extrato, o sistema tenta descontar
-    uma parcela automática do empréstimo, se houver.
-*/
+  //Dispara a cobrança da parcela automática, imprime o histórico de transações e a listagem de empréstimos.
+ 
 function exibirExtrato(usuario) {
-    descontarParcelaEmprestimo(usuario);
+    descontarParcelaEmprestimo(usuario); // Processa cobrança da parcela antes de montar a tela
 
-    console.log("\n===================================");
-    console.log("         EXTRATO BANCÁRIO          ");
-    console.log("===================================");
-
+    console.log("\n===================================\n         EXTRATO BANCÁRIO          \n===================================");
     if (usuario.extrato.length === 0) {
         console.log("Nenhuma movimentação realizada até o momento.");
     } else {
+        // Varre e imprime cada movimentação salva no extrato
         for (let i = 0; i < usuario.extrato.length; i++) {
-            let transacao = usuario.extrato[i];
-            let linha = `[${transacao.data}] ${transacao.tipo}: R$ ${transacao.valor.toFixed(2)}`;
-
-            if (transacao.detalhes) {
-                linha += ` | ${transacao.detalhes}`;
-            }
-
-            console.log(linha);
+            let t = usuario.extrato[i];
+            // Se existirem 'detalhes', concatena usando um operador ternário (condição ? se_verdadeiro : se_falso)
+            console.log(`[${t.data}] ${t.tipo}: R$ ${t.valor.toFixed(2)}${t.detalhes ? ` | ${t.detalhes}` : ""}`);
         }
     }
-
-    console.log("===================================");
-    console.log(`Saldo atual: R$ ${usuario.saldo.toFixed(2)}`);
-    console.log("===================================");
-    console.log("       EMPRÉSTIMOS REGISTRADOS     ");
-    console.log("===================================");
+    console.log(`===================================\nSaldo atual: R$ ${usuario.saldo.toFixed(2)}\n===================================\n       EMPRÉSTIMOS REGISTRADOS     \n===================================`);
     exibirEmprestimos(usuario);
-
     Keyboard.question("\nPressione Enter para voltar ao menu...");
 }
 
-/*
-    Menu principal do sistema.
-    Fica em loop enquanto o usuário estiver logado,
-    permitindo acessar todas as operações da conta.
-*/
+
+ // Loop que exibe as opções do painel bancário enquanto a flag 'logado' for verdadeira.
+
 function menuPrincipal(usuario) {
     let logado = true;
-
     while (logado) {
-        console.log(`\n===================================`);
-        console.log(`   BANCO DIGITAL - MENU PRINCIPAL`);
-        console.log(`   Cliente: ${usuario.nomeCompleto}`);
-        console.log(`   Saldo Atual: R$ ${usuario.saldo.toFixed(2)}`);
-        console.log(`===================================`);
-        console.log("1. Depositar");
-        console.log("2. Sacar");
-        console.log("3. Transferência (Pix, TED, DOC)");
-        console.log("4. Empréstimo");
-        console.log("5. Extrato Completo");
-        console.log("6. Trocar de conta");
-        console.log("7. Criar nova conta");
-        console.log("0. Sair / Encerrar");
-        console.log(`===================================`);
-
-        let opcao = Keyboard.question("Escolha uma opcao: ");
-
-        switch (opcao) {
-            case "1":
-                depositar(usuario);
-                break;
-            case "2":
-                sacar(usuario);
-                break;
-            case "3":
-                transferir(usuario);
-                break;
-            case "4":
-                solicitarEmprestimo(usuario);
-                break;
-            case "5":
-                exibirExtrato(usuario);
-                break;
-            case "6":
-                console.log("\nTrocando de conta...");
-                login();
-                return;
-            case "7":
-                console.log("\n--- CRIAR NOVA CONTA ---");
-                criarConta();
-                break;
-            case "0":
-                console.log(`\nAté logo, ${usuario.nomeCompleto}!`);
-                logado = false;
-                break;
-            default:
-                console.log("\n[ERRO] Opção inválida!");
+        // Agrupamento do menu visual em um bloco único de texto (Template Literal)
+        console.log(`\n===================================\n   BANCO DIGITAL - MENU PRINCIPAL\n   Cliente: ${usuario.nomeCompleto}\n   Saldo Atual: R$ ${usuario.saldo.toFixed(2)}\n===================================\n1. Depositar\n2. Sacar\n3. Transferência (Pix, TED, DOC)\n4. Empréstimo\n5. Extrato Completo\n6. Trocar de conta\n7. Criar nova conta\n0. Sair / Encerrar\n===================================`);
+        
+        // Avalia diretamente a opção digitada pelo teclado
+        switch (Keyboard.question("Escolha uma opcao: ")) {
+            case "1": depositar(usuario); break;
+            case "2": sacar(usuario); break;
+            case "3": transferir(usuario); break;
+            case "4": solicitarEmprestimo(usuario); break;
+            case "5": exibirExtrato(usuario); break;
+            case "6": console.log("\nTrocando de conta..."); login(); return; // Sai totalmente do menu atual para abrir nova tela de login
+            case "7": console.log("\n--- CRIAR NOVA CONTA ---"); criarConta(); break;
+            case "0": console.log(`\nAté logo, ${usuario.nomeCompleto}!`); logado = false; break; // Derruba o loop while
+            default: console.log("\n[ERRO] Opção inválida!");
         }
     }
 }
 
-// Inicia o programa chamando a tela inicial
 conta();
