@@ -3,9 +3,9 @@ const Keyboard = require("readline-sync");
 let contas = [];
 
 
-  //Cria e retorna a estrutura de objeto padrão para novos clientes.
- // Útil para garantir que toda conta comece com as mesmas propriedades básicas.
- 
+//Cria e retorna a estrutura de objeto padrão para novos clientes.
+// Útil para garantir que toda conta comece com as mesmas propriedades básicas.
+
 function criarCadastroBase() {
     return {
         nomeCompleto: null,
@@ -21,22 +21,22 @@ function criarCadastroBase() {
 }
 
 
-  //Insere um novo objeto de movimentação dentro do array 'extrato' do usuário.
- // Captura automaticamente a data e hora locais do momento da transação.
- 
+//Insere um novo objeto de movimentação dentro do array 'extrato' do usuário.
+// Captura automaticamente a data e hora locais do momento da transação.
+
 function registrarTransacao(usuario, tipo, valor, detalhes = "") {
-    usuario.extrato.push({ 
-        tipo, 
-        valor, 
-        detalhes, 
-        data: new Date().toLocaleString("pt-BR") 
+    usuario.extrato.push({
+        tipo,
+        valor,
+        detalhes,
+        data: new Date().toLocaleString("pt-BR")
     });
 }
 
 
-  //Lê a entrada do usuário, converte vírgula em ponto para aceitar decimais
- // e força um loop 'while' até que o valor digitado seja estritamente maior que zero.
- 
+//Lê a entrada do usuário, converte vírgula em ponto para aceitar decimais
+// e força um loop 'while' até que o valor digitado seja estritamente maior que zero.
+
 function lerValor(mensagem) {
     let valor;
     // O 'while' executa a pergunta e a atribuição ao mesmo tempo, validando o resultado
@@ -47,9 +47,9 @@ function lerValor(mensagem) {
 }
 
 
-  //Varre o array global de contas procurando por um CPF idêntico.
-  //Se achar, retorna o objeto da conta correspondente; se terminar o loop sem achar, retorna null.
- 
+//Varre o array global de contas procurando por um CPF idêntico.
+//Se achar, retorna o objeto da conta correspondente; se terminar o loop sem achar, retorna null.
+
 function buscarContaPorCPF(cpf) {
     for (let i = 0; i < contas.length; i++) {
         if (contas[i].cpf === cpf) return contas[i]; // Retorno imediato ao encontrar
@@ -58,8 +58,8 @@ function buscarContaPorCPF(cpf) {
 }
 
 
-  //Controla o ponto de partida do sistema.
-  //Se o sistema estiver vazio, obriga o cadastro. Caso contrário, pergunta o que fazer.
+//Controla o ponto de partida do sistema.
+//Se o sistema estiver vazio, obriga o cadastro. Caso contrário, pergunta o que fazer.
 
 function conta() {
     if (contas.length === 0) {
@@ -77,14 +77,14 @@ function conta() {
 
 
 // Fluxo de criação de conta com validação de duplicidade por Nome e CPF.
- 
+
 function criarConta() {
     const novoUsuario = criarCadastroBase();
     const nomeDigitado = Keyboard.question("Digite seu nome completo: ");
     const cpfDigitado = Keyboard.question("Digite seu CPF: ");
 
     let nomeJaExiste = false, cpfJaExiste = false;
-    
+
     // Loop clássico para verificar se as credenciais já existem no "banco de dados"
     for (let i = 0; i < contas.length; i++) {
         if (contas[i].nomeCompleto.toLowerCase() === nomeDigitado.toLowerCase()) nomeJaExiste = true;
@@ -113,13 +113,13 @@ function criarConta() {
     // Adiciona o novo cliente ao array geral do sistema
     contas.push(novoUsuario);
     console.log("\n[SUCESSO] Conta criada com sucesso!\n");
-    
+
     if (Keyboard.keyInYN("Deseja fazer login agora? ")) login();
 }
 
 
- // Autentica o usuário comparando Nome (desconsiderando maiúsculas/minúsculas) e Senha.
- 
+// Autentica o usuário comparando Nome (desconsiderando maiúsculas/minúsculas) e Senha.
+
 function login() {
     if (contas.length === 0) {
         console.log("\n[ERRO] Não existe nenhuma conta cadastrada ainda.");
@@ -151,8 +151,8 @@ function login() {
 }
 
 
- //Adiciona fundos ao saldo da conta ativa e gera registro no extrato.
- 
+//Adiciona fundos ao saldo da conta ativa e gera registro no extrato.
+
 function depositar(usuario) {
     console.log("\n--- ÁREA DE DEPÓSITO ---");
     const valor = lerValor("Digite o valor que deseja depositar: R$ ");
@@ -163,7 +163,7 @@ function depositar(usuario) {
 
 
 //Retira fundos do saldo caso o usuário possua quantia suficiente.
- 
+
 function sacar(usuario) {
     console.log("\n--- ÁREA DE SAQUE ---");
     const valor = lerValor("Digite o valor que deseja sacar: R$ ");
@@ -181,11 +181,11 @@ function sacar(usuario) {
 
 
 // Desconta o saldo do remetente sem aplicar a entrada em outro objeto (Regra original).
- 
+
 function transferir(usuario) {
     console.log("\n--- TRANSFERÊNCIA ---\n1. Pix\n2. TED\n3. DOC");
     const opcao = Keyboard.question("Escolha o tipo de transferencia: ");
-    
+
     // Dicionário/Objeto para mapear a string correspondente sem precisar de uma estrutura Switch-Case longa
     const tipos = { "1": "Pix", "2": "TED", "3": "DOC" };
     const tipoTransferencia = tipos[opcao];
@@ -205,8 +205,8 @@ function transferir(usuario) {
 }
 
 
- // Concede crédito ao saldo e programa uma dívida de 10 parcelas com juros embutidos de 5%.
- 
+// Concede crédito ao saldo e programa uma dívida de 10 parcelas com juros embutidos de 5%.
+
 function solicitarEmprestimo(usuario) {
     console.log("\n--- ÁREA DE EMPRÉSTIMO ---");
     const valor = lerValor("Digite o valor do empréstimo desejado: R$ ");
@@ -214,7 +214,7 @@ function solicitarEmprestimo(usuario) {
     const totalPagar = valor * 1.05; // 1.05 representa acréscimo direto de 5% de juros
     const parcelas = 10;
     const valorParcela = totalPagar / parcelas;
-    
+
     usuario.saldo += valor; // O dinheiro do empréstimo cai na conta do cliente
 
     // Guarda os dados da dívida dentro da lista de empréstimos do cliente
@@ -225,12 +225,12 @@ function solicitarEmprestimo(usuario) {
 }
 
 
- // Função automática chamada sempre que o usuário tenta visualizar o extrato.
+// Função automática chamada sempre que o usuário tenta visualizar o extrato.
 //Localiza a PRIMEIRA dívida ativa e efetua a cobrança de uma única parcela se houver saldo.
- 
+
 function descontarParcelaEmprestimo(usuario) {
     let emprestimo = null;
-    
+
     // Procura o primeiro empréstimo em aberto usando um loop clássico
     for (let i = 0; i < usuario.emprestimos.length; i++) {
         if (!usuario.emprestimos[i].quitado && usuario.emprestimos[i].parcelasRestantes > 0) {
@@ -268,7 +268,7 @@ function descontarParcelaEmprestimo(usuario) {
 
 
 // Lista todos os empréstimos atrelados à conta, detalhando valores e status de quitação.
- 
+
 function exibirEmprestimos(usuario) {
     if (usuario.emprestimos.length === 0) return console.log("Nenhum empréstimo registrado.");
     let existeEmprestimoAberto = false;
@@ -277,7 +277,7 @@ function exibirEmprestimos(usuario) {
     for (let i = 0; i < usuario.emprestimos.length; i++) {
         let emp = usuario.emprestimos[i];
         console.log(`-----------------------------------\nEmpréstimo ${i + 1}\nValor solicitado: R$ ${emp.valorSolicitado.toFixed(2)}\nTotal a pagar: R$ ${emp.totalPagar.toFixed(2)}`);
-        
+
         if (emp.quitado) {
             console.log("Status: QUITADO\nSaldo devedor: R$ 0.00\nParcelas restantes: 0");
         } else {
@@ -289,8 +289,8 @@ function exibirEmprestimos(usuario) {
     if (!existeEmprestimoAberto) console.log("-----------------------------------\nTodos os empréstimos já foram quitados.");
 }
 
-  //Dispara a cobrança da parcela automática, imprime o histórico de transações e a listagem de empréstimos.
- 
+//Dispara a cobrança da parcela automática, imprime o histórico de transações e a listagem de empréstimos.
+
 function exibirExtrato(usuario) {
     descontarParcelaEmprestimo(usuario); // Processa cobrança da parcela antes de montar a tela
 
@@ -311,14 +311,14 @@ function exibirExtrato(usuario) {
 }
 
 
- // Loop que exibe as opções do painel bancário enquanto a flag 'logado' for verdadeira.
+// Loop que exibe as opções do painel bancário enquanto a flag 'logado' for verdadeira.
 
 function menuPrincipal(usuario) {
     let logado = true;
     while (logado) {
         // Agrupamento do menu visual em um bloco único de texto (Template Literal)
         console.log(`\n===================================\n   BANCO DIGITAL - MENU PRINCIPAL\n   Cliente: ${usuario.nomeCompleto}\n   Saldo Atual: R$ ${usuario.saldo.toFixed(2)}\n===================================\n1. Depositar\n2. Sacar\n3. Transferência (Pix, TED, DOC)\n4. Empréstimo\n5. Extrato Completo\n6. Trocar de conta\n7. Criar nova conta\n0. Sair / Encerrar\n===================================`);
-        
+
         // Avalia diretamente a opção digitada pelo teclado
         switch (Keyboard.question("Escolha uma opcao: ")) {
             case "1": depositar(usuario); break;
