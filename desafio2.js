@@ -1,3 +1,4 @@
+JavaScript
 // ============================================================
 // DESAFIOS (para quem já terminou a atividade 14) – Funções Simples
 // ============================================================
@@ -5,12 +6,7 @@
 // O foco é pensar em funções pequenas e bem nomeadas.
 // ============================================================
 
-function log(mensagem) {
-    console.log(mensagem);
-}
-
-log()
-
+let keyboard = require("readline-sync");
 
 // ------------------------------------------------------------
 // DESAFIO 1 – Relógio digital
@@ -26,38 +22,36 @@ log()
 
 // → Seu código aqui:
 
-
 function mostrarHora() {
-    const hoje = new Date()
-    
-    let horas = hoje.getHours()
-    let minutos = hoje.getMinutes()
-    let segundos = hoje.getSeconds()
-    
-    log(`Hora atual: <${horas}:${minutos}:${segundos}>`)
+    let dataAtual = new Date();
+    console.log("Hora atual: " + dataAtual.toLocaleTimeString());
 }
 
-
 function mostrarData() {
-    const hoje = new Date();
-
-let dia = hoje.getDate();           
-let mes = hoje.getMonth() + 1;      
-let ano = hoje.getFullYear();  
-
-log(`${dia}/${mes}/${ano}`);
-
+    let dataAtual = new Date();
+    console.log("Data atual: " + dataAtual.toLocaleDateString());
 }
 
 function agora() {
-    mostrarData()
-    mostrarHora()
-    log("-------------------------")
+    mostrarData();
+    mostrarHora();
+    console.log("---");
 }
 
-agora()
-setTimeout(agora, 5000)
-setTimeout(agora, 10000)
+function esperarCincoSegundos() {
+    let inicio = Date.now();
+    // Loop de bloqueio (busy-wait) para travar o console por 5 segundos
+    // mantendo a execução síncrona para não sobrepor o próximo desafio
+    while (Date.now() - inicio < 5000) { }
+}
+
+console.log("Exibindo relógio (aguarde 5 segundos entre as chamadas)...");
+agora();
+esperarCincoSegundos();
+agora();
+esperarCincoSegundos();
+agora();
+
 
 console.log("_______________________________");
 
@@ -68,7 +62,7 @@ console.log("_______________________________");
 // Vamos imprimir vários "cartões" estilizados no console.
 //
 // a) Utilizando os arrays:
-const nomes  = ["Ana", "Bruno", "Carla", "Diego", "Eva"];
+const nomes = ["Ana", "Bruno", "Carla", "Diego", "Eva"];
 const cargos = ["Dev Junior", "Dev Pleno", "Tech Lead", "QA", "Designer"];
 //
 // b) Crie a função 'imprimirCartao' que:
@@ -84,24 +78,18 @@ const cargos = ["Dev Junior", "Dev Pleno", "Tech Lead", "QA", "Designer"];
 // → Seu código aqui:
 
 function imprimirCartao() {
-    let indiceNome = Math.floor(Math.random() * nomes.length)
-    let indiceCargo = Math.floor(Math.random() * cargos.length)
+    let indNome = Math.floor(Math.random() * nomes.length);
+    let indCargo = Math.floor(Math.random() * cargos.length);
 
-    let nomeSorteado = nomes[indiceNome]
-    let cargoSorteado = cargos[indiceCargo]
-
-    log("═══════════════════════════════")
-    log(`|   ${nomeSorteado}`)
-    log(`|   ${cargoSorteado}`)
-    log("═══════════════════════════════\n") 
+    console.log("═══════════════════════════════");
+    console.log("|   " + nomes[indNome]);
+    console.log("|   " + cargos[indCargo]);
+    console.log("═══════════════════════════════\n");
 }
 
-imprimirCartao()
-imprimirCartao()
-imprimirCartao()
-imprimirCartao()
-imprimirCartao()
-
+for (let i = 0; i < 5; i++) {
+    imprimirCartao();
+}
 
 console.log("_______________________________");
 
@@ -111,10 +99,10 @@ console.log("_______________________________");
 // ------------------------------------------------------------
 // a) Utilizando o array:
 const noticias = [
-  { titulo: "Tecnologia X é lançada",  texto: "Empresa Y revoluciona o mercado..." },
-  { titulo: "Economia em alta",        texto: "Bolsa fecha o dia em alta de 2%..." },
-  { titulo: "Esporte: time campeão",   texto: "O time A conquistou o título..." },
-  { titulo: "Cultura: novo filme",     texto: "Estreia no cinema o longa Z..." },
+    { titulo: "Tecnologia X é lançada", texto: "Empresa Y revoluciona o mercado..." },
+    { titulo: "Economia em alta", texto: "Bolsa fecha o dia em alta de 2%..." },
+    { titulo: "Esporte: time campeão", texto: "O time A conquistou o título..." },
+    { titulo: "Cultura: novo filme", texto: "Estreia no cinema o longa Z..." },
 ];
 // b) Crie 1 função 'manchete', que exibe:
 //        |── MANCHETE ─────────────────
@@ -129,24 +117,25 @@ const noticias = [
 
 // → Seu código aqui:
 
-function manchete(noticia) {
-    log("|── MANCHETE ─────────────────")
-    log(`| ${noticia.titulo}`)
-    log("|----------------------------")
-    log(`| ${noticia.texto}`)
+// Variável global para controlar a notícia atual na função sem parâmetros
+let indiceNoticiaAtual = 0;
+
+function manchete() {
+    let noticia = noticias[indiceNoticiaAtual];
+    console.log("|── MANCHETE ─────────────────");
+    console.log("| " + noticia.titulo);
+    console.log("|----------------------------");
+    console.log("| " + noticia.texto);
 }
 
 function exibirJornal() {
-    for (let noticia of noticias) { 
-        manchete(noticia)
-        log("") 
+    for (indiceNoticiaAtual = 0; indiceNoticiaAtual < noticias.length; indiceNoticiaAtual++) {
+        manchete();
+        console.log(); // Linha em branco
     }
 }
 
-exibirJornal()
-
-
-
+exibirJornal();
 
 console.log("_______________________________");
 
@@ -177,5 +166,78 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let saldo = 1000;
+
+function verSaldo() {
+    console.log(`Saldo atual: R$ ${saldo.toFixed(2)}`);
+}
+
+function depositar() {
+    let valor = keyboard.questionFloat("Informe o valor para deposito: R$ ");
+    if (valor > 0) {
+        saldo += valor;
+        console.log("Depósito realizado com sucesso!");
+        verSaldo();
+    } else {
+        console.log("Valor inválido para depósito.");
+    }
+}
+
+function sacar() {
+    let valor = keyboard.questionFloat("Informe o valor para saque: R$ ");
+    if (valor > 0 && valor <= saldo) {
+        saldo -= valor;
+        console.log("Saque realizado com sucesso!");
+        verSaldo();
+    } else if (valor > saldo) {
+        console.log("Saldo insuficiente!");
+    } else {
+        console.log("Valor inválido para saque.");
+    }
+}
+
+function extrato() {
+    let dataAtual = new Date();
+    console.log(`\n=== EXTRATO - ${dataAtual.toLocaleDateString()} ===`);
+    verSaldo();
+    console.log("============================");
+}
+
+function exibirMenu() {
+    console.log("\n====== CAIXA ELETRÔNICO ======");
+    console.log("1 – Ver saldo");
+    console.log("2 – Depositar");
+    console.log("3 – Sacar");
+    console.log("4 – Extrato");
+    console.log("0 – Sair");
+}
+
+let opcaoCaixa = -1;
+
+do {
+    exibirMenu();
+    opcaoCaixa = keyboard.questionInt("Escolha uma opcao: ");
+
+    switch (opcaoCaixa) {
+        case 1:
+            verSaldo();
+            break;
+        case 2:
+            depositar();
+            break;
+        case 3:
+            sacar();
+            break;
+        case 4:
+            extrato();
+            break;
+        case 0:
+            console.log("Finalizando e Saindo... Obrigado por acessar!");
+            break;
+        default:
+            console.log("Opção inválida, tente novamente.");
+            break;
+    }
+} while (opcaoCaixa !== 0);
 
 console.log("_______________________________");
