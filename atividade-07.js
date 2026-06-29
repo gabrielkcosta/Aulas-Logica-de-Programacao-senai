@@ -1,3 +1,4 @@
+/*
 // ============================================================
 //   ATIVIDADE 07 – Estruturas de Controle (If / Else)
 // ============================================================
@@ -23,22 +24,17 @@ let keyboard = require('readline-sync')
 
 // → Seu código aqui:
 
-// let pontos = 120
+let pontos = 120
 
-// if (pontos > 200) {
-// console.log('nivel maximo alcançado')
-// } else if (pontos > 100) {
-// console.log('nivel alcançado')
-// } else {
-// console.log('sem pontos para upar')
-// }
+if (pontos > 200) {
+    console.log('nivel maximo alcançado')
+} else if (pontos > 100) {
+    console.log('nivel alcançado')
+} else {
+    console.log('sem pontos para upar')
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -53,22 +49,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let hora = 14
+let hora = 14
 
-// if(hora < 12) {
-//     console.log('bom dia')
-// } else if (hora < 18) {
-//     console.log('boa tarde')
-// } else {
-//     console.log('boa noite')
-// }
+if (hora < 12) {
+    console.log('bom dia')
+} else if (hora < 18) {
+    console.log('boa tarde')
+} else {
+    console.log('boa noite')
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -83,24 +74,20 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let usuario = {
-//     idade: keyboard.questionInt('digite sua idade :')
-// }
+let usuario = {
+    idade: keyboard.questionInt('digite sua idade :')
+}
 
-// if (usuario.idade >= 18) {
-//     console.table('adulto')
-// } else if (usuario.idade <=12) {
-//     console.table('crianca')
-// } else {
-//     console.table('jovem')
-// }
+if (usuario.idade >= 18) {
+    console.table('adulto')
+} else if (usuario.idade <= 12) {
+    console.table('crianca')
+} else {
+    console.table('jovem')
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
+
 
 console.log("_______________________________");
 
@@ -118,28 +105,23 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let notaAluno = 6.8;
+let notaAluno = 6.8;
 
-// let status;
+let status;
 
-// if (notaAluno >= 9) {
-//     status = "Aprovado com mérito";
-// } else if (notaAluno >= 7) {
-//     status = "Aprovado";
-// } else if (notaAluno >= 5) {
-//     status = "Recuperação";
-// } else {
-//     status = "Reprovado";
-// }
+if (notaAluno >= 9) {
+    status = "Aprovado com mérito";
+} else if (notaAluno >= 7) {
+    status = "Aprovado";
+} else if (notaAluno >= 5) {
+    status = "Recuperação";
+} else {
+    status = "Reprovado";
+}
 
-// console.log(`Nota: ${notaAluno} - Situação: ${status}`);
+console.log(`Nota: ${notaAluno} - Situação: ${status}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -157,30 +139,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let temperatura = keyboard.questionFloat('Digite a temperatura atual: ');
+let temperatura = keyboard.questionFloat('Digite a temperatura atual: ');
 
-// let classificacao;
+let classificacao;
 
-// if (temperatura < 10) {
-//     classificacao = "Muito frio";
-// } else if (temperatura < 18) {
-//     classificacao = "Frio";
-// } else if (temperatura <= 25) {
-//     classificacao = "Agradável";
-// } else if (temperatura <= 35) {
-//     classificacao = "Quente";
-// } else {
-//     classificacao = "Muito quente";
-// }
+if (temperatura < 10) {
+    classificacao = "Muito frio";
+} else if (temperatura < 18) {
+    classificacao = "Frio";
+} else if (temperatura <= 25) {
+    classificacao = "Agradável";
+} else if (temperatura <= 35) {
+    classificacao = "Quente";
+} else {
+    classificacao = "Muito quente";
+}
 
-// console.log(`Com ${temperatura} graus, o clima está: ${classificacao}.`);
+console.log(`Com ${temperatura} graus, o clima está: ${classificacao}.`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 
 console.log("_______________________________");
@@ -201,30 +178,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let visitante = {
-//     nome: keyboard.question('Qual o seu nome? '),
-//     possuiIngresso: keyboard.keyInYN('Voce possui ingresso? '),
-//     idade: keyboard.questionInt('Qual a sua idade? ')
-// };
+let visitante = {
+    nome: keyboard.question('Qual o seu nome? '),
+    possuiIngresso: keyboard.keyInYN('Voce possui ingresso? '),
+    idade: keyboard.questionInt('Qual a sua idade? ')
+};
 
-// if (!visitante.possuiIngresso) {
-//     console.log(`${visitante.nome}, dirija-se à bilheteria.`);
-// } else {
-//     if (visitante.idade < 18) {
-//         console.log("Meia-entrada: menor de idade.");
-//     } else if (visitante.idade >= 60) {
-//         console.log("Meia-entrada: melhor idade.");
-//     } else {
-//         console.log("Entrada inteira.");
-//     }
-// }
+if (!visitante.possuiIngresso) {
+    console.log(`${visitante.nome}, dirija-se à bilheteria.`);
+} else {
+    if (visitante.idade < 18) {
+        console.log("Meia-entrada: menor de idade.");
+    } else if (visitante.idade >= 60) {
+        console.log("Meia-entrada: melhor idade.");
+    } else {
+        console.log("Entrada inteira.");
+    }
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -243,29 +215,24 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let nomeDigitado = keyboard.question('Qual o seu nome? ');
-// let idadeDigitada = keyboard.questionInt('Qual a sua idade? ');
-// let temHabilitacao = keyboard.keyInYN('Voce possui habilitacao? ');
+let nomeDigitado = keyboard.question('Qual o seu nome? ');
+let idadeDigitada = keyboard.questionInt('Qual a sua idade? ');
+let temHabilitacao = keyboard.keyInYN('Voce possui habilitacao? ');
 
-// let motorista = {
-//     nome: nomeDigitado,
-//     idade: idadeDigitada,
-//     possuiHabilitacao: temHabilitacao
-// };
+let motorista = {
+    nome: nomeDigitado,
+    idade: idadeDigitada,
+    possuiHabilitacao: temHabilitacao
+};
 
-// if (motorista.idade >= 21 && motorista.possuiHabilitacao) {
-//     console.log(`${motorista.nome}, você pode alugar o veículo.`);
-// } else {
-//     console.log(`${motorista.nome}, você não atende aos requisitos.`);
-// }
+if (motorista.idade >= 21 && motorista.possuiHabilitacao) {
+    console.log(`${motorista.nome}, você pode alugar o veículo.`);
+} else {
+    console.log(`${motorista.nome}, você não atende aos requisitos.`);
+}
 
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -281,21 +248,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let souEstudante = keyboard.keyInYN('Voce e estudante? ');
-// let souIdoso = keyboard.keyInYN('Voce tem 60 anos ou mais? ');
+let souEstudante = keyboard.keyInYN('Voce e estudante? ');
+let souIdoso = keyboard.keyInYN('Voce tem 60 anos ou mais? ');
 
-// if (souEstudante || souIdoso) {
-//     console.log("Desconto de 50% aplicado!");
-// } else {
-//     console.log("Sem desconto. Preço cheio.");
-// }
+if (souEstudante || souIdoso) {
+    console.log("Desconto de 50% aplicado!");
+} else {
+    console.log("Sem desconto. Preço cheio.");
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -318,36 +279,31 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let nomeDigitado = keyboard.question('Nome do aluno: ');
-// let nota1 = keyboard.questionFloat('Nota da prova 1: ');
-// let nota2 = keyboard.questionFloat('Nota da prova 2: ');
+let nomeDigitado = keyboard.question('Nome do aluno: ');
+let nota1 = keyboard.questionFloat('Nota da prova 1: ');
+let nota2 = keyboard.questionFloat('Nota da prova 2: ');
 
-// let aluno = {
-//     nome: nomeDigitado,
-//     prova1: nota1,
-//     prova2: nota2,
-//     media: (nota1 + nota2) / 2 
-// };
+let aluno = {
+    nome: nomeDigitado,
+    prova1: nota1,
+    prova2: nota2,
+    media: (nota1 + nota2) / 2
+};
 
-// let situacao;
+let situacao;
 
-// if (aluno.media >= 7) {
-//     situacao = "Aprovado";
-// } else if (aluno.media >= 5) {
-//     situacao = "Em recuperação";
-// } else {
-//     situacao = "Reprovado";
-// }
+if (aluno.media >= 7) {
+    situacao = "Aprovado";
+} else if (aluno.media >= 5) {
+    situacao = "Em recuperação";
+} else {
+    situacao = "Reprovado";
+}
 
-// console.table(aluno);
-// console.log(`${aluno.nome}: ${situacao} (media: ${aluno.media})`);
+console.table(aluno);
+console.log(`${aluno.nome}: ${situacao} (media: ${aluno.media})`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -372,48 +328,43 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let n1 = keyboard.questionFloat('Digite o primeiro numero: ');
-// let n2 = keyboard.questionFloat('Digite o segundo numero: ');
+let n1 = keyboard.questionFloat('Digite o primeiro numero: ');
+let n2 = keyboard.questionFloat('Digite o segundo numero: ');
 
-// console.log("1 – Soma | 2 – Subtracao | 3 – Multiplicacao | 4 – Divisao");
-// let escolha = keyboard.questionInt('Escolha a operacao: ');
+console.log("1 – Soma | 2 – Subtracao | 3 – Multiplicacao | 4 – Divisao");
+let escolha = keyboard.questionInt('Escolha a operacao: ');
 
-// let calculo = {
-//     numeroA: n1,
-//     numeroB: n2,
-//     operacao: escolha,
-//     simbolo: "" 
-// };
+let calculo = {
+    numeroA: n1,
+    numeroB: n2,
+    operacao: escolha,
+    simbolo: ""
+};
 
-// let resultado;
+let resultado;
 
-// if (calculo.operacao == 1) {
-//     calculo.simbolo = "+";
-//     resultado = calculo.numeroA + calculo.numeroB;
-// } else if (calculo.operacao == 2) {
-//     calculo.simbolo = "-";
-//     resultado = calculo.numeroA - calculo.numeroB;
-// } else if (calculo.operacao == 3) {
-//     calculo.simbolo = "*";
-//     resultado = calculo.numeroA * calculo.numeroB;
-// } else if (calculo.operacao == 4) {
-//     calculo.simbolo = "/";
-    
-//     if (calculo.numeroB == 0) {
-//         resultado = "Erro: Divisao por zero";
-//     } else {
-//         resultado = calculo.numeroA / calculo.numeroB;
-//     }
-// } else {
-//     resultado = "Operacao Invalida";
-// }
+if (calculo.operacao == 1) {
+    calculo.simbolo = "+";
+    resultado = calculo.numeroA + calculo.numeroB;
+} else if (calculo.operacao == 2) {
+    calculo.simbolo = "-";
+    resultado = calculo.numeroA - calculo.numeroB;
+} else if (calculo.operacao == 3) {
+    calculo.simbolo = "*";
+    resultado = calculo.numeroA * calculo.numeroB;
+} else if (calculo.operacao == 4) {
+    calculo.simbolo = "/";
 
-// console.log(`${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado}`);
+    if (calculo.numeroB == 0) {
+        resultado = "Erro: Divisao por zero";
+    } else {
+        resultado = calculo.numeroA / calculo.numeroB;
+    }
+} else {
+    resultado = "Operacao Invalida";
+}
 
-console.log(`
-        __
-    ___( o)>
-    \\ <_. )
-     \`---'
-`);
+console.log(`${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado}`);
+
+/*/
 console.log("_______________________________");

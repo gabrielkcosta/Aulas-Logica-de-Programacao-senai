@@ -1,3 +1,4 @@
+/*
 // ============================================================
 //   ATIVIDADE 12 – Estruturas de Dados: Vetor (Array)
 // ============================================================
@@ -15,21 +16,21 @@
 
 // → Seu código aqui:
 
-// let vetor = ["jaragua","joinvile","porto alegre","salvador","habibi"]
+let vetor = ["jaragua", "joinvile", "porto alegre", "salvador", "habibi"]
 
-// console.log("lista de cidades:");
-// for (let i = 0; i < vetor.length; i++) {
-//   console.log(`Índice ${i}: ${vetor[i]}`);
-// }
+console.log("lista de cidades:");
+for (let i = 0; i < vetor.length; i++) {
+  console.log(`Índice ${i}: ${vetor[i]}`);
+}
 
-// console.log("------------------------");
+console.log("------------------------");
 
-// console.log(`Primeira cidade: ${vetor[0]}`);
-// console.log(`Última cidade: ${vetor[vetor.length - 1]}`);
+console.log(`Primeira cidade: ${vetor[0]}`);
+console.log(`Última cidade: ${vetor[vetor.length - 1]}`);
 
-// console.log("------------------------");
+console.log("------------------------");
 
-// console.log(`Total de cidades no vetor: ${vetor.length}`);
+console.log(`Total de cidades no vetor: ${vetor.length}`);
 
 console.log("_______________________________");
 
@@ -38,22 +39,22 @@ console.log("_______________________________");
 // EXERCÍCIO 2 – Soma e média
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const numeros = [12, 7, 25, 3, 18, 9, 31, 14];
+const numeros = [12, 7, 25, 3, 18, 9, 31, 14];
 // b) Calcule a SOMA de todos os números.
 // c) Calcule a MÉDIA (soma / quantidade).
 // d) Exiba: "Soma: <soma> | Média: <média>" (use toFixed(2) na média).
 
 // → Seu código aqui:
 
-// let soma = 0
+let soma = 0
 
-// for (const numeroAtual of numeros) {
-//     soma += numeroAtual;
-//   }
-//   console.log(`Soma de todos os numeros no vetor ${soma}`);
+for (const numeroAtual of numeros) {
+  soma += numeroAtual;
+}
+console.log(`Soma de todos os numeros no vetor ${soma}`);
 
-//   let media = soma / numeros.length;
-//   console.log(`Soma: ${soma} | Média: ${media.toFixed(2)}`);
+let media = soma / numeros.length;
+console.log(`Soma: ${soma} | Média: ${media.toFixed(2)}`);
 
 console.log("_______________________________");
 
@@ -62,16 +63,16 @@ console.log("_______________________________");
 // EXERCÍCIO 3 – Maior e menor
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const temperaturas = [22.5, 19.0, 27.3, 18.7, 30.1, 25.4, 21.8];
+const temperaturas = [22.5, 19.0, 27.3, 18.7, 30.1, 25.4, 21.8];
 // b) Encontre a MAIOR e a MENOR temperatura.
 // c) Exiba: "Maior: <maior>°C | Menor: <menor>°C"
 
 // → Seu código aqui:
 
-// console.log(`Maior temperatura: ${Math.max(...temperaturas)}`);
-// console.log(`menor temperatura: ${Math.min(...temperaturas)}`);
+console.log(`Maior temperatura: ${Math.max(...temperaturas)}`);
+console.log(`menor temperatura: ${Math.min(...temperaturas)}`);
 
-// console.log(`maior temperatura ${Math.max(...temperaturas)} | Menor temperatura ${Math.min(...temperaturas)}`);
+console.log(`maior temperatura ${Math.max(...temperaturas)} | Menor temperatura ${Math.min(...temperaturas)}`);
 
 
 
@@ -82,7 +83,7 @@ console.log("_______________________________");
 // EXERCÍCIO 4 – Pares e ímpares
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const listaNumeros = [4, 7, 10, 13, 16, 19, 22, 25, 28];
+const listaNumeros = [4, 7, 10, 13, 16, 19, 22, 25, 28];
 // b) Conte quantos números são pares e quantos são ímpares.
 // c) Crie dois vetores: paresVetor[] e imparesVetor[], e adicione os números em cada um.
 // d) Exiba:
@@ -91,19 +92,19 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let paresVetor = [];
-// let imparesVetor = [];
+let paresVetor = [];
+let imparesVetor = [];
 
-// for(let i = 0; i < listaNumeros.length; i++) {
-//     if(listaNumeros[i] % 2 === 0) {
-//         paresVetor.push(listaNumeros[i])
-//     } else {
-//         imparesVetor.push(listaNumeros[i])
-//     }
-// }
+for (let i = 0; i < listaNumeros.length; i++) {
+  if (listaNumeros[i] % 2 === 0) {
+    paresVetor.push(listaNumeros[i])
+  } else {
+    imparesVetor.push(listaNumeros[i])
+  }
+}
 
-// console.log(`Pares (${paresVetor.length}): ${paresVetor}`);
-// console.log(`Ímpares (${imparesVetor.length}): ${imparesVetor}`);
+console.log(`Pares (${paresVetor.length}): ${paresVetor}`);
+console.log(`Ímpares (${imparesVetor.length}): ${imparesVetor}`);
 
 console.log("_______________________________");
 
@@ -112,7 +113,7 @@ console.log("_______________________________");
 // EXERCÍCIO 5 – Inversão de vetor
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const vetorOriginal = ["A", "B", "C", "D", "E"];
+const vetorOriginal = ["A", "B", "C", "D", "E"];
 // b) Usando for(), crie um novo vetor 'vetorInvertido' com os elementos em ordem reversa.
 // c) Exiba ambos os vetores:
 //    "Original:  <original>"
@@ -123,17 +124,17 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-// let vetorInvertido = [];
+let vetorInvertido = [];
 
-// for (let i = vetorOriginal.length - 1; i >= 0; i--) {
-//     vetorInvertido.push(vetorOriginal[i]);
-// }
+for (let i = vetorOriginal.length - 1; i >= 0; i--) {
+  vetorInvertido.push(vetorOriginal[i]);
+}
 
-// console.log(`Original:  ${vetorOriginal}`);
-// console.log(`Invertido: ${vetorInvertido}`);
+console.log(`Original:  ${vetorOriginal}`);
+console.log(`Invertido: ${vetorInvertido}`);
 
-// const vetorInvertido2 = [...vetorOriginal].reverse();
-// console.log(`Invertido 2: ${vetorInvertido2}`);
+const vetorInvertido2 = [...vetorOriginal].reverse();
+console.log(`Invertido 2: ${vetorInvertido2}`);
 
 console.log("_______________________________");
 
@@ -151,20 +152,20 @@ console.log("_______________________________");
 
 let keyboard = require("readline-sync");
 
-// let produtos = [];
+let produtos = [];
 
-// let quantidadeCadastrar = keyboard.questionInt("Quantos produtos deseja cadastrar? ");
+let quantidadeCadastrar = keyboard.questionInt("Quantos produtos deseja cadastrar? ");
 
-// for (let i = 0; i < quantidadeCadastrar; i++) {
-//     let nome = keyboard.question("Digite o nome do produto: ");
-//     produtos.push(nome); 
-// }
-// console.log("--- Lista de Produtos ---");
-// for (let i = 0; i < produtos.length; i++) {
-//     console.log(produtos[i]);
-// }
+for (let i = 0; i < quantidadeCadastrar; i++) {
+  let nome = keyboard.question("Digite o nome do produto: ");
+  produtos.push(nome);
+}
+console.log("--- Lista de Produtos ---");
+for (let i = 0; i < produtos.length; i++) {
+  console.log(produtos[i]);
+}
 
-// console.log(`${produtos.length} produtos cadastrados.`);
+console.log(`${produtos.length} produtos cadastrados.`);
 
 
 console.log("_______________________________");
@@ -174,7 +175,7 @@ console.log("_______________________________");
 // EXERCÍCIO 7 – Busca em vetor
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const alunosReprovados = ["Ana", "Bruno", "Carla", "Diego", "Eva"];
+const alunosReprovados = ["Ana", "Bruno", "Carla", "Diego", "Eva"];
 // b) Pergunte ao usuário o nome de um aluno.
 // c) Usando for e break, verifique se o nome existe na lista.
 //    - Se existir: "<nome> está matriculado(a) (índice <i>)."
@@ -182,24 +183,24 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// console.log(`alunos :  Ana | Bruno | Carla | Diego | Eva | Jorgin | Pedro | Gabriel | etc..`);
+console.log(`alunos :  Ana | Bruno | Carla | Diego | Eva | Jorgin | Pedro | Gabriel | etc..`);
 
-// const procurado = keyboard.question("qual aluno voce esta procurando: ")
-// let achouNoIndice = -1;
+const procurado = keyboard.question("qual aluno voce esta procurando: ")
+let achouNoIndice = -1;
 
-// for (let i = 0; i < alunosReprovados.length; i++) {
-//     if (alunosReprovados[i] === procurado) {
-//       achouNoIndice = i;
-//       break;
-//     }
-//   }
-  
-//   if (achouNoIndice === -1) {
-//     console.log(`"${procurado}" não está na lista de Reprovados.`);
-//   } else {
-//     console.log(`"${procurado}" está no índice ${achouNoIndice}.`);
-//   }
-  
+for (let i = 0; i < alunosReprovados.length; i++) {
+  if (alunosReprovados[i] === procurado) {
+    achouNoIndice = i;
+    break;
+  }
+}
+
+if (achouNoIndice === -1) {
+  console.log(`"${procurado}" não está na lista de Reprovados.`);
+} else {
+  console.log(`"${procurado}" está no índice ${achouNoIndice}.`);
+}
+
 
 console.log("_______________________________");
 
@@ -208,12 +209,12 @@ console.log("_______________________________");
 // EXERCÍCIO 8 – Vetor de objetos
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const livros = [
-        { titulo: "Dom Casmurro",       paginas: 256 },
-        { titulo: "O Cortiço",          paginas: 304 },
-        { titulo: "Memórias Póstumas",  paginas: 208 },
-        { titulo: "Capitães da Areia",  paginas: 280 },
-      ];
+const livros = [
+  { titulo: "Dom Casmurro", paginas: 256 },
+  { titulo: "O Cortiço", paginas: 304 },
+  { titulo: "Memórias Póstumas", paginas: 208 },
+  { titulo: "Capitães da Areia", paginas: 280 },
+];
 // b) Exiba a lista com console.table().
 // c) Usando for, calcule:
 //    - Total de páginas de todos os livros.
@@ -225,9 +226,9 @@ console.log("_______________________________");
 let totalPaginas = 0;
 let livroMaisPaginas = livros[0];
 
-for(let i = 0; i < livros.length; i++){
-      totalPaginas += livros[i].paginas
-    }
+for (let i = 0; i < livros.length; i++) {
+  totalPaginas += livros[i].paginas
+}
 
 let mediaPaginas = totalPaginas / livros.length;
 
@@ -241,7 +242,7 @@ console.log("_______________________________");
 // EXERCÍCIO 9 – Filtro com push
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const idades = [12, 17, 21, 15, 30, 45, 9, 67, 19, 8];
+const idades = [12, 17, 21, 15, 30, 45, 9, 67, 19, 8];
 // b) Usando for, separe o vetor acima em dois vetores:
 //    - menores[]: pessoas com idade < 18
 //    - adultos[]: pessoas com idade >= 18
@@ -296,7 +297,7 @@ do {
   console.log(`4 - Remover última`);
   console.log(`5 - Limpar todas`);
   console.log(`0 - Sair`);
-  
+
   opcao = keyboard.questionInt(`Escolha uma opcao: `);
 
   switch (opcao) {
@@ -356,14 +357,9 @@ do {
       break;
   }
 
-} while (opcao !== 0); 
+} while (opcao !== 0);
 
 console.log(`Encerrando. Total de notas registradas: ${notas.length}`);
 
-console.log(`
-        __
-    ___( o)>
-    \\ <_. )
-     \`---'
-`);
+/*/
 console.log("_______________________________");

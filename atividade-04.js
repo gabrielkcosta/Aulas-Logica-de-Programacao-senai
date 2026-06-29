@@ -1,3 +1,4 @@
+/*
 // ============================================================
 //   ATIVIDADE 04 – Operadores Aritméticos em JavaScript
 // ============================================================
@@ -7,11 +8,11 @@
 //     npm install readline-sync
 // Para executar:
 //     node atividade-04.js
-//
+
 // Dica: Ao terminar um exercício, comente-o. Assim os dados
 //       não serão solicitados novamente.
 // ============================================================
-let Keyboard = require('readline-sync')
+// let Keyboard = require('readline-sync')
 
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Operações básicas
@@ -28,23 +29,17 @@ let Keyboard = require('readline-sync')
 
 // → Seu código aqui:
 
-// let num1 = 18
-// let num2 = 5
-// console.log(`calculo: ${num1} + ${num2} = ${num1 + num2}`);
-// console.log(`subtraçao ${num1} - ${num2} = ${num1 - num2}`);
-// console.log(`multiplicação ${num1} x ${num2} = ${num1 * num2}`)
-// console.log(`divisao ${num1} / ${num2} = ${(num1 / num2).toFixed(2)}`);
-// console.log(`resto da divisao ${num1} % ${num2} = ${num1 % num2}`);
-// console.log(`elevado ${num1} ** ${num2} = ${num1 ** num2}`);
+let num1 = 18
+let num2 = 5
+console.log(`calculo: ${num1} + ${num2} = ${num1 + num2}`);
+console.log(`subtraçao ${num1} - ${num2} = ${num1 - num2}`);
+console.log(`multiplicação ${num1} x ${num2} = ${num1 * num2}`)
+console.log(`divisao ${num1} / ${num2} = ${(num1 / num2).toFixed(2)}`);
+console.log(`resto da divisao ${num1} % ${num2} = ${num1 % num2}`);
+console.log(`elevado ${num1} ** ${num2} = ${num1 ** num2}`);
 
-// Assim os dados não serão solicitados novamente
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 
 console.log("_______________________________");
@@ -61,20 +56,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let largura = 8;
-// let altura = 5;
-// let area = largura * altura;
-// let perimetro = 2 * largura + 2 * altura;
-// console.log(`retangulo | largura: ${largura} | altura: ${altura} | area: ${area} | perimetro: ${perimetro}`);
+let largura = 8;
+let altura = 5;
+let area = largura * altura;
+let perimetro = 2 * largura + 2 * altura;
+console.log(`retangulo | largura: ${largura} | altura: ${altura} | area: ${area} | perimetro: ${perimetro}`);
 
-// Assim os dados não serão solicitados novamente
-
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -93,20 +80,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let precoOriginal = 250 
-// let percentualDesconto = 15 //15%
-// let valorDesconto = precoOriginal * (percentualDesconto / 100)
-// let precoFinal = precoOriginal - valorDesconto
-// console.log(`preco original: R$ ${precoOriginal} | desconto: R$ ${valorDesconto} | preco final: R$ ${precoFinal}`)
+let precoOriginal = 250
+let percentualDesconto = 15 //15%
+let valorDesconto = precoOriginal * (percentualDesconto / 100)
+let precoFinal = precoOriginal - valorDesconto
+console.log(`preco original: R$ ${precoOriginal} | desconto: R$ ${valorDesconto} | preco final: R$ ${precoFinal}`)
 
-// Assim os dados não serão solicitados novamente
-
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -124,25 +103,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let pontos = 100
-// console.log("pontos antes",pontos)
-// pontos += 50
-// console.log("pontos depois",pontos)
-// pontos -= 30
-// console.log("pontos menos 30",pontos)
-// pontos *= 2
-// console.log("pontos multiplicados por 2",pontos)
-// pontos /= 4
-// console.log("pontos divido por 4",pontos)
+let pontos = 100
+console.log("pontos antes", pontos)
+pontos += 50
+console.log("pontos depois", pontos)
+pontos -= 30
+console.log("pontos menos 30", pontos)
+pontos *= 2
+console.log("pontos multiplicados por 2", pontos)
+pontos /= 4
+console.log("pontos divido por 4", pontos)
 
-// Assim os dados não serão solicitados novamente
-
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -159,29 +130,21 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let vidas = 3
-// console.log(vidas)
-// vidas++;
-// console.log(vidas)
-// vidas++;
-// console.log(vidas)
-// vidas--;
-// console.log(vidas)
+let vidas = 3
+console.log(vidas)
+vidas++;
+console.log(vidas)
+vidas++;
+console.log(vidas)
+vidas--;
+console.log(vidas)
 
-// let nivel = 1
-// console.log(`Nível inicial: ${nivel}`);
-// console.log(`Nível após 1 incremento : ${++nivel}`);
-// console.log(`Nível após 2 incremento : ${++nivel}`);
-// console.log(`Nível após 3 incremento : ${++nivel}`);
+let nivel = 1
+console.log(`Nível inicial: ${nivel}`);
+console.log(`Nível após 1 incremento : ${++nivel}`);
+console.log(`Nível após 2 incremento : ${++nivel}`);
+console.log(`Nível após 3 incremento : ${++nivel}`);
 
-// Assim os dados não serão solicitados novamente
-
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -199,24 +162,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let nota = 7.3
-// console.log(`Math.round(${nota}) = ${Math.round(nota)}`); 
-// console.log(`Math.floor(${nota}) = ${Math.floor(nota)}`); 
-// console.log(`Math.ceil(${nota}) = ${Math.ceil(nota)}`);  
+let nota = 7.3
+console.log(`Math.round(${nota}) = ${Math.round(nota)}`);
+console.log(`Math.floor(${nota}) = ${Math.floor(nota)}`);
+console.log(`Math.ceil(${nota}) = ${Math.ceil(nota)}`);
 
-// let temperatura = -12.5
-// console.log("valor abs :", Math.abs(temperatura));
-// console.log(`valor maior : ${Math.max(42, 17, 89, 5, 63)}`)
-// console.log(`valor menor : ${Math.min(42, 17, 89, 5, 63)}`)
+let temperatura = -12.5
+console.log("valor abs :", Math.abs(temperatura));
+console.log(`valor maior : ${Math.max(42, 17, 89, 5, 63)}`)
+console.log(`valor menor : ${Math.min(42, 17, 89, 5, 63)}`)
 
-// Assim os dados não serão solicitados novamente
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -232,23 +188,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let n1 = Keyboard.questionFloat("Digite a nota 1: ");
-// let n2 = Keyboard.questionFloat("Digite a nota 2: ");
-// let n3 = Keyboard.questionFloat("Digite a nota 3: ");
+let n1 = Keyboard.questionFloat("Digite a nota 1: ");
+let n2 = Keyboard.questionFloat("Digite a nota 2: ");
+let n3 = Keyboard.questionFloat("Digite a nota 3: ");
 
-// let media = (n1 + n2 + n3) / 3;
+let media = (n1 + n2 + n3) / 3;
 
-// console.log(`Nota 1: ${n1} | Nota 2: ${n2} | Nota 3: ${n3}`);
-// console.log(`Média: ${media.toFixed(2)}`);
+console.log(`Nota 1: ${n1} | Nota 2: ${n2} | Nota 3: ${n3}`);
+console.log(`Média: ${media.toFixed(2)}`);
 
-// Assim os dados não serão solicitados novamente
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -267,20 +216,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let valorTotalCompra = Keyboard.questionFloat("digite o valor total da compra : R$");
-// let valorEntregue = Keyboard.questionFloat("valor entregue pelo cliente : R$");
-// let troco = ("troco :", valorEntregue - valorTotalCompra);
+let valorTotalCompra = Keyboard.questionFloat("digite o valor total da compra : R$");
+let valorEntregue = Keyboard.questionFloat("valor entregue pelo cliente : R$");
+let troco = ("troco :", valorEntregue - valorTotalCompra);
 
-// console.log("valor da compra :",valorTotalCompra,"valor entregue :",valorEntregue,"troco :",troco)
+console.log("valor da compra :", valorTotalCompra, "valor entregue :", valorEntregue, "troco :", troco)
 
-// Assim os dados não serão solicitados novamente
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -289,32 +231,27 @@ console.log("_______________________________");
 // EXERCÍCIO 9 – Valor total de listas
 // ------------------------------------------------------------
 // a) Dada uma lista de preços, calcule e exiba o total.
-let precos = [29.90, 49.99, 15.75, 99.90];
+// let precos = [29.90, 49.99, 15.75, 99.90];
 // b) Dada uma lista de notas, calcule e exiba a média.
-let notas = [7.5, 8.2, 6.5, 9.0];
+// let notas = [7.5, 8.2, 6.5, 9.0];
 // c) Dada uma lista de idades, exiba a maior e a menor idade utilizando das funções Math().
-let idades = [15, 22, 30, 18, 25];
+// let idades = [15, 22, 30, 18, 25];
 
 // → Seu código aqui:
 
-// let total = precos[0] + precos[1] + precos[2] + precos[3];
-// console.log(`total : ${total.toFixed(2)}`)
+let total = precos[0] + precos[1] + precos[2] + precos[3];
+console.log(`total : ${total.toFixed(2)}`)
 
 
-// let soma = notas[0] + notas[1] + notas[2] + notas[3];
-// let media = soma / 4;
-// console.log("Média:", media);
+let soma = notas[0] + notas[1] + notas[2] + notas[3];
+let media = soma / 4;
+console.log("Média:", media);
 
 
-// console.log(`idade maior : ${Math.max(15, 22, 30, 18, 25)}`);
-// console.log(`idade menor : ${Math.min(15, 22, 30, 18, 25)}`);
- 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+console.log(`idade maior : ${Math.max(15, 22, 30, 18, 25)}`);
+console.log(`idade menor : ${Math.min(15, 22, 30, 18, 25)}`);
+
+
 
 console.log("_______________________________");
 
@@ -345,54 +282,47 @@ let turma = {
 
 // → Seu código aqui:
 
-// turma.aluno1.notas.push(Keyboard.questionFloat("Digite a nota 1: "))
-// turma.aluno1.notas.push(Keyboard.questionFloat("Digite a nota 2: "))
-// turma.aluno1.notas.push(Keyboard.questionFloat("Digite a nota 3: "))
-// console.log("notas do Joao",turma.aluno1.notas)
+turma.aluno1.notas.push(Keyboard.questionFloat("Digite a nota 1: "))
+turma.aluno1.notas.push(Keyboard.questionFloat("Digite a nota 2: "))
+turma.aluno1.notas.push(Keyboard.questionFloat("Digite a nota 3: "))
+console.log("notas do Joao", turma.aluno1.notas)
 
-// turma.aluno2.notas.push(Keyboard.questionFloat("Digite a nota 1: "));
-// turma.aluno2.notas.push(Keyboard.questionFloat("Digite a nota 2: "));
-// turma.aluno2.notas.push(Keyboard.questionFloat("Digite a nota 3: "));
-// console.log("notas da Maria",turma.aluno1.notas)
+turma.aluno2.notas.push(Keyboard.questionFloat("Digite a nota 1: "));
+turma.aluno2.notas.push(Keyboard.questionFloat("Digite a nota 2: "));
+turma.aluno2.notas.push(Keyboard.questionFloat("Digite a nota 3: "));
+console.log("notas da Maria", turma.aluno1.notas)
 
-// turma.aluno3.notas.push(Keyboard.questionFloat("Digite a nota 1: "));
-// turma.aluno3.notas.push(Keyboard.questionFloat("Digite a nota 2: "));
-// turma.aluno3.notas.push(Keyboard.questionFloat("Digite a nota 3: "));
-// console.log("notas do Pedro",turma.aluno1.notas)
+turma.aluno3.notas.push(Keyboard.questionFloat("Digite a nota 1: "));
+turma.aluno3.notas.push(Keyboard.questionFloat("Digite a nota 2: "));
+turma.aluno3.notas.push(Keyboard.questionFloat("Digite a nota 3: "));
+console.log("notas do Pedro", turma.aluno1.notas)
 
-// let somaJoao = turma.aluno1.notas[0] + turma.aluno1.notas[1] + turma.aluno1.notas[2]
-// let mediaJoao = somaJoao / 3
-// console.log(`media do joao é: ${mediaJoao.toFixed(2)}`)
+let somaJoao = turma.aluno1.notas[0] + turma.aluno1.notas[1] + turma.aluno1.notas[2]
+let mediaJoao = somaJoao / 3
+console.log(`media do joao é: ${mediaJoao.toFixed(2)}`)
 
-// let somaMaria = turma.aluno2.notas[0] + turma.aluno2.notas[1] + turma.aluno2.notas[2]
-// let mediaMaria = somaMaria / 3
-// console.log(`media da maria é: ${mediaMaria.toFixed(2)}`)
+let somaMaria = turma.aluno2.notas[0] + turma.aluno2.notas[1] + turma.aluno2.notas[2]
+let mediaMaria = somaMaria / 3
+console.log(`media da maria é: ${mediaMaria.toFixed(2)}`)
 
-// let somaPedro = turma.aluno3.notas[0] + turma.aluno3.notas[1] + turma.aluno3.notas[2]
-// let mediaPedro = somaPedro / 3
-// console.log(`media do pedro é: ${mediaPedro.toFixed(2)}`);
+let somaPedro = turma.aluno3.notas[0] + turma.aluno3.notas[1] + turma.aluno3.notas[2]
+let mediaPedro = somaPedro / 3
+console.log(`media do pedro é: ${mediaPedro.toFixed(2)}`);
 
-// let somaMedias = mediaJoao + mediaMaria + mediaPedro
-// let mediaGeral = somaMedias / 3
-// console.log(`A média geral da turma : ${mediaGeral.toFixed(2)}`);
+let somaMedias = mediaJoao + mediaMaria + mediaPedro
+let mediaGeral = somaMedias / 3
+console.log(`A média geral da turma : ${mediaGeral.toFixed(2)}`);
 
-// let maiorJoao = Math.max(turma.aluno1.notas[0], turma.aluno1.notas[1], turma.aluno1.notas[2])
-// let menorJoao = Math.min(turma.aluno1.notas[0], turma.aluno1.notas[1], turma.aluno1.notas[2])
-// console.log(`João Maior nota: ${maiorJoao} | Menor nota: ${menorJoao}`)
+let maiorJoao = Math.max(turma.aluno1.notas[0], turma.aluno1.notas[1], turma.aluno1.notas[2])
+let menorJoao = Math.min(turma.aluno1.notas[0], turma.aluno1.notas[1], turma.aluno1.notas[2])
+console.log(`João Maior nota: ${maiorJoao} | Menor nota: ${menorJoao}`)
 
-// let maiorMaria = Math.max(turma.aluno2.notas[0], turma.aluno2.notas[1], turma.aluno2.notas[2])
-// let menorMaria = Math.min(turma.aluno2.notas[0], turma.aluno2.notas[1], turma.aluno2.notas[2])
-// console.log(`Maria Maior nota: ${maiorMaria} | Menor nota: ${menorMaria}`)
+let maiorMaria = Math.max(turma.aluno2.notas[0], turma.aluno2.notas[1], turma.aluno2.notas[2])
+let menorMaria = Math.min(turma.aluno2.notas[0], turma.aluno2.notas[1], turma.aluno2.notas[2])
+console.log(`Maria Maior nota: ${maiorMaria} | Menor nota: ${menorMaria}`)
 
-// let maiorPedro = Math.max(turma.aluno3.notas[0], turma.aluno3.notas[1], turma.aluno3.notas[2])
-// let menorPedro = Math.min(turma.aluno3.notas[0], turma.aluno3.notas[1], turma.aluno3.notas[2])
-// console.log(`Pedro Maior nota: ${maiorPedro} | Menor nota: ${menorPedro}`)
-
-console.log(`
-        __
-    ___( o)>
-    \\ <_. )
-     \`---'
-`);
-
+let maiorPedro = Math.max(turma.aluno3.notas[0], turma.aluno3.notas[1], turma.aluno3.notas[2])
+let menorPedro = Math.min(turma.aluno3.notas[0], turma.aluno3.notas[1], turma.aluno3.notas[2])
+console.log(`Pedro Maior nota: ${maiorPedro} | Menor nota: ${menorPedro}`)
+/*/
 console.log("_______________________________");

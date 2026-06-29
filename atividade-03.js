@@ -1,3 +1,4 @@
+/*
 // ============================================================
 //   ATIVIDADE 03 – Input e Output em JavaScript
 // ============================================================
@@ -23,17 +24,13 @@ let keyboard = require('readline-sync')
 // d) Use console.error() para exibir uma mensagem de erro aleatória de sua escolha.
 
 // → Seu código aqui:
-// console.log('iniciandoo programa...')
-// console.info('atividade imput e output')
-// console.warn('inicie o programa com node e o nome do arquivo')
-// console.error('erro van 208')
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+console.log('iniciandoo programa...')
+console.info('atividade imput e output')
+console.warn('inicie o programa com node e o nome do arquivo')
+console.error('erro van 208')
+
+
 
 console.log("_______________________________");
 
@@ -48,17 +45,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// const nomeUsuario = keyboard.question('Digite seu nome');
-// const idadeDeUsuario = keyboard.questionInt('digite sua idade');
-// const cidade = keyboard.question('cidade onde voce mora')
-// console.log(`olá, ${nomeUsuario}! Você tem ${idadeDeUsuario} anos.`);
+const nomeUsuario = keyboard.question('Digite seu nome');
+const idadeDeUsuario = keyboard.questionInt('digite sua idade');
+const cidade = keyboard.question('cidade onde voce mora')
+console.log(`olá, ${nomeUsuario}! Você tem ${idadeDeUsuario} anos.`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -72,20 +64,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// const nomeUsuario = keyboard.question('Digite seu nome');
-// const idadeDeUsuario = keyboard.questionInt('digite sua idade');
-// const cidadeDeUsuario = keyboard.question('cidade onde voce mora')
+const nomeUsuario = keyboard.question('Digite seu nome');
+const idadeDeUsuario = keyboard.questionInt('digite sua idade');
+const cidadeDeUsuario = keyboard.question('cidade onde voce mora')
 
-// const ficha = {nome: nomeUsuario, idade: idadeDeUsuario, cidade: cidadeDeUsuario}
+const ficha = { nome: nomeUsuario, idade: idadeDeUsuario, cidade: cidadeDeUsuario }
 
-// console.table([ficha])
+console.table([ficha])
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -99,15 +85,9 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// const JogarBrawl = keyboard.keyInYN('Vamo jogar brawl?')
-// console.log(`${JogarBrawl ? 'entao bora' : 'nao seu bobao'}. `)
+const JogarBrawl = keyboard.keyInYN('Vamo jogar brawl?')
+console.log(`${JogarBrawl ? 'entao bora' : 'nao seu bobao'}. `)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -120,20 +100,15 @@ console.log("_______________________________");
 // c) Exiba a array com console.table().
 
 // → Seu código aqui:
-// let comida1 = keyboard.question('comida favorita 1?  :');
-// let comida2 = keyboard.question('comida favorita 2?  :');
-// let comida3 = keyboard.question('comida favorita 3?  :');
+let comida1 = keyboard.question('comida favorita 1?  :');
+let comida2 = keyboard.question('comida favorita 2?  :');
+let comida3 = keyboard.question('comida favorita 3?  :');
 
-// comidasFavoritas = [comida1, comida2, comida3];
-// const comidinhas = {Comida1:comida1, Comida2:comida2, Comida3:comida3}
-// console.table([comidinhas])
+comidasFavoritas = [comida1, comida2, comida3];
+const comidinhas = { Comida1: comida1, Comida2: comida2, Comida3: comida3 }
+console.table([comidinhas])
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -148,25 +123,20 @@ console.log("_______________________________");
 // d) Exiba a mesma informação com console.table().
 
 // → Seu código aqui:
-// let nome = keyboard.question('me fale seu nome?  :');
-// let profissao = keyboard.question('qual sua profissao?  :');
-// let cidade = keyboard.question('qual a sua cidade?  :');
+let nome = keyboard.question('me fale seu nome?  :');
+let profissao = keyboard.question('qual sua profissao?  :');
+let cidade = keyboard.question('qual a sua cidade?  :');
 
-// const cadastroPessoal = {
-//     nome,
-//     profissao,
-//     cidade,
-// }
+const cadastroPessoal = {
+  nome,
+  profissao,
+  cidade,
+}
 
-// console.log(`Me chamo ${nome}. Profissao ${profissao} e moro na cidade de: ${cidade}.`)
-// console.table(cadastroPessoal)
+console.log(`Me chamo ${nome}. Profissao ${profissao} e moro na cidade de: ${cidade}.`)
+console.table(cadastroPessoal)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -186,53 +156,48 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let usuario1 = {
-//     nome: "pintovaldo",
-//     idade: 54,
-//     endereco: { 
-//         cidade: "republica tcheca",
-//         pais: "nova zelandia",
-//         rua: "nova york",
-//         ip: 091623,
-//     }
-// };
+let usuario1 = {
+  nome: "pintovaldo",
+  idade: 54,
+  endereco: {
+    cidade: "republica tcheca",
+    pais: "nova zelandia",
+    rua: "nova york",
+    ip: 091623,
+  }
+};
 
-// let usuario2 = {
-//     nome: "geraldo",
-//     idade: 13,
-//     endereco: { 
-//         cidade: "peru",
-//         pais: "Brasil",
-//         rua: "portugol",
-//         ip: 098363,
-//     }
-// };
+let usuario2 = {
+  nome: "geraldo",
+  idade: 13,
+  endereco: {
+    cidade: "peru",
+    pais: "Brasil",
+    rua: "portugol",
+    ip: 098363,
+  }
+};
 
-// let usuario3 = {
-//      nome: "valdecir",
-//      idade: 88,
-//      endereco: {
-//         cidade: "tabui",
-//         pais: "pernanbuco",
-//         rua: "portugol",
-//         ip: 098363,
-//     }
-// };
+let usuario3 = {
+  nome: "valdecir",
+  idade: 88,
+  endereco: {
+    cidade: "tabui",
+    pais: "pernanbuco",
+    rua: "portugol",
+    ip: 098363,
+  }
+};
 
-// const listaDeUsuarios = [usuario1, usuario2, usuario3];
+const listaDeUsuarios = [usuario1, usuario2, usuario3];
 
-// console.table(listaDeUsuarios);
+console.table(listaDeUsuarios);
 
-// console.log(`nome: ${listaDeUsuarios[1].nome}, idade ${listaDeUsuarios[1].idade}`);
-// console.log("endereço do 3 usuario", listaDeUsuarios[2].endereco);
-// console.log(`nome: ${listaDeUsuarios[0].nome}, Rua: ${listaDeUsuarios[0].endereco.rua}`);
+console.log(`nome: ${listaDeUsuarios[1].nome}, idade ${listaDeUsuarios[1].idade}`);
+console.log("endereço do 3 usuario", listaDeUsuarios[2].endereco);
+console.log(`nome: ${listaDeUsuarios[0].nome}, Rua: ${listaDeUsuarios[0].endereco.rua}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -249,44 +214,39 @@ console.log("_______________________________");
 // g) Exiba o nome e a 3ª nota do 1º aluno.
 
 // → Seu código aqui:
-// const aluno1 = {
-//     nome: keyboard.question('Digite o nome do aluno1: '),
-//     notas: [
-//       keyboard.questionInt('Digite a nota 1: '),
-//       keyboard.questionInt('Digite a nota 2: '),
-//       keyboard.questionInt('Digite a nota 3: ')
-//     ]
-//   };
+const aluno1 = {
+  nome: keyboard.question('Digite o nome do aluno1: '),
+  notas: [
+    keyboard.questionInt('Digite a nota 1: '),
+    keyboard.questionInt('Digite a nota 2: '),
+    keyboard.questionInt('Digite a nota 3: ')
+  ]
+};
 
-//   const aluno2 = {
-//     nome: keyboard.question('Digite o nome do aluno2: '),
-//     notas: [
-//       keyboard.questionInt('Digite a nota 1: '),
-//       keyboard.questionInt('Digite a nota 2: '),
-//       keyboard.questionInt('Digite a nota 3: ')
-//     ]
-//   };
+const aluno2 = {
+  nome: keyboard.question('Digite o nome do aluno2: '),
+  notas: [
+    keyboard.questionInt('Digite a nota 1: '),
+    keyboard.questionInt('Digite a nota 2: '),
+    keyboard.questionInt('Digite a nota 3: ')
+  ]
+};
 
-//   const aluno3 = {
-//     nome: keyboard.question('Digite o nome do aluno3: '),
-//     notas: [
-//       keyboard.questionInt('Digite a nota 1: '),
-//       keyboard.questionInt('Digite a nota 2: '),
-//       keyboard.questionInt('Digite a nota 3: ')
-//     ]
-//   };
-// const turma =[aluno1, aluno2, aluno3]
-// console.table(turma)
-// console.log(`Aluno: ${turma[1].nome}, Nota: ${turma[1].notas[0]}`);
-// console.log(`Aluno: ${turma[2].nome}, Nota: ${turma[2].notas[1]}`);
-// console.log(`Aluno: ${turma[2].nome}, Nota: ${turma[2].notas[1]}`);
+const aluno3 = {
+  nome: keyboard.question('Digite o nome do aluno3: '),
+  notas: [
+    keyboard.questionInt('Digite a nota 1: '),
+    keyboard.questionInt('Digite a nota 2: '),
+    keyboard.questionInt('Digite a nota 3: ')
+  ]
+};
+const turma = [aluno1, aluno2, aluno3]
+console.table(turma)
+console.log(`Aluno: ${turma[1].nome}, Nota: ${turma[1].notas[0]}`);
+console.log(`Aluno: ${turma[2].nome}, Nota: ${turma[2].notas[1]}`);
+console.log(`Aluno: ${turma[2].nome}, Nota: ${turma[2].notas[1]}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -307,31 +267,27 @@ console.log("_______________________________");
 //    "Produto: <nome> | Categoria: <categoria> | Estoque: <quantidade> un".
 
 // → Seu código aqui
-// const Produtos = {
-//     nome: keyboard.question('digite o nome do produto:'),
-//     categoria: keyboard.question('digite sua categoria:'),
-//     preco: keyboard.questionInt('preco:'),
-//     quantidade_em_estoque: keyboard.questionInt('quantidade estoque:'),
-// }
-// const venda = keyboard.keyInYN('esta disponivel para venda?:');
 
-// const produto =  {
-//     nome: Produtos.nome,
-//     categoria: Produtos.categoria,
-//     preco: Produtos.preco,
-//     estoque: Produtos.quantidade_em_estoque,
-//     Disponivel: venda
-// }
+const Produtos = {
+  nome: keyboard.question('digite o nome do produto:'),
+  categoria: keyboard.question('digite sua categoria:'),
+  preco: keyboard.questionInt('preco:'),
+  quantidade_em_estoque: keyboard.questionInt('quantidade estoque:'),
+}
+const venda = keyboard.keyInYN('esta disponivel para venda?:');
 
-// console.table([produto]);
-// console.log(`produto: ${produto.nome} | categoria: ${produto.categoria} | estoque: ${produto.estoque} un.`);
+const produto = {
+  nome: Produtos.nome,
+  categoria: Produtos.categoria,
+  preco: Produtos.preco,
+  estoque: Produtos.quantidade_em_estoque,
+  Disponivel: venda
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+console.table([produto]);
+console.log(`produto: ${produto.nome} | categoria: ${produto.categoria} | estoque: ${produto.estoque} un.`);
+
+
 
 console.log("_______________________________");
 
@@ -349,30 +305,25 @@ console.log("_______________________________");
 // e) Exiba somente o nome e se está em estoque o 1 medicamento.
 
 
-// const user = {
-//     nome: keyboard.question('digite o nome do medicamento:'),
-//     preco: keyboard.questionInt('digite o preco do medicamento:'),
-//     emEstoque: keyboard.keyInYN('esta disponivel para venda?:')
-// }
+const user = {
+  nome: keyboard.question('digite o nome do medicamento:'),
+  preco: keyboard.questionInt('digite o preco do medicamento:'),
+  emEstoque: keyboard.keyInYN('esta disponivel para venda?:')
+}
 
-// const user2 = {
-//     nome: keyboard.question('digite o nome do 2 medicamento:'),
-//     preco: keyboard.questionInt('digite o preco do 2 medicamento:'),
-//     emEstoque: keyboard.keyInYN('esta disponivel para venda?:')
-// }
-// const estoqueFarmacia = [];
-// estoqueFarmacia.push(user);
-// estoqueFarmacia.push(user2);
+const user2 = {
+  nome: keyboard.question('digite o nome do 2 medicamento:'),
+  preco: keyboard.questionInt('digite o preco do 2 medicamento:'),
+  emEstoque: keyboard.keyInYN('esta disponivel para venda?:')
+}
+const estoqueFarmacia = [];
+estoqueFarmacia.push(user);
+estoqueFarmacia.push(user2);
 
-// console.table(estoqueFarmacia)
+console.table(estoqueFarmacia)
 
-// console.log(`medicamento 2: ${estoqueFarmacia[1].nome} | preco R$ ${estoqueFarmacia[1].preco}`);
-// console.log(`medicamento 2: ${estoqueFarmacia[0].nome} | preco R$ ${estoqueFarmacia[0].emEstoque}`);
+console.log(`medicamento 2: ${estoqueFarmacia[1].nome} | preco R$ ${estoqueFarmacia[1].preco}`);
+console.log(`medicamento 2: ${estoqueFarmacia[0].nome} | preco R$ ${estoqueFarmacia[0].emEstoque}`);
 
-console.log(`
-        __
-    ___( o)>
-    \\ <_. )
-     \`---'
-`);
+/*/
 console.log("_______________________________");

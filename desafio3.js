@@ -1,3 +1,4 @@
+/*
 // ============================================================
 //   DESAFIOS (para quem já terminou a atividade 15)
 //   Funções com Parâmetros e Retornos
@@ -181,7 +182,7 @@ function iniciarQuiz(lista) {
     for (let i = 0; i < lista.length; i++) {
         exibirPergunta(lista[i], i + 1);
         let resp = readline.question("Sua resposta: ");
-        
+
         if (verificarResposta(lista[i], resp)) {
             console.log("Resposta Correta! Muito bem.");
         } else {
@@ -422,7 +423,7 @@ function jogar(min, max) {
     while (!flagAcertou) {
         let palpiteAtual = pedirPalpite(min, max);
         tentativas++;
-        
+
         let feedback = compararPalpite(palpiteAtual, alvo);
 
         if (feedback === "acertou") {
@@ -454,5 +455,5 @@ do {
 
 console.log("\n--- HISTÓRICO DE PERFORMANCE FINAL ---");
 console.table(historicoPartidas);
-
+/*/
 console.log("_______________________________");

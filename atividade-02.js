@@ -1,3 +1,4 @@
+/*
 // ============================================================
 //   ATIVIDADE 02 – Arrays (Listas) em JavaScript
 // ============================================================
@@ -14,19 +15,14 @@
 
 // → Seu código aqui:
 
-// let Cores = ["azul","preto","vermelho","verde"];
-// console.log(Cores [0]) //azul
-// console.log(Cores [3]) //verde
-// console.log(Cores)
-// console.log(Cores.length);
-// console.log("_______________________________");
+let Cores = ["azul", "preto", "vermelho", "verde"];
+console.log(Cores[0]) //azul
+console.log(Cores[3]) //verde
+console.log(Cores)
+console.log(Cores.length);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+console.log("_______________________________");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 2 – Métodos básicos
@@ -37,18 +33,13 @@
 
 // → Seu código aqui:
 
-// Cores.push("marrom");
-// console.log(Cores)
-// Cores.shift()
-// console.log(Cores)
-// console.log(Cores.length)
+Cores.push("marrom");
+console.log(Cores)
+Cores.shift()
+console.log(Cores)
+console.log(Cores.length)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -61,15 +52,10 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let number = [1,2,3,4,5,6,7,8];
-// console.log(`${number}, quantidade de itens armazenados ${number.length}`);
+let number = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(`${number}, quantidade de itens armazenados ${number.length}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -82,20 +68,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let Verdade = true
-// let Nada = null
-// let Fantasma
-// let Palavra = "texto"
-// const Numero = 42
-// let Variavel =[Verdade, Nada, Fantasma, Palavra, Numero]
-// console.log(Variavel, "Quantidade de elementos" , Variavel.length)
+let Verdade = true
+let Nada = null
+let Fantasma
+let Palavra = "texto"
+const Numero = 42
+let Variavel = [Verdade, Nada, Fantasma, Palavra, Numero]
+console.log(Variavel, "Quantidade de elementos", Variavel.length)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -112,19 +93,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let Tipos = ["batata","computador",43,"bolinha de golfe","six seven",]
-// console.log(Tipos)
-// Tipos.shift()
-// Tipos.pop()
-// console.log(Tipos)
-// Tipos.push("xicara")
-// console.log(Tipos)
+let Tipos = ["batata", "computador", 43, "bolinha de golfe", "six seven",]
+console.log(Tipos)
+Tipos.shift()
+Tipos.pop()
+console.log(Tipos)
+Tipos.push("xicara")
+console.log(Tipos)
 
-console.log(`
-        __
-    ___( o)>
-    \\ <_. )
-     \`---'
-`);
 
+/*/
 console.log("_______________________________");

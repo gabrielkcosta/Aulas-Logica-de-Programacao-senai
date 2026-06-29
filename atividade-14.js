@@ -1,3 +1,4 @@
+/*
 // ============================================================
 // ATIVIDADE 14 – Funções Simples
 // ============================================================
@@ -51,8 +52,8 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-function linha() {console.log( "--------------------------------------------------");}
-function titulo() {console.log("              RELATORIO MENSAL");}
+function linha() { console.log("--------------------------------------------------"); }
+function titulo() { console.log("              RELATORIO MENSAL"); }
 
 function cabecalho() {
     linha();
@@ -91,28 +92,28 @@ let nsei = [];
 
 
 function meusDados() {
-       let nsei2 = 
-            {
-                nome: keyboard.question("nome: "),
-                idade: keyboard.questionInt("idade: "),
-                cidade: keyboard.question("cidade: ")
-            }
-        linha()
-        nsei.push(nsei2)
+    let nsei2 =
+    {
+        nome: keyboard.question("nome: "),
+        idade: keyboard.questionInt("idade: "),
+        cidade: keyboard.question("cidade: ")
     }
+    linha()
+    nsei.push(nsei2)
+}
 
 function exibirDados() {
-    for(let i = 0; i < nsei.length;i++){
-       log("---------------------------------")
-       log("            BEM VINDO(a)          ")
-       log(`Nome ${nsei[i].nome}`)
-       log(`Idade  ${nsei[i].idade}`)
-       log(`Cidade ${nsei[i].cidade}`)
-       log("----------------------------------")
+    for (let i = 0; i < nsei.length; i++) {
+        log("---------------------------------")
+        log("            BEM VINDO(a)          ")
+        log(`Nome ${nsei[i].nome}`)
+        log(`Idade  ${nsei[i].idade}`)
+        log(`Cidade ${nsei[i].cidade}`)
+        log("----------------------------------")
     }
 }
 
-for(let i = 0; i < 2; i++) {
+for (let i = 0; i < 2; i++) {
     meusDados();
 }
 
@@ -139,7 +140,7 @@ function sortear() {
 }
 
 function exibirNumero() {
-    for(let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
         sortear();
         linha();
     }
@@ -167,23 +168,23 @@ console.log("_______________________________");
 function tabuadaDoCinco() {
 
 
-console.log(`--- Tabuada do ${5} ---`);
+    console.log(`--- Tabuada do ${5} ---`);
 
-for (let i = 1; i <= 10; i++) {
-    let resultado = 5 * i;
-    console.log(`${5} x ${i} = ${resultado}`);
-    }   
+    for (let i = 1; i <= 10; i++) {
+        let resultado = 5 * i;
+        console.log(`${5} x ${i} = ${resultado}`);
+    }
 }
 
 
 function tabuadaDoSete() {
 
-console.log(`--- Tabuada do ${7} ---`);
+    console.log(`--- Tabuada do ${7} ---`);
 
-for (let i = 1; i <= 10; i++) {
-    let resultado = 7 * i;
-    console.log(`${7} x ${i} = ${resultado}`);
-    }   
+    for (let i = 1; i <= 10; i++) {
+        let resultado = 7 * i;
+        console.log(`${7} x ${i} = ${resultado}`);
+    }
 }
 
 tabuadaDoCinco()
@@ -207,7 +208,7 @@ console.log("_______________________________");
 function converterTemperatura() {
     let pergunta = keyboard.question("digite uma temperatura em celsius: ")
     let Fahrenheit = pergunta * 1.8 + 32
-    
+
     log(`${pergunta}°C equivalem a ${Fahrenheit.toFixed(2)}°F`)
 }
 
@@ -224,7 +225,7 @@ console.log("_______________________________");
 // EXERCÍCIO 7 – Listando informações
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
+const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
 // b) Crie a função 'listarFilmes' que percorre o vetor 'filmes' com for
 //    e exibe cada um no formato: "<i+1> - <filme>".
 // c) Chame listarFilmes() duas vezes.
@@ -233,8 +234,8 @@ console.log("_______________________________");
 
 function listarFilmes() {
     for (let i = 0; i < filmes.length; i++) {
-     log(`Índice ${i+1} = ${filmes[i]}`);
-   }
+        log(`Índice ${i + 1} = ${filmes[i]}`);
+    }
 }
 
 listarFilmes()
@@ -308,7 +309,7 @@ function pedirNome() {
     log(`          Olá! ${nome}`)
 }
 
-function rodape() {log(`\n           desenvolvido por "Gabriel Costa"`)}
+function rodape() { log(`\n           desenvolvido por "Gabriel Costa"`) }
 
 function FuncaoPrincipal() {
     limparTela()
@@ -412,5 +413,5 @@ do {
 
 } while (opcao !== 0)
 
-
+/*/
 console.log("_______________________________");

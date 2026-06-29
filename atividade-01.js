@@ -1,3 +1,4 @@
+/*
 // ============================================================
 //   ATIVIDADE 01 – Variáveis e Tipos Primitivos em JavaScript
 // ============================================================
@@ -17,22 +18,17 @@
 
 // → Seu código aqui:
 
-// var meuNome = "Gabriel";
-// //b
-// var naoUsarVAr = "porque é ruim";
-// //c
-// let minhaIdade = 16;
-// //d
-// const ANO_NASCIMENTO = 2009
-// //E
-// console.log(`Meu Nome é ${meuNome}\nMinha idade é ${minhaIdade}`)
+var meuNome = "Gabriel";
+//b
+var naoUsarVAr = "porque é ruim";
+//c
+let minhaIdade = 16;
+//d
+const ANO_NASCIMENTO = 2009
+//E
+console.log(`Meu Nome é ${meuNome}\nMinha idade é ${minhaIdade}`)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -48,19 +44,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// const cidade = "jaragua do sul";
-// //b
-// const pais = "Brasil";
-// //c
-// let fraseMoradia = ` Eu moro em ${cidade}, no ${pais}`
-// console.log(fraseMoradia)
+const cidade = "jaragua do sul";
+//b
+const pais = "Brasil";
+//c
+let fraseMoradia = ` Eu moro em ${cidade}, no ${pais}`
+console.log(fraseMoradia)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -74,17 +65,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let maiorDeIdade = false
-// let temCNH = false
-// console.log(typeof maiorDeIdade, typeof temCNH)
-// console.log(maiorDeIdade,temCNH)
+let maiorDeIdade = false
+let temCNH = false
+console.log(typeof maiorDeIdade, typeof temCNH)
+console.log(maiorDeIdade, temCNH)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -99,21 +85,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// //a
-// let apelido
-// //b
-// let enderecoAtual = null
-// //c
-// console.log(typeof apelido,typeof enderecoAtual)
-// //d
-// //é um bug histórico da linguagem que nunca foi corrigido por questões de compatibilidade.
+//a
+let apelido
+//b
+let enderecoAtual = null
+//c
+console.log(typeof apelido, typeof enderecoAtual)
+//d
+//é um bug histórico da linguagem que nunca foi corrigido por questões de compatibilidade.
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -124,25 +105,20 @@ console.log("_______________________________");
 // Para cada valor abaixo, use typeof e exiba o resultado no console.
 // Tente adivinhar o resultado ANTES de executar!
 
-// // 42
-// // "texto"
-// // true
-// // undefined
-// // null
-// // 3.14
-// console.log(typeof 42); // number
-// console.log(typeof "texto"); // string
-// console.log(typeof true); // boolean
-// console.log(typeof undefined); // undefined
-// console.log(typeof null); // object
-// console.log(typeof 3.14); // number
+// 42
+// "texto"
+// true
+// undefined
+// null
+// 3.14
+console.log(typeof 42); // number
+console.log(typeof "texto"); // string
+console.log(typeof true); // boolean
+console.log(typeof undefined); // undefined
+console.log(typeof null); // object
+console.log(typeof 3.14); // number
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -158,18 +134,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let MeuNome = "Gabriel"
-// let Idade = 16
-// let Altura = 170
-// const Cidade = "jaragua do sul"
-// let estudandoJS = true
-// console.log(`olá! Meu nome é ${MeuNome}, tenho ${Idade} anos, moro em ${Cidade},meço ${Altura} e estou estudando Javascript: ${estudandoJS}.`)
+let MeuNome = "Gabriel"
+let Idade = 16
+let Altura = 170
+const Cidade = "jaragua do sul"
+let estudandoJS = true
+console.log(`olá! Meu nome é ${MeuNome}, tenho ${Idade} anos, moro em ${Cidade},meço ${Altura} e estou estudando Javascript: ${estudandoJS}.`)
 
-console.log(`
-        __
-    ___( o)>
-    \\ <_. )
-     \`---'
-`);
 
+/*/
 console.log("_______________________________");

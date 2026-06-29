@@ -1,3 +1,4 @@
+/*
 //ALUNO: GABRIEL COSTA, KEVIN VINICIUS
 //TURMA DESENVOLVIMENTO DE SISTEMA
 
@@ -221,7 +222,7 @@ function exibirEmprestimos(usuario) {
         if (emp.quitado) {
             console.log("Status: QUITADO\nSaldo devedor: R$ 0.00\nParcelas restantes: 0");
         } else {
-            existeEmprestimoAberto = true; 
+            existeEmprestimoAberto = true;
             console.log(`Status: EM ABERTO\nSaldo devedor: R$ ${emp.saldoDevedor.toFixed(2)}\nParcelas restantes: ${emp.parcelasRestantes}\nValor da parcela: R$ ${emp.valorParcela.toFixed(2)}`);
         }
     }
@@ -231,7 +232,7 @@ function exibirEmprestimos(usuario) {
 
 // Dispara a cobrança da parcela automática, imprime o histórico listagem de empréstimos.
 function exibirExtrato(usuario) {
-    descontarParcelaEmprestimo(usuario); 
+    descontarParcelaEmprestimo(usuario);
 
     console.log("\n===================================\n         EXTRATO BANCÁRIO          \n===================================");
     if (usuario.extrato.length === 0) {
@@ -255,23 +256,24 @@ function menuPrincipal(usuario) {
         console.log(`\n===================================\n   BANCO DIGITAL - MENU PRINCIPAL\n   Cliente: ${usuario.nomeCompleto}\n   Saldo Atual: R$ ${usuario.saldo.toFixed(2)}\n===================================\n1. Depositar\n2. Sacar\n3. Empréstimo\n4. Extrato Completo\n5. Trocar de conta\n6. Criar nova conta\n0. Sair / Encerrar\n===================================`);
 
         switch (Keyboard.question("Escolha uma opcao: ")) {
-            case "1": depositar(usuario); 
+            case "1": depositar(usuario);
                 break;
-            case "2": sacar(usuario); 
+            case "2": sacar(usuario);
                 break;
-            case "3": solicitarEmprestimo(usuario); 
+            case "3": solicitarEmprestimo(usuario);
                 break;
-            case "4": exibirExtrato(usuario); 
+            case "4": exibirExtrato(usuario);
                 break;
-            case "5": console.log("\nTrocando de conta..."); login(); 
+            case "5": console.log("\nTrocando de conta..."); login();
                 return;
-            case "6": console.log("\n--- CRIAR NOVA CONTA ---"); criarConta(); 
+            case "6": console.log("\n--- CRIAR NOVA CONTA ---"); criarConta();
                 break;
-            case "0": console.log(`\nAté logo, ${usuario.nomeCompleto}!`); logado = false; 
-                break; 
+            case "0": console.log(`\nAté logo, ${usuario.nomeCompleto}!`); logado = false;
+                break;
             default: console.log("\n[ERRO] Opção inválida!");
         }
     }
 }
 
 conta();
+/*/

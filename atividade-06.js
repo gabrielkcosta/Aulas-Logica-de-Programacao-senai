@@ -2,6 +2,7 @@
 //   ATIVIDADE 06 – Operadores Lógicos em JavaScript
 // ============================================================
 // Instruções: resolva cada exercício no espaço indicado.
+/*
 // Use console.log() para exibir os resultados.
 // Lembre-se de instalar o pacote antes de executar:
 //     npm install readline-sync
@@ -28,28 +29,23 @@
 
 // → Seu código aqui:
 
-// let a = true
-// let a1 = true
-// console.log("true && true → <resultado>", a && a1)
+let a = true
+let a1 = true
+console.log("true && true → <resultado>", a && a1)
 
-// let b = true
-// let b1 = false
-// console.log("true && false → <resultado>", b && b1)
+let b = true
+let b1 = false
+console.log("true && false → <resultado>", b && b1)
 
-// let c = false
-// let c1 = true
-// console.log("false && true → <resultado>", c && c1)
+let c = false
+let c1 = true
+console.log("false && true → <resultado>", c && c1)
 
-// let d = false
-// let d1 = false
-// console.log("false && false → <resultado>", d && d1)
+let d = false
+let d1 = false
+console.log("false && false → <resultado>", d && d1)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 
 
@@ -71,28 +67,23 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let a = true
-// let a1 = true
-// console.log("true || true → <resultado>", a || a1)
+let a = true
+let a1 = true
+console.log("true || true → <resultado>", a || a1)
 
-// let b = true
-// let b1 = false
-// console.log("true || false → <resultado>", b || b1)
+let b = true
+let b1 = false
+console.log("true || false → <resultado>", b || b1)
 
-// let c = false
-// let c1 = true
-// console.log("false || true → <resultado>", c || c1)
+let c = false
+let c1 = true
+console.log("false || true → <resultado>", c || c1)
 
-// let d = false
-// let d1 = false
-// console.log("false || false → <resultado>", d || d1)
+let d = false
+let d1 = false
+console.log("false || false → <resultado>", d || d1)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -108,18 +99,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let sistemaAtivo = true
-// let modoManutencao = !sistemaAtivo
-// let lugarVago = false
-// let lugarOcupado = !lugarVago
-// console.log(`sistemaAtivo : ${sistemaAtivo} | modoManutencao : ${modoManutencao} | lugarVago : ${lugarVago} | lugarOcupado : ${lugarOcupado}`)
+let sistemaAtivo = true
+let modoManutencao = !sistemaAtivo
+let lugarVago = false
+let lugarOcupado = !lugarVago
+console.log(`sistemaAtivo : ${sistemaAtivo} | modoManutencao : ${modoManutencao} | lugarVago : ${lugarVago} | lugarOcupado : ${lugarOcupado}`)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -138,21 +124,21 @@ console.log("_______________________________");
 
 let keyboard = require("readline-sync")
 
-// let usuario = {
-//     altura: keyboard.questionFloat("me fale sua altura :"),
-//     peso: keyboard.questionFloat("me fale seu peso :"),
-// }
+let usuario = {
+    altura: keyboard.questionFloat("me fale sua altura :"),
+    peso: keyboard.questionFloat("me fale seu peso :"),
+}
 
-// usuario.imc = usuario.peso / (usuario.altura ** 2);
+usuario.imc = usuario.peso / (usuario.altura ** 2);
 
-// let imcAbaixoDoPeso = usuario.imc < 18.5;
-// let imcNormal = usuario.imc >= 18.5 && usuario.imc <= 24.9;
-// let imcAcimaDoPeso = usuario.imc >= 25 && usuario.imc <= 29.9;
+let imcAbaixoDoPeso = usuario.imc < 18.5;
+let imcNormal = usuario.imc >= 18.5 && usuario.imc <= 24.9;
+let imcAcimaDoPeso = usuario.imc >= 25 && usuario.imc <= 29.9;
 
-// console.log(`Seu imc é: ${usuario.imc.toFixed(2)}`);
-// console.log(`Esta abaixo do peso? ${imcAbaixoDoPeso}`);
-// console.log(`Esta com peso normal? ${imcNormal}`);
-// console.log(`Esta acima do peso? ${imcAcimaDoPeso}`);
+console.log(`Seu imc é: ${usuario.imc.toFixed(2)}`);
+console.log(`Esta abaixo do peso? ${imcAbaixoDoPeso}`);
+console.log(`Esta com peso normal? ${imcNormal}`);
+console.log(`Esta acima do peso? ${imcAcimaDoPeso}`);
 
 
 console.log("_______________________________");
@@ -172,18 +158,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let notaFinal = 4.8
-// let precisaRecuperacao = notaFinal >= 4 && notaFinal < 6
-// let reprovado = notaFinal < 4
-// let precisaDeAjuda = precisaRecuperacao || reprovado
-// console.log(`nota final : ${notaFinal} | precisa de recuperacao : ${precisaRecuperacao} | reprovado : ${reprovado} | precisa de ajuda : ${precisaDeAjuda}`)
+let notaFinal = 4.8
+let precisaRecuperacao = notaFinal >= 4 && notaFinal < 6
+let reprovado = notaFinal < 4
+let precisaDeAjuda = precisaRecuperacao || reprovado
+console.log(`nota final : ${notaFinal} | precisa de recuperacao : ${precisaRecuperacao} | reprovado : ${reprovado} | precisa de ajuda : ${precisaDeAjuda}`)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -199,16 +179,11 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let temperatura = 38.2
-// let diagnostico = temperatura >= 37.6 ? "Febre detectada" : "Temperatura normal"; //operador ternario
-// console.log(`A temperatura registrada é ${temperatura} | Resultado: ${diagnostico}.`);
+let temperatura = 38.2
+let diagnostico = temperatura >= 37.6 ? "Febre detectada" : "Temperatura normal"; //operador ternario
+console.log(`A temperatura registrada é ${temperatura} | Resultado: ${diagnostico}.`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -224,17 +199,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let velocidade = 110
-// let limiteVelocidade = 100
-// let statusMulta =  velocidade > limiteVelocidade ? "multa aplicada" : "velocidade regular"
-// console.log(`valocidade : ${velocidade} | limite de velocidade : ${limiteVelocidade} | status dad multa : ${statusMulta}`)
+let velocidade = 110
+let limiteVelocidade = 100
+let statusMulta = velocidade > limiteVelocidade ? "multa aplicada" : "velocidade regular"
+console.log(`valocidade : ${velocidade} | limite de velocidade : ${limiteVelocidade} | status dad multa : ${statusMulta}`)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -251,17 +221,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let ehEstudante = keyboard.keyInYN("voce é bolista :")
-// let curso = keyboard.keyInYN("voce paga mais de R$ 1000,00, mensais pelo curso?")
-// let mensagem = ehEstudante && curso ? "desconto aplicado" : "desconto nao aplicado"
-// console.log(`voce e bolista : ${ehEstudante ? "sim" : "nao"} | paga mais que R$ 1000,00 mensais pelo curso : ${curso ? "sim" : "nao"} | ganha desconto? : ${mensagem}`)
+let ehEstudante = keyboard.keyInYN("voce é bolista :")
+let curso = keyboard.keyInYN("voce paga mais de R$ 1000,00, mensais pelo curso?")
+let mensagem = ehEstudante && curso ? "desconto aplicado" : "desconto nao aplicado"
+console.log(`voce e bolista : ${ehEstudante ? "sim" : "nao"} | paga mais que R$ 1000,00 mensais pelo curso : ${curso ? "sim" : "nao"} | ganha desconto? : ${mensagem}`)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -285,26 +250,26 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-// let usuario = {
-//     idade: keyboard.questionInt("Digite sua idade: "),
-//     ingresso: keyboard.keyInYN("Tem ingresso? "),
-//     associado: keyboard.keyInYN("Associado ao clube? ")
-// };
+let usuario = {
+    idade: keyboard.questionInt("Digite sua idade: "),
+    ingresso: keyboard.keyInYN("Tem ingresso? "),
+    associado: keyboard.keyInYN("Associado ao clube? ")
+};
 
-// let entrada = {
-//     podeEntrarNormal: (usuario.idade >= 18 && usuario.ingresso) || usuario.associado,
-//     podeEntrarSocio: usuario.ingresso && usuario.associado, precisaAcompanhante: usuario.idade < 18,
-//     naoPodeEntrar: !usuario.ingresso && !usuario.associado
-// };
+let entrada = {
+    podeEntrarNormal: (usuario.idade >= 18 && usuario.ingresso) || usuario.associado,
+    podeEntrarSocio: usuario.ingresso && usuario.associado, precisaAcompanhante: usuario.idade < 18,
+    naoPodeEntrar: !usuario.ingresso && !usuario.associado
+};
 
-// console.log(`Pode entrar normal: ${entrada.podeEntrarNormal}`);
-// console.log(`Pode entrar como sócio: ${entrada.podeEntrarSocio}`);
-// console.log(`Precisa de acompanhante? ${entrada.precisaAcompanhante}`);
-// console.log(`Não pode entrar de jeito nenhum? ${entrada.naoPodeEntrar}`);
+console.log(`Pode entrar normal: ${entrada.podeEntrarNormal}`);
+console.log(`Pode entrar como sócio: ${entrada.podeEntrarSocio}`);
+console.log(`Precisa de acompanhante? ${entrada.precisaAcompanhante}`);
+console.log(`Não pode entrar de jeito nenhum? ${entrada.naoPodeEntrar}`);
 
-// let mensagemFinal = entrada.podeEntrarNormal || entrada.podeEntrarSocio ? "Entrada liberada!" : "Entrada negada.";
+let mensagemFinal = entrada.podeEntrarNormal || entrada.podeEntrarSocio ? "Entrada liberada!" : "Entrada negada.";
 
-// console.log(mensagemFinal);
+console.log(mensagemFinal);
 
 
 // ------------------------------------------------------------
@@ -323,31 +288,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// const nome = keyboard.question("Digite o nome do produto: ");
-// const quantidade = keyboard.questionInt("Digite a quantidade em estoque: ");
-// const ativo = keyboard.keyInYN("O produto esta ativo no sistema? ");
+const nome = keyboard.question("Digite o nome do produto: ");
+const quantidade = keyboard.questionInt("Digite a quantidade em estoque: ");
+const ativo = keyboard.keyInYN("O produto esta ativo no sistema? ");
 
 
-// const produto = {
-//     nome: nome,
-//     estoque: quantidade,
-//     statusAtivo: ativo
-// };
+const produto = {
+    nome: nome,
+    estoque: quantidade,
+    statusAtivo: ativo
+};
 
 
-// const temEstoque = produto.estoque > 0;
-// const produtoDisponivel = temEstoque && produto.statusAtivo;
-// const produtoIndisponivel = !temEstoque || !produto.statusAtivo;
+const temEstoque = produto.estoque > 0;
+const produtoDisponivel = temEstoque && produto.statusAtivo;
+const produtoIndisponivel = !temEstoque || !produto.statusAtivo;
 
 
-// console.log(`Produto: ${produto.nome} | Quantidade: ${produto.estoque} | Esta ativo? ${produto.statusAtivo ? "Sim" : "Não"} | Tem estoque? ${temEstoque} | Produto disponível para venda? ${produtoDisponivel} | Produto indisponível? ${produtoIndisponivel}`);
+console.log(`Produto: ${produto.nome} | Quantidade: ${produto.estoque} | Esta ativo? ${produto.statusAtivo ? "Sim" : "Não"} | Tem estoque? ${temEstoque} | Produto disponível para venda? ${produtoDisponivel} | Produto indisponível? ${produtoIndisponivel}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -368,28 +328,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let admin =  keyboard.keyInYN("Voce e administrador? ");
-// let logado =  keyboard.keyInYN("Voce esta logado no sistema? ");
-// let ativa =  keyboard.keyInYN("Sua conta esta ativa? ");
+let admin = keyboard.keyInYN("Voce e administrador? ");
+let logado = keyboard.keyInYN("Voce esta logado no sistema? ");
+let ativa = keyboard.keyInYN("Sua conta esta ativa? ");
 
-// let usuario = {
-//     admin,
-//     logado,
-//     ativa
-// }
+let usuario = {
+    admin,
+    logado,
+    ativa
+}
 
-// let acessoSistema = usuario.logado && usuario.ativa;
-// let acessoAdmin = acessoSistema && usuario.admin;
-// let acessoNegado = !usuario.logado || !usuario.ativa;
+let acessoSistema = usuario.logado && usuario.ativa;
+let acessoAdmin = acessoSistema && usuario.admin;
+let acessoNegado = !usuario.logado || !usuario.ativa;
 
-// console.log(`Status Logado: ${usuario.logado ? "Sim" : "Não"} | Conta Ativa: ${usuario.ativa ? "Sim" : "Não"} | Administrador: ${usuario.admin ? "Sim" : "Não"} | Pode acessar o sistema? ${acessoSistema} | Tem privilégios de Admin? ${acessoAdmin} | Acesso foi negado? ${acessoNegado}`)
+console.log(`Status Logado: ${usuario.logado ? "Sim" : "Não"} | Conta Ativa: ${usuario.ativa ? "Sim" : "Não"} | Administrador: ${usuario.admin ? "Sim" : "Não"} | Pode acessar o sistema? ${acessoSistema} | Tem privilégios de Admin? ${acessoAdmin} | Acesso foi negado? ${acessoNegado}`)
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -413,27 +367,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let credenciaisSistema = {
-//     usuario: "admin",
-//     senha: "1234"
-// };
+let credenciaisSistema = {
+    usuario: "admin",
+    senha: "1234"
+};
 
-// let usuarioDigitado = keyboard.question("Usuario: ");
-// let senhaDigitada = keyboard.question("Senha: ");
+let usuarioDigitado = keyboard.question("Usuario: ");
+let senhaDigitada = keyboard.question("Senha: ");
 
-// let usuarioCorreto = usuarioDigitado === credenciaisSistema.usuario;
-// let senhaCorreta = senhaDigitada === credenciaisSistema.senha;
-// let loginValido = usuarioCorreto && senhaCorreta;
+let usuarioCorreto = usuarioDigitado === credenciaisSistema.usuario;
+let senhaCorreta = senhaDigitada === credenciaisSistema.senha;
+let loginValido = usuarioCorreto && senhaCorreta;
 
-// console.log(loginValido ? "Login realizado com sucesso!" : "Usuario ou senha incorretos.");
-
-console.log(`
-        __
-    ___( o)>
-    \\ <_. )
-     \`---'
-`);
+console.log(loginValido ? "Login realizado com sucesso!" : "Usuario ou senha incorretos.");
 
 
 
+
+/*/
 console.log("_______________________________");

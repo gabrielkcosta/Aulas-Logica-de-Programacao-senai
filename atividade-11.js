@@ -1,3 +1,4 @@
+/*
 // ============================================================
 //   ATIVIDADE 11 – Interrompendo Laços (break / continue / return)
 // ============================================================
@@ -14,14 +15,14 @@ let keyboard = require("readline-sync")
 
 // → Seu código aqui:
 
-// for (let i = 1; i <= 100; i++) {
-//     console.log(i);
+for (let i = 1; i <= 100; i++) {
+    console.log(i);
 
-//     if (i % 7 === 0 && i > 30) {
-//         console.log(`Primeiro múltiplo de 7 acima de 30: ${i}`);
-//         break;
-//     }
-// }
+    if (i % 7 === 0 && i > 30) {
+        console.log(`Primeiro múltiplo de 7 acima de 30: ${i}`);
+        break;
+    }
+}
 
 
 
@@ -33,26 +34,26 @@ console.log("_______________________________");
 // EXERCÍCIO 2 – Continue: filtrando vogais
 // ------------------------------------------------------------
 // a) Utilizando o array:
-      const letras = ['a', 'b', 'c', 'e', 'f', 'i', 'k', 'o', 'p', 'u',];
-      const vogais = ['a', 'e', 'i', 'o', 'u']
+const letras = ['a', 'b', 'c', 'e', 'f', 'i', 'k', 'o', 'p', 'u',];
+const vogais = ['a', 'e', 'i', 'o', 'u']
 // b) Usando for e continue, exiba apenas as consoantes
 //    (pule as vogais: a, e, i, o, u).
 // c) Ao final, exiba: "Consoantes exibidas: <quantidade>"
 
 // → Seu código aqui:
 
-// let contadorConsoantes = 0;
+let contadorConsoantes = 0;
 
-// for (let i = 0; i < letras.length; i++) {
-//     const letra = letras[i];
+for (let i = 0; i < letras.length; i++) {
+    const letra = letras[i];
 
-//     if (!vogais.includes(letra)) {
-//         console.log(letra);
-//         contadorConsoantes++;
-//     }
-// }
+    if (!vogais.includes(letra)) {
+        console.log(letra);
+        contadorConsoantes++;
+    }
+}
 
-// console.log(`Consoantes exibidas: ${contadorConsoantes}`);
+console.log(`Consoantes exibidas: ${contadorConsoantes}`);
 
 
 console.log("_______________________________");
@@ -73,30 +74,30 @@ const notasAlunoB = [8, 6.5, 6.3, 9];
 
 // → Seu código aqui:
 
-// for (let i = 0; i < notasAlunoB.length; i++) {
-//     if (notasAlunoB[i] < 5) {
-//         console.log(`Reprovado na nota ${notasAlunoB[i]} (indice :${i})`);
-//         return;
-//     }
-//     if (i === notasAlunoB.length - 1) {
-//         console.log("aluno b Aprovado!");
-//         break;
-//     }
-// }
+for (let i = 0; i < notasAlunoB.length; i++) {
+    if (notasAlunoB[i] < 5) {
+        console.log(`Reprovado na nota ${notasAlunoB[i]} (indice :${i})`);
+        return;
+    }
+    if (i === notasAlunoB.length - 1) {
+        console.log("aluno b Aprovado!");
+        break;
+    }
+}
 
-// for (let i = 0; i < notasAlunoA.length; i++) {
-//     if (notasAlunoA[i] < 5) {
-//         console.log(`aluno a Reprovado na nota ${notasAlunoA[i]} (indice :${i})`);
-//         return; 
-//     }
-//     if (i === notasAlunoA.length - 1) {
-//         console.log("aluno a Aprovado!");
-//         break; 
-//     }
-// }
+for (let i = 0; i < notasAlunoA.length; i++) {
+    if (notasAlunoA[i] < 5) {
+        console.log(`aluno a Reprovado na nota ${notasAlunoA[i]} (indice :${i})`);
+        return;
+    }
+    if (i === notasAlunoA.length - 1) {
+        console.log("aluno a Aprovado!");
+        break;
+    }
+}
 
 
- 
+
 
 
 console.log("_______________________________");
@@ -115,22 +116,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let palavraSecreta = "bumbum guloso"
-// let totalTentativas = 0
+let palavraSecreta = "bumbum guloso"
+let totalTentativas = 0
 
-// while (true) {
-//  let palpite = keyboard.question("tente adivinhar a palavra: ")
-//  totalTentativas++
+while (true) {
+    let palpite = keyboard.question("tente adivinhar a palavra: ")
+    totalTentativas++
 
-//  if (palpite === palavraSecreta) {
-//   console.log("parabens voce acertou")
-//   break
-//  }
+    if (palpite === palavraSecreta) {
+        console.log("parabens voce acertou")
+        break
+    }
 
-//  console.log("voce errou tente novamente")
-// }
+    console.log("voce errou tente novamente")
+}
 
-// console.log("voce precisou de " + totalTentativas + " tentativas")
+console.log("voce precisou de " + totalTentativas + " tentativas")
 
 console.log("_______________________________");
 
@@ -148,27 +149,27 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let soma = 0
-// let quantidade = 0
+let soma = 0
+let quantidade = 0
 
-// while(true){
-//     let num = keyboard.questionInt("digite o numero zero para sair:  ")
+while (true) {
+    let num = keyboard.questionInt("digite o numero zero para sair:  ")
 
-//     if(num === 0)
-//     break;
+    if (num === 0)
+        break;
 
-//     if(num < 0){
-//     console.log("ignorando numero negativo");
-//     continue
-// }
+    if (num < 0) {
+        console.log("ignorando numero negativo");
+        continue
+    }
 
-// soma = soma + num
-// quantidade++
+    soma = soma + num
+    quantidade++
 
-// }
+}
 
-// console.log("Soma dos positivos: " + soma)
-// console.log("Quantidade de positivos: " + quantidade)
+console.log("Soma dos positivos: " + soma)
+console.log("Quantidade de positivos: " + quantidade)
 
 console.log("_______________________________");
 
@@ -177,31 +178,31 @@ console.log("_______________________________");
 // EXERCÍCIO 6 – Return: busca em array de objetos
 // ------------------------------------------------------------
 // a) Dado o array de alunos:
-   const alunos = [
-     { nome: "Ana", nota: 8.5 },
-     { nome: "Bruno", nota: 6.0 },
-     { nome: "Carlos", nota: 9.2 },
-     { nome: "Diana", nota: 4.8 },
-     { nome: "Eva", nota: 7.1 },
-     { nome: "Fernando", nota: 3.8 }
-   ];
+const alunos = [
+    { nome: "Ana", nota: 8.5 },
+    { nome: "Bruno", nota: 6.0 },
+    { nome: "Carlos", nota: 9.2 },
+    { nome: "Diana", nota: 4.8 },
+    { nome: "Eva", nota: 7.1 },
+    { nome: "Fernando", nota: 3.8 }
+];
 // b) Crie um array que retorna o primeiro aluno com nota < 5.
 //    Se não houver, retorna null.
 
 // → Seu código aqui:
 
-// let alunoProcurado = null
+let alunoProcurado = null
 
-// for(let i = 0; i < alunos.length; i++) {
+for (let i = 0; i < alunos.length; i++) {
 
-//     if(alunos[i].nota < 5) {
-//         alunoProcurado = alunos[i]
-//         break
-//     }
+    if (alunos[i].nota < 5) {
+        alunoProcurado = alunos[i]
+        break
+    }
 
-// }
+}
 
-// console.log(alunoProcurado);
+console.log(alunoProcurado);
 
 
 console.log("_______________________________");
@@ -211,7 +212,7 @@ console.log("_______________________________");
 // EXERCÍCIO 7 – Continue: relatório de vendas
 // ------------------------------------------------------------
 // a) Dado o array:
-      const vendas = [320, -1, 150, -1, 80, 410, -1, 200];
+const vendas = [320, -1, 150, -1, 80, 410, -1, 200];
 //    (valores -1 representam vendas canceladas)
 // b) Usando for e continue, ignore as vendas canceladas (-1).
 // c) Acumule o total das vendas válidas e conte quantas há.
@@ -222,22 +223,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let totalVendas = 0
-// let quantidadeVendas = 0
+let totalVendas = 0
+let quantidadeVendas = 0
 
-// for(let i = 0; i < vendas.length; i++) {
-//     if (vendas[i] === -1)
-//         continue
+for (let i = 0; i < vendas.length; i++) {
+    if (vendas[i] === -1)
+        continue
 
-//     totalVendas += vendas[i]
-//     quantidadeVendas++
-// }
+    totalVendas += vendas[i]
+    quantidadeVendas++
+}
 
-// let ticketMedio = totalVendas / quantidadeVendas;
+let ticketMedio = totalVendas / quantidadeVendas;
 
-// console.log("Vendas válidas: " + quantidadeVendas);
-// console.log("Total arrecadado: R$ " + totalVendas);
-// console.log("Ticket médio: R$ " + ticketMedio);
+console.log("Vendas válidas: " + quantidadeVendas);
+console.log("Total arrecadado: R$ " + totalVendas);
+console.log("Ticket médio: R$ " + ticketMedio);
 
 console.log("_______________________________");
 
@@ -254,27 +255,20 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let soma = 0;
+let soma = 0;
 
-// for (let i = 1; i <= 50; i++) {
-//     if (i % 5 === 0) {
-//         continue;
-//     }
+for (let i = 1; i <= 50; i++) {
+    if (i % 5 === 0) {
+        continue;
+    }
 
-//     soma += i;
-//     console.log(`Somando: ${i} | Acumulado: ${soma}`);
+    soma += i;
+    console.log(`Somando: ${i} | Acumulado: ${soma}`);
 
-//     if (soma > 200) {
-//         console.log(`Laço encerrado em i = ${i} | Soma final: ${soma}`);
-//         break;
-//     }
-// }
-
-console.log(`
-        __
-    ___( o)>
-    \\ <_. )
-     \`---'
-`);
-
+    if (soma > 200) {
+        console.log(`Laço encerrado em i = ${i} | Soma final: ${soma}`);
+        break;
+    }
+}
+/*/
 console.log("_______________________________");

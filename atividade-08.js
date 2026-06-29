@@ -1,3 +1,4 @@
+/*
 // ============================================================
 //   ATIVIDADE 08 – Estruturas de Controle (Switch / Case)
 // ============================================================
@@ -18,54 +19,48 @@ let keyboard = require('readline-sync')
 
 // → Seu código aqui:
 
-// let planeta = keyboard.questionInt(`
-// digite um numero 1 a 8 sendo eles
-// 1 mercurio
-// 2 venus
-// 3 terra
-// 4 marte
-// 5 jupiter
-// 6 saturno
-// 7 urano
-// 8 netuno
+let planeta = keyboard.questionInt(`
+digite um numero 1 a 8 sendo eles
+1 mercurio
+2 venus
+3 terra
+4 marte
+5 jupiter
+6 saturno
+7 urano
+8 netuno
 
-// RESPOSTA :`)
+RESPOSTA :`)
 
-// switch (planeta) {
-//     case 1:
-//         console.log('mercurio')
-//         break;
-//     case 2:
-//         console.log('venus')
-//         break;
-//     case 3:
-//         console.log('terra')
-//         break;
-//     case 4:
-//         console.log('marte')
-//         break;
-//     case 5:
-//         console.log('jupiter')
-//         break;
-//     case 6:
-//         console.log('saturno')
-//         break;
-//     case 7:
-//         console.log('urano')
-//         break;
-//     case 8:
-//         console.log('netuno')
-//         break;
-//     default:
-//         console.log('planeta n encontrado')
-// }
+switch (planeta) {
+    case 1:
+        console.log('mercurio')
+        break;
+    case 2:
+        console.log('venus')
+        break;
+    case 3:
+        console.log('terra')
+        break;
+    case 4:
+        console.log('marte')
+        break;
+    case 5:
+        console.log('jupiter')
+        break;
+    case 6:
+        console.log('saturno')
+        break;
+    case 7:
+        console.log('urano')
+        break;
+    case 8:
+        console.log('netuno')
+        break;
+    default:
+        console.log('planeta n encontrado')
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -83,39 +78,33 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let direcao = keyboard.question(`
-// digite se voce quer continuar para:
+let direcao = keyboard.question(`
+digite se voce quer continuar para:
 
-// norte:
-// sul:
-// leste:
-// oeste:
+norte:
+sul:
+leste:
+oeste:
 
-// RESPOSTA :`)
+RESPOSTA :`)
 
-// switch (direcao) {
-//     case "norte":
-//         console.log("Seguindo para o Norte ↑");
-//         break;
-//     case "sul":
-//         console.log("Seguindo para o Sul ↓");
-//         break;
-//     case "leste":
-//         console.log("Seguindo para o Leste →");
-//         break;
-//     case "oeste":
-//         console.log("Seguindo para o Oeste ←");
-//         break;
-//     default:
-//         console.log("Direção desconhecida.");
-// }
+switch (direcao) {
+    case "norte":
+        console.log("Seguindo para o Norte ↑");
+        break;
+    case "sul":
+        console.log("Seguindo para o Sul ↓");
+        break;
+    case "leste":
+        console.log("Seguindo para o Leste →");
+        break;
+    case "oeste":
+        console.log("Seguindo para o Oeste ←");
+        break;
+    default:
+        console.log("Direção desconhecida.");
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 console.log("_______________________________");
 
@@ -132,31 +121,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let tipoVeiculo = "moto";
-// let categoria;
+let tipoVeiculo = "moto";
+let categoria;
 
-// switch (tipoVeiculo) {
-//   case "bicicleta":
-//   case "moto":
-//   case "carro":
-//     categoria = "Veículo leve";
-//     break;
-//   case "caminhao":
-//   case "onibus":
-//     categoria = "Veículo pesado";
-//     break;
-//   default:
-//     categoria = "Tipo desconhecido.";
-// }
+switch (tipoVeiculo) {
+    case "bicicleta":
+    case "moto":
+    case "carro":
+        categoria = "Veículo leve";
+        break;
+    case "caminhao":
+    case "onibus":
+        categoria = "Veículo pesado";
+        break;
+    default:
+        categoria = "Tipo desconhecido.";
+}
 
-// console.log(`A categoria do veículo é: ${categoria}`);
+console.log(`A categoria do veículo é: ${categoria}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 
 console.log("_______________________________");
@@ -176,31 +160,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// console.log("--- Selecione seu Turno ---");
-// console.log("1 – Manhã | 2 – Tarde | 3 – Noite");
+console.log("--- Selecione seu Turno ---");
+console.log("1 – Manhã | 2 – Tarde | 3 – Noite");
 
-// const turno = keyboard.questionInt("Escolha uma opcao: ");
+const turno = keyboard.questionInt("Escolha uma opcao: ");
 
-// switch (turno) {
-//   case 1:
-//     console.log("Bom dia! Turno da manha");
-//     break;
-//   case 2:
-//     console.log("Boa tarde! Turno da tarde");
-//     break;
-//   case 3:
-//     console.log("Boa noite! Turno da noite");
-//     break;
-//   default:
-//     console.log("Opcao invalida");
-// }
+switch (turno) {
+    case 1:
+        console.log("Bom dia! Turno da manha");
+        break;
+    case 2:
+        console.log("Boa tarde! Turno da tarde");
+        break;
+    case 3:
+        console.log("Boa noite! Turno da noite");
+        break;
+    default:
+        console.log("Opcao invalida");
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 
 console.log("_______________________________");
@@ -221,31 +200,26 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-// let estacao = keyboard.question("Qual e a sua estacao do ano favorita? (verao, outono, inverno ou primavera): ")
+let estacao = keyboard.question("Qual e a sua estacao do ano favorita? (verao, outono, inverno ou primavera): ")
 
-// switch (estacao) {
-//   case "verao":
-//     console.log("Dias quentes e ferias!");
-//     break;
-//   case "outono":
-//     console.log("Folhas caindo e temperaturas amenas.");
-//     break;
-//   case "inverno":
-//     console.log("Frio, cobertores e chocolate quente.");
-//     break;
-//   case "primavera":
-//     console.log("Flores, calor e renovação.");
-//     break;
-//   default:
-//     console.log("Estação não reconhecida.");
-// }
+switch (estacao) {
+    case "verao":
+        console.log("Dias quentes e ferias!");
+        break;
+    case "outono":
+        console.log("Folhas caindo e temperaturas amenas.");
+        break;
+    case "inverno":
+        console.log("Frio, cobertores e chocolate quente.");
+        break;
+    case "primavera":
+        console.log("Flores, calor e renovação.");
+        break;
+    default:
+        console.log("Estação não reconhecida.");
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -262,30 +236,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let dia = keyboard.questionInt('digite um numero de 1 a 7 :')
+let dia = keyboard.questionInt('digite um numero de 1 a 7 :')
 
-// switch(dia) {
-//     case 1:
-//     case 2:
-//     case 3:
-//     case 4:
-//     case 5:
-//     console.log('ola dia util')
-//     break;
-//         case 6:
-//         case 7:
-//             console.log('final de semana')
-//             break;
-//     default:
-//         console.log('numero invalido')
-// }
+switch (dia) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        console.log('ola dia util')
+        break;
+    case 6:
+    case 7:
+        console.log('final de semana')
+        break;
+    default:
+        console.log('numero invalido')
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 
 console.log("_______________________________");
@@ -308,43 +277,39 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let produto = {
-//     nome: keyboard.question("Nome do produto: "),
-//     categoria: keyboard.questionInt("Categoria (1-4) | 1 eletronico | 2 vestuario | 3 alimento | 4 livro : "),
-//     preco: keyboard.questionFloat("Preco: ")
-// };
+let produto = {
+    nome: keyboard.question("Nome do produto: "),
+    categoria: keyboard.questionInt("Categoria (1-4) | 1 eletronico | 2 vestuario | 3 alimento | 4 livro : "),
+    preco: keyboard.questionFloat("Preco: ")
+};
 
-// switch (produto.categoria) {
-//     case 1:
-//         produto.descricaoCategoria = "Eletrônico";
-//         produto.garantia = "12 meses";
-//         break;
-//     case 2:
-//         produto.descricaoCategoria = "Vestuário";
-//         produto.garantia = "Troca em 30 dias";
-//         break;
-//     case 3:
-//         produto.descricaoCategoria = "Alimento";
-//         produto.garantia = "Ver validade";
-//         break;
-//     case 4:
-//         produto.descricaoCategoria = "Livro";
-//         produto.garantia = "Sem garantia";
-//         break;
-//     default:
-//         produto.descricaoCategoria = "Categoria invalida";
-//         produto.garantia = "Sem garantia";
-//         console.log("Categoria inválida.");
-// }
+switch (produto.categoria) {
+    case 1:
+        produto.descricaoCategoria = "Eletrônico";
+        produto.garantia = "12 meses";
+        break;
+    case 2:
+        produto.descricaoCategoria = "Vestuário";
+        produto.garantia = "Troca em 30 dias";
+        break;
+    case 3:
+        produto.descricaoCategoria = "Alimento";
+        produto.garantia = "Ver validade";
+        break;
+    case 4:
+        produto.descricaoCategoria = "Livro";
+        produto.garantia = "Sem garantia";
+        break;
+    default:
+        produto.descricaoCategoria = "Categoria invalida";
+        produto.garantia = "Sem garantia";
+        console.log("Categoria inválida.");
+}
 
-// console.table(produto);
+console.table(produto);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
+
 
 
 console.log("_______________________________");
@@ -369,51 +334,46 @@ console.log("_______________________________");
 
 
 
-// let aluno = {
-//     nome: keyboard.question("Digite o nome do aluno: "),
-//     nota: keyboard.questionInt("Digite a nota (0-10): ")
-// };
+let aluno = {
+    nome: keyboard.question("Digite o nome do aluno: "),
+    nota: keyboard.questionInt("Digite a nota (0-10): ")
+};
 
-// switch (aluno.nota) {
-//     case 10:
-//     case 9:
-//         aluno.conceito = "A";
-//         aluno.mensagem = "Excelente!";
-//         break;
-//     case 8:
-//     case 7:
-//         aluno.conceito = "B";
-//         aluno.mensagem = "Muito bom!";
-//         break;
-//     case 6:
-//     case 5:
-//         aluno.conceito = "C";
-//         aluno.mensagem = "Suficiente.";
-//         break;
-//     case 4:
-//     case 3:
-//         aluno.conceito = "D";
-//         aluno.mensagem = "Em recuperação.";
-//         break;
-//     case 2:
-//     case 1:
-//     case 0:
-//         aluno.conceito = "F";
-//         aluno.mensagem = "Reprovado.";
-//         break;
-//     default:
-//         aluno.conceito = "Inexistente";
-//         aluno.mensagem = "Nota inválida.";
-// }
+switch (aluno.nota) {
+    case 10:
+    case 9:
+        aluno.conceito = "A";
+        aluno.mensagem = "Excelente!";
+        break;
+    case 8:
+    case 7:
+        aluno.conceito = "B";
+        aluno.mensagem = "Muito bom!";
+        break;
+    case 6:
+    case 5:
+        aluno.conceito = "C";
+        aluno.mensagem = "Suficiente.";
+        break;
+    case 4:
+    case 3:
+        aluno.conceito = "D";
+        aluno.mensagem = "Em recuperação.";
+        break;
+    case 2:
+    case 1:
+    case 0:
+        aluno.conceito = "F";
+        aluno.mensagem = "Reprovado.";
+        break;
+    default:
+        aluno.conceito = "Inexistente";
+        aluno.mensagem = "Nota inválida.";
+}
 
-// console.log(`${aluno.nome} – Nota: ${aluno.nota} | Conceito: ${aluno.conceito} | ${aluno.mensagem}`);
+console.log(`${aluno.nome} – Nota: ${aluno.nota} | Conceito: ${aluno.conceito} | ${aluno.mensagem}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 
 console.log("_______________________________");
@@ -435,50 +395,45 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-// let numA = keyboard.questionFloat("Digite o primeiro numero: ");
-// let numB = keyboard.questionFloat("Digite o segundo numero: ");
+let numA = keyboard.questionFloat("Digite o primeiro numero: ");
+let numB = keyboard.questionFloat("Digite o segundo numero: ");
 
-// console.log("--- Menu de Operações ---");
-// console.log("1 – Soma | 2 – Subtração | 3 – Multiplicação | 4 – Divisão | 5 – Resto");
+console.log("--- Menu de Operações ---");
+console.log("1 – Soma | 2 – Subtração | 3 – Multiplicação | 4 – Divisão | 5 – Resto");
 
-// let operacao = keyboard.questionInt("Escolha uma operacao: ");
-// let calculo;
+let operacao = keyboard.questionInt("Escolha uma operacao: ");
+let calculo;
 
-// switch (operacao) {
-//     case 1:
-//         calculo = numA + numB;
-//         console.log(`${numA} + ${numB} = ${calculo}`);
-//         break;
-//     case 2:
-//         calculo = numA - numB;
-//         console.log(`${numA} - ${numB} = ${calculo}`);
-//         break;
-//     case 3:
-//         calculo = numA * numB;
-//         console.log(`${numA} * ${numB} = ${calculo}`);
-//         break;
-//     case 4:
-//         if (numB === 0) {
-//             console.log("Erro: divisão por zero não é permitida.");
-//         } else {
-//             calculo = numA / numB;
-//             console.log(`${numA} / ${numB} = ${calculo}`);
-//         }
-//         break;
-//     case 5:
-//         calculo = numA % numB;
-//         console.log(`${numA} % ${numB} = ${calculo}`);
-//         break;
-//     default:
-//         console.log("Operação inválida.");
-// }
+switch (operacao) {
+    case 1:
+        calculo = numA + numB;
+        console.log(`${numA} + ${numB} = ${calculo}`);
+        break;
+    case 2:
+        calculo = numA - numB;
+        console.log(`${numA} - ${numB} = ${calculo}`);
+        break;
+    case 3:
+        calculo = numA * numB;
+        console.log(`${numA} * ${numB} = ${calculo}`);
+        break;
+    case 4:
+        if (numB === 0) {
+            console.log("Erro: divisão por zero não é permitida.");
+        } else {
+            calculo = numA / numB;
+            console.log(`${numA} / ${numB} = ${calculo}`);
+        }
+        break;
+    case 5:
+        calculo = numA % numB;
+        console.log(`${numA} % ${numB} = ${calculo}`);
+        break;
+    default:
+        console.log("Operação inválida.");
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -503,50 +458,44 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let loja = {
-//     nome: "TechShop",
-//     saldo: 0
-// };
+let loja = {
+    nome: "TechShop",
+    saldo: 0
+};
 
-// console.log(`--- Bem-vindo à ${loja.nome} ---`);
-// console.log("1 – Ver produtos | 2 – Comprar | 3 – Ver carrinho | 4 – Sair");
-// let opcao = keyboard.questionInt("Escolha uma opcao: ");
+console.log(`--- Bem-vindo à ${loja.nome} ---`);
+console.log("1 – Ver produtos | 2 – Comprar | 3 – Ver carrinho | 4 – Sair");
+let opcao = keyboard.questionInt("Escolha uma opcao: ");
 
-// switch (opcao) {
-//     case 1:
-//         const vitrine = [
-//             { produto: "Mouse Gamer", preco: 89.90 },
-//             { produto: "Teclado Mecânico", preco: 199.00 },
-//             { produto: "Headset USB", preco: 150.50 }
-//         ];
-//         console.log("Produtos Disponíveis:");
-//         console.table(vitrine);
-//         break;
+switch (opcao) {
+    case 1:
+        const vitrine = [
+            { produto: "Mouse Gamer", preco: 89.90 },
+            { produto: "Teclado Mecânico", preco: 199.00 },
+            { produto: "Headset USB", preco: 150.50 }
+        ];
+        console.log("Produtos Disponíveis:");
+        console.table(vitrine);
+        break;
 
-//     case 2:
-//         const itemNome = keyboard.question("Qual produto deseja comprar? ");
-//         const itemPreco = keyboard.questionFloat("Qual o preco do produto? ");
-        
-//         loja.saldo += itemPreco;
-//         console.log(`\n"${itemNome}" adicionado ao carrinho.`);
-//         break;
+    case 2:
+        const itemNome = keyboard.question("Qual produto deseja comprar? ");
+        const itemPreco = keyboard.questionFloat("Qual o preco do produto? ");
 
-//     case 3:
-//         console.log(`Total no carrinho: R$ ${loja.saldo.toFixed(2)}`);
-//         break;
+        loja.saldo += itemPreco;
+        console.log(`\n"${itemNome}" adicionado ao carrinho.`);
+        break;
 
-//     case 4:
-//         console.log(`Obrigado por visitar a ${loja.nome}!`);
-//         break;
+    case 3:
+        console.log(`Total no carrinho: R$ ${loja.saldo.toFixed(2)}`);
+        break;
 
-//     default:
-//         console.log("Opção inválida.");
-// }
+    case 4:
+        console.log(`Obrigado por visitar a ${loja.nome}!`);
+        break;
 
-console.log(`
-        __
-    ___( o)>
-    \\ <_. )
-     \`---'
-`);
+    default:
+        console.log("Opção inválida.");
+}
+/*/
 console.log("_______________________________");

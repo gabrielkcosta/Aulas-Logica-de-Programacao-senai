@@ -1,3 +1,4 @@
+/*
 // ============================================================
 //   JOGO: Adivinhe o Número
 // ============================================================
@@ -73,7 +74,7 @@ console.log("_______________________________");
 
 
 switch (modo) {
-    case 1: { 
+    case 1: {
         let secreto = Math.floor(Math.random() * NUM_MAX) + NUM_MIN;
         let venceu = false;
 
@@ -95,8 +96,8 @@ switch (modo) {
         console.log(`\nNumero secreto: ${secreto}`);
         console.log(`Resultado: ${venceu ? "Vitoria" : "Derrota"}`);
         break;
-    } 
-    case 2: { 
+    }
+    case 2: {
         console.log("Pense em um numero de 1 a 100.");
         let min = NUM_MIN;
         let max = NUM_MAX;
@@ -105,7 +106,7 @@ switch (modo) {
         for (let i = 1; i <= MAX_TENTATIVAS; i++) {
             let palpite = Math.floor((min + max) / 2);
             console.log(`Tentativa ${i}: Meu palpite e ${palpite}!`);
-            
+
             let resposta = keyboard.questionInt("1 - Acertei | 2 - Muito alto | 3 - Muito baixo: ");
 
             if (resposta === 1) {
@@ -155,3 +156,4 @@ switch (modo) {
 // PASSO 5 – Se o computador não acertar, exiba uma mensagem de derrota e o número que o jogador estava pensando.
 
 // Implemente seu código abaixo:
+/*/

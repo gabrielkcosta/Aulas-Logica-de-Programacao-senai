@@ -1,3 +1,4 @@
+/*
 //jogo da forca
 //nome: Gabriel Costa
 //Dia 10/06/26
@@ -7,7 +8,7 @@ function log(mensagem) { console.log(mensagem); }
 function vazio() { log("") }
 function boasVindas() { log("---BEM-VINDO(a)-AO-JOGO-DA-FORCA---") }
 
-boasVindas(); 
+boasVindas();
 
 const palavrasForca = [
     // Animais
@@ -42,26 +43,26 @@ const palavrasForca = [
 ];
 
 let palavraRandom = Math.floor(Math.random() * palavrasForca.length);
-let palavraSecreta = palavrasForca[palavraRandom]; 
+let palavraSecreta = palavrasForca[palavraRandom];
 let palavraEscondida = [];
 let erros = 0;
 let maxErro = 6;
 let JogoAcabou = false;
 
-for (let i = 0; i < palavraSecreta.length; i++){ 
+for (let i = 0; i < palavraSecreta.length; i++) {
     palavraEscondida.push("_");
 }
 
 while (JogoAcabou === false) {
     let status = "";
-    for (let i = 0; i < palavraEscondida.length; i++){
+    for (let i = 0; i < palavraEscondida.length; i++) {
         status = status + palavraEscondida[i] + " ";
     }
 
     log(`Palavra: ${status}`);
     log(`Erros: ${erros} de ${maxErro}`);
     vazio();
-    let letra = keyboard.question(`Digite uma letra: `); 
+    let letra = keyboard.question(`Digite uma letra: `);
 
     if (letra === null || letra === "") {
         log("Jogo cancelado pelo Jogador(a)");
@@ -70,8 +71,8 @@ while (JogoAcabou === false) {
 
     let acertou = false;
 
-    for (let i = 0; i < palavraSecreta.length; i++) { 
-        if (palavraSecreta[i] === letra.toLowerCase()) { 
+    for (let i = 0; i < palavraSecreta.length; i++) {
+        if (palavraSecreta[i] === letra.toLowerCase()) {
             palavraEscondida[i] = letra;
             acertou = true
         }
@@ -86,7 +87,7 @@ while (JogoAcabou === false) {
 
     if (erros >= maxErro) {
         log(`voce perdeu, a PALAVRA ERA: [${palavraSecreta}]`);
-        JogoAcabou = true; 
+        JogoAcabou = true;
     }
 
     let ganhou = true;
@@ -98,7 +99,8 @@ while (JogoAcabou === false) {
 
     if (ganhou === true) {
         log(`PARABENS VOCE GANHOU, a palavra era: [${palavraSecreta}]`);
-        JogoAcabou = true; 
+        JogoAcabou = true;
     }
     vazio();
 }
+/*/

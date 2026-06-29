@@ -1,3 +1,4 @@
+/*
 // ============================================================
 //   ATIVIDADE 09 – Estruturas de Controle (Repetição - For)
 // ============================================================
@@ -13,18 +14,11 @@ let keyboard = require("readline-sync")
 
 // → Seu código aqui:
 
-// for (let i = 5; i <= 12; i++) {
-//     console.log(i);
-// }
-// console.log("Contagem concluída!");
+for (let i = 5; i <= 12; i++) {
+    console.log(i);
+}
+console.log("Contagem concluída!");
 
-
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 
 console.log("_______________________________");
@@ -39,18 +33,10 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// for (let i = 10; i >= 3; i--) {
-//     console.log(i);
-// }
-// console.log("Lançamento! 🚀");
-
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
-
+for (let i = 10; i >= 3; i--) {
+    console.log(i);
+}
+console.log("Lançamento! 🚀");
 
 
 console.log("_______________________________");
@@ -64,20 +50,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let contadorPares = 0;
+let contadorPares = 0;
 
-// for (let i = 0; i <= 30; i += 2) {
-//     console.log(i);
-//     contadorPares++; 
-// }
-// console.log("Total de números pares exibidos: " + contadorPares);
+for (let i = 0; i <= 30; i += 2) {
+    console.log(i);
+    contadorPares++;
+}
+console.log("Total de números pares exibidos: " + contadorPares);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 
 console.log("_______________________________");
@@ -92,23 +72,18 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let keyboard = require('readline-sync');
+let keyboard = require('readline-sync');
 
-// let numero = keyboard.questionInt("Digite um numero para ver a tabuada: ");
+let numero = keyboard.questionInt("Digite um numero para ver a tabuada: ");
 
-// console.log(`--- Tabuada do ${numero} ---`);
+console.log(`--- Tabuada do ${numero} ---`);
 
-// for (let i = 1; i <= 10; i++) {
-//     let resultado = numero * i;
-//     console.log(`${numero} x ${i} = ${resultado}`);
-// }
+for (let i = 1; i <= 10; i++) {
+    let resultado = numero * i;
+    console.log(`${numero} x ${i} = ${resultado}`);
+}
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -122,21 +97,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let numeroInteiro = keyboard.questionInt("digite um numero maior que 10 ou 10 :")
-// let soma = 0
+let numeroInteiro = keyboard.questionInt("digite um numero maior que 10 ou 10 :")
+let soma = 0
 
-// for(let i = 1; i <= numeroInteiro; i++) {
-//     soma += i    
-// }
+for (let i = 1; i <= numeroInteiro; i++) {
+    soma += i
+}
 
-// console.table(`a soma de 1 ate ${numeroInteiro} é ${soma}`);
+console.table(`a soma de 1 ate ${numeroInteiro} é ${soma}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -152,21 +122,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let number = keyboard.questionInt("escolha um numero de 1 a 10 : ")
-// let fatorial = 1
+let number = keyboard.questionInt("escolha um numero de 1 a 10 : ")
+let fatorial = 1
 
-// for(let i = 1; i <= number; i++) {
-//     fatorial *= i
-// }
+for (let i = 1; i <= number; i++) {
+    fatorial *= i
+}
 
-// console.log(`${number}! = ${fatorial}`);
+console.log(`${number}! = ${fatorial}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 console.log("_______________________________");
 
@@ -175,25 +140,19 @@ console.log("_______________________________");
 // EXERCÍCIO 7 – Percorrendo um array
 // ------------------------------------------------------------
 // a) Utilizando o array:
-    const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
+const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
 // b) Utilizando de um for, exiba cada cidade com seu índice no formato:
 //    "[<indice>] - <Cidade>"
 // c) Ao final, exiba: "Total de cidades: <quantidade>"
 
 // → Seu código aqui:
 
-// for(let i = 0; i < cidades.length; i++) {
-//     console.log(`[${i}] ${cidades[i]}`);
-// }
+for (let i = 0; i < cidades.length; i++) {
+    console.log(`[${i}] ${cidades[i]}`);
+}
 
-// console.log(`total de cidades ${cidades.length}`);
+console.log(`total de cidades ${cidades.length}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 
 
@@ -212,28 +171,23 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// const temperaturas = [28, 15, 32, 9, 21, 37, 14, 25];
+const temperaturas = [28, 15, 32, 9, 21, 37, 14, 25];
 
-// let maior = temperaturas[0];
-// let menor = temperaturas[0];
+let maior = temperaturas[0];
+let menor = temperaturas[0];
 
-// for (let i = 1; i < temperaturas.length; i++) {
-//     if (temperaturas[i] > maior) {
-//         maior = temperaturas[i];
-//     }
-//     if (temperaturas[i] < menor) {
-//         menor = temperaturas[i];
-//     }
-// }
-// console.log(`Maior temperatura: ${maior} °C`);
-// console.log(`Menor temperatura: ${menor} °C`);
+for (let i = 1; i < temperaturas.length; i++) {
+    if (temperaturas[i] > maior) {
+        maior = temperaturas[i];
+    }
+    if (temperaturas[i] < menor) {
+        menor = temperaturas[i];
+    }
+}
+console.log(`Maior temperatura: ${maior} °C`);
+console.log(`Menor temperatura: ${menor} °C`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+
 
 
 console.log("_______________________________");
@@ -243,7 +197,7 @@ console.log("_______________________________");
 // EXERCÍCIO 9 – Contando com condição
 // ------------------------------------------------------------
 // a) Utilizando do array:
-    // const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
+// const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
 // b) Usando um for, conte:
 //    - Quantas pessoas são menores de idade (< 18)
 //    - Quantas são maiores de idade (>= 18)
@@ -251,29 +205,23 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
+const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
 
-// let menores = 0;
-// let maiores = 0;
+let menores = 0;
+let maiores = 0;
 
-// for (let i = 0; i < idades.length; i++) {
-//     if (idades[i] < 18) {
-//         menores++;
-//     }
-//     if (idades[i] >= 18) {
-//         maiores++;
-//     }
-// }
+for (let i = 0; i < idades.length; i++) {
+    if (idades[i] < 18) {
+        menores++;
+    }
+    if (idades[i] >= 18) {
+        maiores++;
+    }
+}
 
-// console.log(`Pessoas menores de idade: ${menores}`);
-// console.log(`Pessoas maiores de idade: ${maiores}`);
+console.log(`Pessoas menores de idade: ${menores}`);
+console.log(`Pessoas maiores de idade: ${maiores}`);
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
 
 
 console.log("_______________________________");
@@ -283,7 +231,7 @@ console.log("_______________________________");
 // EXERCÍCIO 10 – Média com array
 // ------------------------------------------------------------
 // a) Utilizando do array:
-    // const salarios = [1800, 3200, 950, 4500, 2100, 1500, 7800, 2900];
+// const salarios = [1800, 3200, 950, 4500, 2100, 1500, 7800, 2900];
 // b) Usando um for, calcule a média salarial.
 // c) Exiba a média no formato: "Média salarial: R$ <media>"
 // d) Usando outro for, exiba cada salário e se está acima ou abaixo da média:
@@ -292,35 +240,29 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// const salarios = [1800, 3200, 950, 4500, 2100, 1500, 7800, 2900];
+const salarios = [1800, 3200, 950, 4500, 2100, 1500, 7800, 2900];
 
-// let soma = 0;
-// for (let i = 0; i < salarios.length; i++) {
-//     soma += salarios[i];
-// }
-// let media = soma / salarios.length;
+let soma = 0;
+for (let i = 0; i < salarios.length; i++) {
+    soma += salarios[i];
+}
+let media = soma / salarios.length;
 
-// console.log(`Média salarial: R$ ${media.toFixed(2)}`);
+console.log(`Média salarial: R$ ${media.toFixed(2)}`);
 
-// console.log("--- Detalhamento ---");
-// for (let i = 0; i < salarios.length; i++) {
-//     let status = "";
-    
-//     if (salarios[i] > media) {
-//         status = "Acima da média";
-//     }
-//     if (salarios[i] < media) {
-//         status = "Abaixo da média";
-//     }
-//     console.log(`R$ ${salarios[i].toFixed(2)} – ${status}`);
-// }
+console.log("--- Detalhamento ---");
+for (let i = 0; i < salarios.length; i++) {
+    let status = "";
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+    if (salarios[i] > media) {
+        status = "Acima da média";
+    }
+    if (salarios[i] < media) {
+        status = "Abaixo da média";
+    }
+    console.log(`R$ ${salarios[i].toFixed(2)} – ${status}`);
+}
+
 
 
 console.log("_______________________________");
@@ -345,48 +287,43 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let turma = [];
-// let somaMedias = 0;
+let turma = [];
+let somaMedias = 0;
 
-// for (let i = 1; i <= 3; i++) {
-//     console.log(`--- Cadastro do ${i}º aluno ---`);
-//     let nome = readline.question("Nome: ");
-    
-//     let n1 = parseFloat(readline.question("Nota 1: "));
-//     let n2 = parseFloat(readline.question("Nota 2: "));
-//     let n3 = parseFloat(readline.question("Nota 3: "));
-    
-//     let mediaAluno = (n1 + n2 + n3) / 3;
-    
-//     turma.push({
-//         nome: nome,
-//         nota: mediaAluno.toFixed(1)
-//     });
+for (let i = 1; i <= 3; i++) {
+    console.log(`--- Cadastro do ${i}º aluno ---`);
+    let nome = readline.question("Nome: ");
 
-//     somaMedias += mediaAluno;
-// }
+    let n1 = parseFloat(readline.question("Nota 1: "));
+    let n2 = parseFloat(readline.question("Nota 2: "));
+    let n3 = parseFloat(readline.question("Nota 3: "));
 
-// let mediaTurma = somaMedias / turma.length;
+    let mediaAluno = (n1 + n2 + n3) / 3;
 
-// console.log("\n--- Resultados ---");
+    turma.push({
+        nome: nome,
+        nota: mediaAluno.toFixed(1)
+    });
 
-// turma.forEach(aluno => {
-//     let nota = parseFloat(aluno.nota);
-//     let situacao = nota >= 7 ? "Aprovado" : (nota >= 5 ? "Recuperação" : "Reprovado");
-    
-//     console.log(`${aluno.nome}: ${aluno.nota} – ${situacao}`);
-// });
+    somaMedias += mediaAluno;
+}
 
-// console.log(`\nMédia da turma: ${mediaTurma.toFixed(1)}`);
+let mediaTurma = somaMedias / turma.length;
 
-// console.table(turma);
+console.log("\n--- Resultados ---");
 
-//      ▲
-//     / \
-//    /___\
-//     | |
-//
-// CÓDIGO ACIMA
+turma.forEach(aluno => {
+    let nota = parseFloat(aluno.nota);
+    let situacao = nota >= 7 ? "Aprovado" : (nota >= 5 ? "Recuperação" : "Reprovado");
+
+    console.log(`${aluno.nome}: ${aluno.nota} – ${situacao}`);
+});
+
+console.log(`\nMédia da turma: ${mediaTurma.toFixed(1)}`);
+
+console.table(turma);
+
+
 
 
 
@@ -408,43 +345,38 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let qtd = readline.questionInt("Quantos produtos deseja cadastrar? ");
-// let estoque = [];
+let qtd = readline.questionInt("Quantos produtos deseja cadastrar? ");
+let estoque = [];
 
-// for (let i = 0; i < qtd; i++) {
-//     console.log(`\n--- Produto ${i + 1} ---`);
-//     let nome = readline.question("Nome do produto: ");
-//     let preco = readline.questionFloat("Preco: ");
-    
-//     estoque.push({ nome: nome, preco: preco });
-// }
+for (let i = 0; i < qtd; i++) {
+    console.log(`\n--- Produto ${i + 1} ---`);
+    let nome = readline.question("Nome do produto: ");
+    let preco = readline.questionFloat("Preco: ");
 
-// console.log("\n--- Estoque Cadastrado ---");
+    estoque.push({ nome: nome, preco: preco });
+}
 
-// let maisCaro = estoque[0];
-// let maisBarato = estoque[0];
+console.log("\n--- Estoque Cadastrado ---");
 
-// estoque.forEach(produto => {
-//     console.log(`${produto.nome}: R$ ${produto.preco.toFixed(2)}`);
+let maisCaro = estoque[0];
+let maisBarato = estoque[0];
 
-//     if (produto.preco > maisCaro.preco) {
-//         maisCaro = produto;
-//     }
-//     if (produto.preco < maisBarato.preco) {
-//         maisBarato = produto;
-//     }
-// });
+estoque.forEach(produto => {
+    console.log(`${produto.nome}: R$ ${produto.preco.toFixed(2)}`);
 
-// console.log(`\nProduto mais caro: ${maisCaro.nome} (R$ ${maisCaro.preco.toFixed(2)})`);
-// console.log(`Produto mais barato: ${maisBarato.nome} (R$ ${maisBarato.preco.toFixed(2)})`);
+    if (produto.preco > maisCaro.preco) {
+        maisCaro = produto;
+    }
+    if (produto.preco < maisBarato.preco) {
+        maisBarato = produto;
+    }
+});
 
-// console.table(estoque);
+console.log(`\nProduto mais caro: ${maisCaro.nome} (R$ ${maisCaro.preco.toFixed(2)})`);
+console.log(`Produto mais barato: ${maisBarato.nome} (R$ ${maisBarato.preco.toFixed(2)})`);
 
-console.log(`
-        __
-    ___( o)>
-    \\ <_. )
-     \`---'
-`);
+console.table(estoque);
 
+
+/*/
 console.log("_______________________________");
