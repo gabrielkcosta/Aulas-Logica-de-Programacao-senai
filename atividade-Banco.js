@@ -174,7 +174,7 @@ function solicitarEmprestimo(usuario) {
 function descontarParcelaEmprestimo(usuario) {
     let emprestimo = null;
 
-    // Procura o primeiro empréstimo em aberto usando um loop clássico
+    // Procura o primeiro empréstimo em aberto
     for (let i = 0; i < usuario.emprestimos.length; i++) {
         if (!usuario.emprestimos[i].quitado && usuario.emprestimos[i].parcelasRestantes > 0) {
             emprestimo = usuario.emprestimos[i];
