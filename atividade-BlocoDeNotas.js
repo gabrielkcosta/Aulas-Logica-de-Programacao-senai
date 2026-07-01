@@ -1,5 +1,6 @@
 //Gabriel Costa
 //DESENVOLVIMENTO DE SISTEMA
+//TRABALHO BLOCO DE NOTAS
 
 
 const keyboard = require("readline-sync");
@@ -32,7 +33,7 @@ function criarCardInterativo() {
 
     const tituloDigitado = lerEntradaValida("Digite o titulo da nota: ");
     const descricaoDigitada = lerEntradaValida("Digite a descricao da nota: ");
-    const conteudoDigitado = lerEntradaValida("O que voce quer escrever no card?: ");
+    const conteudoDigitado = keyboard.question("O que voce quer escrever no card?: ");
 
     const card = {
         titulo: tituloDigitado,
@@ -169,7 +170,6 @@ function filtrarItem() {
     }
 
     const termo = lerEntradaValida("\nDigite o termo para buscar no titulo: ").toLowerCase();
-    console.log(`DEBUG: Buscando por "${termo}" em ${listaDeNotas.length} notas.`);
 
     const resultados = listaDeNotas.filter(function (nota) {
         return nota.titulo.toLowerCase().includes(termo);
@@ -225,7 +225,7 @@ function exibirMenu() {
         }
 
         if (opcao !== 7) {
-            keyboard.keyIn("\nPressione qualquer tecla para continuar...");
+            keyboard.keyIn("\nPressione Espaco para CONTINUAR...");
         }
     }
 }
