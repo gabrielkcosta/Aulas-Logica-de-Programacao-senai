@@ -1,6 +1,25 @@
+//Gabriel Costa
+//DESENVOLVIMENTO DE SISTEMA
+
 
 const keyboard = require("readline-sync");
 const listaDeNotas = [];
+
+
+////////////////////////////////////////////////////////////////////////////////////
+/*                    FUNÇÃO PARA NAO DEIXAR ESPAÇO EM BRANCO                     */
+///////////////////////////////////////////////////////////////////////////////////
+
+function lerEntradaValida(mensagem) {
+    let entrada = keyboard.question(mensagem);
+
+    while (entrada === "") {
+        console.log("não pode ficar em branco. Tente novamente.");
+        entrada = keyboard.question(mensagem);
+    }
+
+    return entrada;
+}
 
 ////////////////////////////////////////////////////////////////////////////////////
 /*                        FUNÇÃO PARA CRIAR A LISTA/CARD                         */
@@ -11,9 +30,9 @@ function criarCardInterativo() {
     console.log(`║           BLOCO DE NOTAS            ║`);
     console.log(`╚═════════════════════════════════════╝`);
 
-    const tituloDigitado = keyboard.question("Digite o titulo da nota: ");
-    const descricaoDigitada = keyboard.question("Digite a descricao da nota: ");
-    const conteudoDigitado = keyboard.question("O que voce quer escrever no card?: ");
+    const tituloDigitado = lerEntradaValida("Digite o titulo da nota: ");
+    const descricaoDigitada = lerEntradaValida("Digite a descricao da nota: ");
+    const conteudoDigitado = lerEntradaValida("O que voce quer escrever no card?: ");
 
     const card = {
         titulo: tituloDigitado,
@@ -22,11 +41,10 @@ function criarCardInterativo() {
     };
 
     listaDeNotas.push(card);
-
-    console.log(`\n───────────────────────────────────────`);
-    console.log(` Nota adicionada com sucesso!`);
-    console.log(`───────────────────────────────────────`);
 }
+console.log(`\n───────────────────────────────────────`);
+console.log(` Nota adicionada com sucesso!`);
+console.log(`────────────────────────────────────────`);
 
 ////////////////////////////////////////////////////////////////////////////////////
 /*                       FUNÇÃO DE VIZUALIZAR LISTA                              */
@@ -36,7 +54,7 @@ function visualizarLista() {
     console.log(`\n=================================`);
     console.log(`      LISTA DE NOTAS             `);
     console.log(`=================================`);
-    
+
     if (listaDeNotas.length === 0) {
         console.log(` A lista esta vazia.`);
     } else {
@@ -57,7 +75,7 @@ function visualizarItem() {
     }
 
     visualizarLista();
-    
+
     const index = keyboard.questionInt("Digite o numero da nota que deseja exibir: ") - 1;
 
     if (index >= 0 && index < listaDeNotas.length) {
@@ -100,13 +118,13 @@ function editarItem() {
 
         switch (opcao) {
             case 1:
-                listaDeNotas[index].titulo = keyboard.question("Digite o novo titulo: ");
+                listaDeNotas[index].titulo = lerEntradaValida("Digite o novo titulo: ");
                 break;
             case 2:
-                listaDeNotas[index].descricao = keyboard.question("Digite a nova descricao: ");
+                listaDeNotas[index].descricao = lerEntradaValida("Digite a nova descricao: ");
                 break;
             case 3:
-                listaDeNotas[index].conteudo = keyboard.question("Digite o novo conteudo: ");
+                listaDeNotas[index].conteudo = lerEntradaValida("Digite o novo conteudo: ");
                 break;
             default:
                 console.log("Opcao invalida!");
@@ -144,16 +162,16 @@ function removerItem() {
 ///////////////////////////////////////////////////////////////////////////////////
 
 function filtrarItem() {
-    console.log("\nDEBUG: Entrou na função filtrarItem"); 
+
     if (listaDeNotas.length === 0) {
         console.log("\nLista vazia, nao ha itens para filtrar.");
         return;
     }
 
-    const termo = keyboard.question("\nDigite o termo para buscar no titulo: ").toLowerCase();
+    const termo = lerEntradaValida("\nDigite o termo para buscar no titulo: ").toLowerCase();
     console.log(`DEBUG: Buscando por "${termo}" em ${listaDeNotas.length} notas.`);
 
-    const resultados = listaDeNotas.filter(function(nota) {
+    const resultados = listaDeNotas.filter(function (nota) {
         return nota.titulo.toLowerCase().includes(termo);
     });
 
@@ -161,7 +179,7 @@ function filtrarItem() {
         console.log(`\n=================================`);
         console.log(`   RESULTADOS DA BUSCA: "${termo}"`);
         console.log(`=================================`);
-        resultados.forEach(function(nota) {
+        resultados.forEach(function (nota) {
             console.log(` - ${nota.titulo}`);
         });
         console.log(`=================================\n`);
@@ -199,9 +217,9 @@ function exibirMenu() {
             case 4: editarItem(); break;
             case 5: removerItem(); break;
             case 6: filtrarItem(); break;
-            case 7: 
+            case 7:
                 console.log("\nEncerrando sistema...");
-                executando = false; 
+                executando = false;
                 break;
             default: console.log("\nOpcao invalida, tente novamente.");
         }
