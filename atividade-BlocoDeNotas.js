@@ -42,10 +42,11 @@ function criarCardInterativo() {
     };
 
     listaDeNotas.push(card);
+    
+    console.log(`\n───────────────────────────────────────`);
+    console.log(` Nota adicionada com sucesso!`);
+    console.log(`────────────────────────────────────────`);
 }
-console.log(`\n───────────────────────────────────────`);
-console.log(` Nota adicionada com sucesso!`);
-console.log(`────────────────────────────────────────`);
 
 ////////////////////////////////////////////////////////////////////////////////////
 /*                       FUNÇÃO DE VIZUALIZAR LISTA                              */
